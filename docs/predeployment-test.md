@@ -1,6 +1,6 @@
 # Pre-deployment test for cross-split AML evaluation
 
-This checklist is the portable deliverable of the TDSC manuscript. It is deliberately a
+This checklist is the portable deliverable of the Journal manuscript. It is deliberately a
 decision procedure, not a formula: the paper's leave-one-graph-out regression has negative
 R^2 in every direction, so no correction factor is claimed.
 

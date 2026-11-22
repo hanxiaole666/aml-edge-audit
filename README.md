@@ -3,8 +3,7 @@
 A reproducible evaluation-protocol audit for cryptocurrency anti-money laundering (AML).
 
 This repository contains the code, per-entity predictions, result files, test logs, and LaTeX
-source behind the manuscript submitted to **IEEE Transactions on Dependable and Secure Computing
-(TDSC)**:
+source behind the manuscript submitted to **Journal**
 
 > **Cross-Split Edge Auditing for Cryptocurrency AML Evaluation: Degree, Composition, and a
 > Pre-Deployment Test**
@@ -16,8 +15,6 @@ source behind the manuscript submitted to **IEEE Transactions on Dependable and 
 > 234,355 edges never cross a time step, the same operation is composition-driven. We therefore
 > deliver a pre-deployment test rather than a transferable formula.
 
-Full title and author: Xiaole Han (sole author), Business School, Qilu Institute of Technology,
-Jinan, Shandong 250200, China. ORCID: 0009-0009-9611-2368.
 
 ## Quick start
 

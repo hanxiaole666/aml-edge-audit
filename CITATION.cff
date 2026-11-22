@@ -10,7 +10,7 @@ authors:
 abstract: >-
   An audit of evaluation protocols for cryptocurrency anti-money laundering.
   The repository contains the code, results, generated tables, and LaTeX source
-  for the manuscript submitted to IEEE TDSC. The central result is that the
+  for the manuscript submitted to Journal. The central result is that the
   dominant channel of a protocol effect differs by graph: degree on a 1,500-node
   co-occurrence graph, label composition on Elliptic, where no edge crosses a
   time step. The deliverable is a pre-deployment test based on three measurable
