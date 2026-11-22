@@ -1,0 +1,334 @@
+{
+  "experiment": "attack_threat_model",
+  "threat_model": {
+    "modifiable": [
+      "transaction_number",
+      "payment_transactions",
+      "receipt_transactions",
+      "max_sent_amount",
+      "min_sent_amount",
+      "lifetime",
+      "activity_d",
+      "activity_w",
+      "total_gas_used",
+      "transaction_fee"
+    ],
+    "immutable": [
+      "creat_contract",
+      "total_received_ETH",
+      "total_sent_ETH",
+      "total_received_USD",
+      "total_sent_USD",
+      "lifetime-neutral variances"
+    ],
+    "rationale": "a launderer reshapes flows; totals are conserved"
+  },
+  "baseline": {
+    "AP": 0.7993,
+    "recall@1%": 0.0363,
+    "n_test": 7148,
+    "n_illicit": 1957
+  },
+  "results": [
+    {
+      "attack": "smurfing",
+      "param": 2,
+      "q": 0.1,
+      "AP": 0.8039,
+      "recall@1%": 0.0363,
+      "AP_drop": -0.0046
+    },
+    {
+      "attack": "smurfing",
+      "param": 2,
+      "q": 0.3,
+      "AP": 0.8064,
+      "recall@1%": 0.0363,
+      "AP_drop": -0.0071
+    },
+    {
+      "attack": "smurfing",
+      "param": 2,
+      "q": 0.5,
+      "AP": 0.8148,
+      "recall@1%": 0.0363,
+      "AP_drop": -0.0155
+    },
+    {
+      "attack": "smurfing",
+      "param": 2,
+      "q": 1.0,
+      "AP": 0.8312,
+      "recall@1%": 0.0363,
+      "AP_drop": -0.0319
+    },
+    {
+      "attack": "smurfing",
+      "param": 4,
+      "q": 0.1,
+      "AP": 0.8121,
+      "recall@1%": 0.0363,
+      "AP_drop": -0.0128
+    },
+    {
+      "attack": "smurfing",
+      "param": 4,
+      "q": 0.3,
+      "AP": 0.832,
+      "recall@1%": 0.0363,
+      "AP_drop": -0.0327
+    },
+    {
+      "attack": "smurfing",
+      "param": 4,
+      "q": 0.5,
+      "AP": 0.8553,
+      "recall@1%": 0.0363,
+      "AP_drop": -0.056
+    },
+    {
+      "attack": "smurfing",
+      "param": 4,
+      "q": 1.0,
+      "AP": 0.9087,
+      "recall@1%": 0.0363,
+      "AP_drop": -0.1094
+    },
+    {
+      "attack": "smurfing",
+      "param": 8,
+      "q": 0.1,
+      "AP": 0.8168,
+      "recall@1%": 0.0363,
+      "AP_drop": -0.0175
+    },
+    {
+      "attack": "smurfing",
+      "param": 8,
+      "q": 0.3,
+      "AP": 0.8434,
+      "recall@1%": 0.0363,
+      "AP_drop": -0.0441
+    },
+    {
+      "attack": "smurfing",
+      "param": 8,
+      "q": 0.5,
+      "AP": 0.8739,
+      "recall@1%": 0.0363,
+      "AP_drop": -0.0746
+    },
+    {
+      "attack": "smurfing",
+      "param": 8,
+      "q": 1.0,
+      "AP": 0.9411,
+      "recall@1%": 0.0363,
+      "AP_drop": -0.1418
+    },
+    {
+      "attack": "layering",
+      "param": 1,
+      "q": 0.1,
+      "AP": 0.7648,
+      "recall@1%": 0.0363,
+      "AP_drop": 0.0345
+    },
+    {
+      "attack": "layering",
+      "param": 1,
+      "q": 0.3,
+      "AP": 0.6784,
+      "recall@1%": 0.0363,
+      "AP_drop": 0.121
+    },
+    {
+      "attack": "layering",
+      "param": 1,
+      "q": 0.5,
+      "AP": 0.5887,
+      "recall@1%": 0.0358,
+      "AP_drop": 0.2106
+    },
+    {
+      "attack": "layering",
+      "param": 1,
+      "q": 1.0,
+      "AP": 0.3726,
+      "recall@1%": 0.0342,
+      "AP_drop": 0.4267
+    },
+    {
+      "attack": "layering",
+      "param": 2,
+      "q": 0.1,
+      "AP": 0.7616,
+      "recall@1%": 0.0363,
+      "AP_drop": 0.0377
+    },
+    {
+      "attack": "layering",
+      "param": 2,
+      "q": 0.3,
+      "AP": 0.6699,
+      "recall@1%": 0.0358,
+      "AP_drop": 0.1294
+    },
+    {
+      "attack": "layering",
+      "param": 2,
+      "q": 0.5,
+      "AP": 0.5741,
+      "recall@1%": 0.0358,
+      "AP_drop": 0.2252
+    },
+    {
+      "attack": "layering",
+      "param": 2,
+      "q": 1.0,
+      "AP": 0.3356,
+      "recall@1%": 0.0322,
+      "AP_drop": 0.4637
+    },
+    {
+      "attack": "layering",
+      "param": 3,
+      "q": 0.1,
+      "AP": 0.7627,
+      "recall@1%": 0.0363,
+      "AP_drop": 0.0366
+    },
+    {
+      "attack": "layering",
+      "param": 3,
+      "q": 0.3,
+      "AP": 0.6738,
+      "recall@1%": 0.0358,
+      "AP_drop": 0.1255
+    },
+    {
+      "attack": "layering",
+      "param": 3,
+      "q": 0.5,
+      "AP": 0.5797,
+      "recall@1%": 0.0358,
+      "AP_drop": 0.2197
+    },
+    {
+      "attack": "layering",
+      "param": 3,
+      "q": 1.0,
+      "AP": 0.3395,
+      "recall@1%": 0.0307,
+      "AP_drop": 0.4598
+    },
+    {
+      "attack": "pgd_linf",
+      "param": 0.1,
+      "q": 0.1,
+      "AP": 0.7872,
+      "recall@1%": 0.0363,
+      "AP_drop": 0.0121
+    },
+    {
+      "attack": "pgd_linf",
+      "param": 0.1,
+      "q": 0.3,
+      "AP": 0.7548,
+      "recall@1%": 0.0363,
+      "AP_drop": 0.0445
+    },
+    {
+      "attack": "pgd_linf",
+      "param": 0.1,
+      "q": 0.5,
+      "AP": 0.7261,
+      "recall@1%": 0.0363,
+      "AP_drop": 0.0732
+    },
+    {
+      "attack": "pgd_linf",
+      "param": 0.1,
+      "q": 1.0,
+      "AP": 0.654,
+      "recall@1%": 0.0358,
+      "AP_drop": 0.1453
+    },
+    {
+      "attack": "pgd_linf",
+      "param": 0.2,
+      "q": 0.1,
+      "AP": 0.7814,
+      "recall@1%": 0.0363,
+      "AP_drop": 0.0179
+    },
+    {
+      "attack": "pgd_linf",
+      "param": 0.2,
+      "q": 0.3,
+      "AP": 0.7316,
+      "recall@1%": 0.0363,
+      "AP_drop": 0.0677
+    },
+    {
+      "attack": "pgd_linf",
+      "param": 0.2,
+      "q": 0.5,
+      "AP": 0.6861,
+      "recall@1%": 0.0363,
+      "AP_drop": 0.1132
+    },
+    {
+      "attack": "pgd_linf",
+      "param": 0.2,
+      "q": 1.0,
+      "AP": 0.5649,
+      "recall@1%": 0.0353,
+      "AP_drop": 0.2344
+    },
+    {
+      "attack": "pgd_linf",
+      "param": 0.4,
+      "q": 0.1,
+      "AP": 0.7762,
+      "recall@1%": 0.0363,
+      "AP_drop": 0.0231
+    },
+    {
+      "attack": "pgd_linf",
+      "param": 0.4,
+      "q": 0.3,
+      "AP": 0.7083,
+      "recall@1%": 0.0363,
+      "AP_drop": 0.0911
+    },
+    {
+      "attack": "pgd_linf",
+      "param": 0.4,
+      "q": 0.5,
+      "AP": 0.6452,
+      "recall@1%": 0.0358,
+      "AP_drop": 0.1541
+    },
+    {
+      "attack": "pgd_linf",
+      "param": 0.4,
+      "q": 1.0,
+      "AP": 0.4839,
+      "recall@1%": 0.0342,
+      "AP_drop": 0.3155
+    }
+  ],
+  "status": "PASS",
+  "budget_to_halve_recall": {
+    "smurfing_m8": null,
+    "layering_h3": null,
+    "pgd_eps0.4": null
+  },
+  "verdict": {
+    "max_AP_drop_smurfing": -0.0046,
+    "max_AP_drop_layering": 0.4637,
+    "max_AP_drop_pgd": 0.3155,
+    "note": "Semantic attacks change the shape of flows within a feasible region; the PGD row is an upper bound from a linear surrogate, not a claim that an adversary can realise it on-chain."
+  }
+}

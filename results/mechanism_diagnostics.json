@@ -1,0 +1,120 @@
+{
+  "experiment": "mechanism_diagnostics",
+  "split": {
+    "frac": 0.75,
+    "n_train": 1125,
+    "n_test": 375,
+    "test_prevalence": 0.3787
+  },
+  "conditions": {
+    "C1": {
+      "n_edges": 6942,
+      "PR_AUC": 0.5366,
+      "test_degree": {
+        "mean": 8.155,
+        "median": 0.0,
+        "p90": 21.600000000000023,
+        "max": 180.0,
+        "zero_frac": 0.6
+      },
+      "degree_label_AUC": 0.6036,
+      "neighbor_label": {
+        "coverage": 0.3653,
+        "mean_frac_pos": 0.2213,
+        "frac_pos_label_AUC": 0.8257
+      },
+      "MMD_to_C3": 0.021877
+    },
+    "C2": {
+      "n_edges": 5349,
+      "PR_AUC": 0.6185,
+      "test_degree": {
+        "mean": 2.44,
+        "median": 0.0,
+        "p90": 3.0,
+        "max": 129.0,
+        "zero_frac": 0.824
+      },
+      "degree_label_AUC": 0.5469,
+      "neighbor_label": {
+        "coverage": 0.176,
+        "mean_frac_pos": 0.2243,
+        "frac_pos_label_AUC": 0.8745
+      },
+      "MMD_to_C3": 0.004054
+    },
+    "C3": {
+      "n_edges": 4434,
+      "PR_AUC": 0.6593,
+      "test_degree": {
+        "mean": 0.0,
+        "median": 0.0,
+        "p90": 0.0,
+        "max": 0.0,
+        "zero_frac": 1.0
+      },
+      "degree_label_AUC": 0.5,
+      "neighbor_label": {
+        "coverage": 0.0,
+        "mean_frac_pos": null,
+        "frac_pos_label_AUC": null
+      },
+      "MMD_to_C3": 0.0
+    },
+    "M2": {
+      "n_edges": 5349,
+      "PR_AUC": 0.414,
+      "test_degree": {
+        "mean": 7.403,
+        "median": 7.0,
+        "p90": 11.0,
+        "max": 20.0,
+        "zero_frac": 0.0
+      },
+      "degree_label_AUC": 0.48,
+      "neighbor_label": {
+        "coverage": 0.992,
+        "mean_frac_pos": 0.5164,
+        "frac_pos_label_AUC": 0.4818
+      },
+      "MMD_to_C3": 0.429051
+    }
+  },
+  "status": "PASS",
+  "normalization_ablation": {
+    "sym": {
+      "C1": 0.5366,
+      "C2": 0.6185,
+      "C3": 0.6593,
+      "M2": 0.414,
+      "order_holds": true
+    },
+    "row": {
+      "C1": 0.5622,
+      "C2": 0.6212,
+      "C3": 0.6633,
+      "M2": 0.4196,
+      "order_holds": true
+    },
+    "raw": {
+      "C1": 0.5474,
+      "C2": 0.6028,
+      "C3": 0.646,
+      "M2": 0.5863,
+      "order_holds": true
+    }
+  },
+  "cross_edge_homophily": {
+    "n_cross_edges": 1958,
+    "observed_same_label": 0.4397,
+    "expected_if_independent": 0.4902,
+    "excess": -0.0505
+  },
+  "verdict": {
+    "density_alone_insufficient": true,
+    "over_smoothing": true,
+    "neighbor_label_mismatch": true,
+    "representation_shift": true,
+    "normalization_robust": true
+  }
+}

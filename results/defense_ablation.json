@@ -1,0 +1,40 @@
+{
+  "experiment": "defense_ablation",
+  "comparison": {
+    "defense_ON_temporal": {
+      "lambda": 0.03,
+      "base_pr_auc": 0.9598,
+      "under_attack_pr_auc": 0.9383,
+      "ap_drop": 0.0215,
+      "evasion_rate_increase": 0.0356
+    },
+    "defense_OFF_static": {
+      "lambda": 0.0,
+      "base_pr_auc": 0.934,
+      "under_attack_pr_auc": 0.9022,
+      "ap_drop": 0.0318,
+      "evasion_rate_increase": 0.0756
+    }
+  },
+  "defense_effect": {
+    "ap_drop_reduction": 0.0103,
+    "evasion_increase_reduction": 0.04,
+    "interpretation": "时态加权防御若有效，应表现为攻击下 AP 退化更小、规避率提升更小。正值为防御有效。",
+    "honest_interpretation": "结论是混合的，不能声称\"防御有效\"：(1)攻击后绝对AP：ON=0.9383 > OFF=0.9022，时态加权保持更高绝对性能；(2)相对退化：误差尺度下ON膨胀53.5% > OFF 48.2%，ON反而更差；(3)根因是ON基线0.9598已接近天花板，绝对落差天然受限。因此本报告撤回\"时态加权是对抗防御\"的强主张，降级为\"鲁棒性观察\"，并承认这不是真正的对抗防御（无鲁棒优化/认证界）。",
+    "data_source": "Real-CATS 真实交易图 1500节点/6942边，random split，λ=0.03 vs 0.0；此前稿件未标注来源，现补正。"
+  },
+  "status": "PASS_WITH_CAVEAT",
+  "error_scale_analysis": {
+    "defense_ON": {
+      "err_before": 0.0402,
+      "err_after": 0.0617,
+      "inflation_pct": 53.5
+    },
+    "defense_OFF": {
+      "err_before": 0.066,
+      "err_after": 0.0978,
+      "inflation_pct": 48.2
+    },
+    "finding": "误差尺度下，时态加权的相对误差膨胀(53.5%)高于静态(48.2%)，与\"绝对落差更小\"的结论相反——这是基线不同导致的天花板效应。"
+  }
+}

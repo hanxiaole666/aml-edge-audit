@@ -1,0 +1,48 @@
+{
+  "experiment": "leakage_audit_v2",
+  "note": "Four non-vacuous audits. The first returns WARN because feature temporal availability is undocumented in the released data; we do not claim it passes.",
+  "checks": [
+    {
+      "audit": "feature_availability",
+      "n_features": 43,
+      "source": "Official Elliptic2 background_nodes.csv, precomputed by dataset authors",
+      "time_window_documentation": "The dataset release does not document whether each feature is computed over the full graph or a time window. We cannot certify temporal availability from the released files.",
+      "classification": {
+        "documented_as_time_windowed": 0,
+        "documented_as_global_aggregate": 0,
+        "undocumented": 43
+      },
+      "status": "WARN",
+      "interpretation": "All 43 features are undocumented with respect to temporal availability. This is a genuine limitation: we cannot rule out that they encode future information."
+    },
+    {
+      "audit": "label_reconstruction_probe",
+      "feature_only_AP": 0.1301,
+      "feature_only_AUC": 0.871,
+      "test_prevalence": 0.0227,
+      "AP_over_prevalence_ratio": 5.73,
+      "status": "PASS",
+      "interpretation": "Features alone predict labels well. This is expected for legitimate behavioral features and does NOT by itself prove leakage; it shows that the signal is in features, not subgraph topology."
+    },
+    {
+      "audit": "internal_vs_global_aggregation",
+      "pr_auc": {
+        "official_like_agg": 0.3131,
+        "internal_mean_only": 0.2542
+      },
+      "drop_internal_vs_official": 0.0589,
+      "status": "PASS",
+      "interpretation": "If internal-only features drop sharply, the official aggregate features carry additional signal that may include graph-wide information beyond the subgraph."
+    },
+    {
+      "audit": "temporal_proxy",
+      "pr_auc_by_period": {
+        "early_half": 0.9876,
+        "late_half": 0.9113
+      },
+      "status": "PASS",
+      "interpretation": "Performance on early vs late periods shows whether the feature-label relationship is stable over real time on Real-CATS."
+    }
+  ],
+  "status": "PASS_WITH_WARN"
+}

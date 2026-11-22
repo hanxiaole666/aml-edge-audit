@@ -1,0 +1,212 @@
+{
+  "experiment": "drift_buckets",
+  "label_subtype_note": "Neither release provides illicit subtypes, so label-type buckets are impossible; degree buckets substitute as a structural axis and are labelled as such.",
+  "elliptic2": {
+    "rows": [
+      {
+        "bucket": "size Q1",
+        "n": 6091,
+        "size_range": [
+          2.0,
+          2.0
+        ],
+        "prev": 0.022,
+        "AP": 0.6299,
+        "PSI_mean": 0.681,
+        "PSI_max": 4.4223,
+        "KS_mean": 0.0765,
+        "KS_max": 0.2314,
+        "MMD": 0.01329
+      },
+      {
+        "bucket": "size Q2",
+        "n": 6091,
+        "size_range": [
+          2.0,
+          2.0
+        ],
+        "prev": 0.0194,
+        "AP": 0.5346,
+        "PSI_mean": 0.6781,
+        "PSI_max": 4.4125,
+        "KS_mean": 0.0777,
+        "KS_max": 0.2247,
+        "MMD": 0.00888
+      },
+      {
+        "bucket": "size Q3",
+        "n": 6091,
+        "size_range": [
+          2.0,
+          3.0
+        ],
+        "prev": 0.022,
+        "AP": 0.5772,
+        "PSI_mean": 0.0814,
+        "PSI_max": 1.3903,
+        "KS_mean": 0.0454,
+        "KS_max": 0.1282,
+        "MMD": 0.00251
+      },
+      {
+        "bucket": "size Q4",
+        "n": 6090,
+        "size_range": [
+          3.0,
+          5.0
+        ],
+        "prev": 0.0245,
+        "AP": 0.5161,
+        "PSI_mean": 0.0653,
+        "PSI_max": 0.2525,
+        "KS_mean": 0.0675,
+        "KS_max": 0.1865,
+        "MMD": 0.0131
+      },
+      {
+        "bucket": "size Q5",
+        "n": 6090,
+        "size_range": [
+          5.0,
+          282.0
+        ],
+        "prev": 0.0274,
+        "AP": 0.3943,
+        "PSI_mean": 0.2391,
+        "PSI_max": 0.963,
+        "KS_mean": 0.1478,
+        "KS_max": 0.4037,
+        "MMD": 0.02877
+      }
+    ]
+  },
+  "real_cats": {
+    "rows": [
+      {
+        "bucket": "age 0-30d",
+        "n": 512,
+        "prev": 0.4883,
+        "AP": 0.8936,
+        "PSI_mean": 0.3567,
+        "PSI_max": 3.7955,
+        "KS_mean": 0.1058,
+        "KS_max": 0.2643,
+        "MMD": 0.04322
+      },
+      {
+        "bucket": "age 30-90d",
+        "n": 1158,
+        "prev": 0.4758,
+        "AP": 0.9189,
+        "PSI_mean": 0.3273,
+        "PSI_max": 4.0714,
+        "KS_mean": 0.1237,
+        "KS_max": 0.2738,
+        "MMD": 0.06632
+      },
+      {
+        "bucket": "age 90-180d",
+        "n": 1699,
+        "prev": 0.4614,
+        "AP": 0.8872,
+        "PSI_mean": 0.3372,
+        "PSI_max": 6.0945,
+        "KS_mean": 0.1011,
+        "KS_max": 0.3014,
+        "MMD": 0.03937
+      },
+      {
+        "bucket": "age 180-3650d",
+        "n": 3779,
+        "prev": 0.0984,
+        "AP": 0.6087,
+        "PSI_mean": 0.428,
+        "PSI_max": 6.1092,
+        "KS_mean": 0.1312,
+        "KS_max": 0.3444,
+        "MMD": 0.03396
+      },
+      {
+        "bucket": "activity Q1",
+        "n": 1968,
+        "activity_range": [
+          0.6931471805599453,
+          1.6094379134341006
+        ],
+        "prev": 0.185,
+        "AP": 0.6198,
+        "PSI_mean": 3.2537,
+        "PSI_max": 16.8403,
+        "KS_mean": 0.3419,
+        "KS_max": 0.7401,
+        "MMD": 0.24445
+      },
+      {
+        "bucket": "activity Q2",
+        "n": 2089,
+        "activity_range": [
+          1.6094379124341005,
+          2.6390573306152585
+        ],
+        "prev": 0.191,
+        "AP": 0.6712,
+        "PSI_mean": 2.043,
+        "PSI_max": 13.6365,
+        "KS_mean": 0.2272,
+        "KS_max": 0.5567,
+        "MMD": 0.09001
+      },
+      {
+        "bucket": "activity Q3",
+        "n": 1836,
+        "activity_range": [
+          2.6390573296152584,
+          3.9889840475642746
+        ],
+        "prev": 0.2473,
+        "AP": 0.7732,
+        "PSI_mean": 1.4934,
+        "PSI_max": 14.1727,
+        "KS_mean": 0.2059,
+        "KS_max": 0.4367,
+        "MMD": 0.15337
+      },
+      {
+        "bucket": "activity Q4",
+        "n": 1796,
+        "activity_range": [
+          3.9889840465642745,
+          12.218909895331665
+        ],
+        "prev": 0.4582,
+        "AP": 0.9033,
+        "PSI_mean": 1.1835,
+        "PSI_max": 12.0705,
+        "KS_mean": 0.2896,
+        "KS_max": 0.6813,
+        "MMD": 0.14558
+      }
+    ]
+  },
+  "status": "PASS",
+  "rank_corr_AP_vs_PSI": {
+    "elliptic2": 0.5,
+    "real_cats": -0.619
+  },
+  "verdict": {
+    "elliptic2_size_gradient": [
+      0.6299,
+      0.5346,
+      0.5772,
+      0.5161,
+      0.3943
+    ],
+    "real_cats_age_gradient": [
+      0.8936,
+      0.9189,
+      0.8872,
+      0.6087
+    ],
+    "note": "A monotone gradient with a matching PSI gradient means the drop is a measurable distribution shift, not unexplained variance."
+  }
+}

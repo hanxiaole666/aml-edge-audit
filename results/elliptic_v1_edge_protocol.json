@@ -1,0 +1,417 @@
+{
+  "experiment": "elliptic_v1_edge_protocol",
+  "n_tx": 203769,
+  "n_edges": 234355,
+  "n_labelled": 46564,
+  "illicit": 4545,
+  "licit": 42019,
+  "edge_time_definition": "max(time_step(u), time_step(v))",
+  "model": "LogisticRegression(C=0.1) on 2-hop symmetric-normalized smoothing, 93 local features",
+  "cutoffs": [
+    30,
+    33,
+    36,
+    39,
+    42
+  ],
+  "splits": [
+    {
+      "cutoff": 30,
+      "n_train": 26381,
+      "n_test": 19659,
+      "test_prevalence": 0.0809,
+      "conditions": {
+        "C1": {
+          "AP": 0.1053,
+          "n_edges": 234355,
+          "CI95": [
+            0.0982,
+            0.1101
+          ]
+        },
+        "C2": {
+          "AP": 0.1226,
+          "n_edges": 55309,
+          "CI95": [
+            0.1156,
+            0.1294
+          ]
+        },
+        "C3": {
+          "AP": 0.1352,
+          "n_edges": 20151,
+          "CI95": [
+            0.1279,
+            0.1416
+          ]
+        },
+        "M2": {
+          "AP": 0.1173,
+          "n_edges": 55309,
+          "CI95": [
+            0.1105,
+            0.1235
+          ]
+        },
+        "LightGBM-nograph": {
+          "AP": 0.8451,
+          "CI95": [
+            0.829,
+            0.86
+          ]
+        }
+      },
+      "paired": {
+        "C2_vs_C3": {
+          "diff": -0.0121,
+          "ci95": [
+            -0.0144,
+            -0.01
+          ],
+          "significant": true
+        },
+        "C2_vs_M2": {
+          "diff": 0.0056,
+          "ci95": [
+            0.0029,
+            0.0081
+          ],
+          "significant": true
+        },
+        "C1_vs_C2": {
+          "diff": -0.0186,
+          "ci95": [
+            -0.0216,
+            -0.0155
+          ],
+          "significant": true
+        }
+      }
+    },
+    {
+      "cutoff": 33,
+      "n_train": 28938,
+      "n_test": 17185,
+      "test_prevalence": 0.0652,
+      "conditions": {
+        "C1": {
+          "AP": 0.1029,
+          "n_edges": 234355,
+          "CI95": [
+            0.0959,
+            0.1109
+          ]
+        },
+        "C2": {
+          "AP": 0.1116,
+          "n_edges": 60319,
+          "CI95": [
+            0.1051,
+            0.1198
+          ]
+        },
+        "C3": {
+          "AP": 0.1467,
+          "n_edges": 22042,
+          "CI95": [
+            0.1373,
+            0.1581
+          ]
+        },
+        "M2": {
+          "AP": 0.1219,
+          "n_edges": 60319,
+          "CI95": [
+            0.1148,
+            0.1313
+          ]
+        },
+        "LightGBM-nograph": {
+          "AP": 0.7738,
+          "CI95": [
+            0.7513,
+            0.7922
+          ]
+        }
+      },
+      "paired": {
+        "C2_vs_C3": {
+          "diff": -0.0356,
+          "ci95": [
+            -0.0405,
+            -0.0302
+          ],
+          "significant": true
+        },
+        "C2_vs_M2": {
+          "diff": -0.0103,
+          "ci95": [
+            -0.0141,
+            -0.0066
+          ],
+          "significant": true
+        },
+        "C1_vs_C2": {
+          "diff": -0.0094,
+          "ci95": [
+            -0.0137,
+            -0.0047
+          ],
+          "significant": true
+        }
+      }
+    },
+    {
+      "cutoff": 36,
+      "n_train": 31235,
+      "n_test": 13621,
+      "test_prevalence": 0.0637,
+      "conditions": {
+        "C1": {
+          "AP": 0.1362,
+          "n_edges": 234355,
+          "CI95": [
+            0.1252,
+            0.1482
+          ]
+        },
+        "C2": {
+          "AP": 0.1278,
+          "n_edges": 65608,
+          "CI95": [
+            0.1178,
+            0.1381
+          ]
+        },
+        "C3": {
+          "AP": 0.1395,
+          "n_edges": 23900,
+          "CI95": [
+            0.1287,
+            0.1521
+          ]
+        },
+        "M2": {
+          "AP": 0.1344,
+          "n_edges": 65608,
+          "CI95": [
+            0.1238,
+            0.1461
+          ]
+        },
+        "LightGBM-nograph": {
+          "AP": 0.7344,
+          "CI95": [
+            0.707,
+            0.7631
+          ]
+        }
+      },
+      "paired": {
+        "C2_vs_C3": {
+          "diff": -0.0121,
+          "ci95": [
+            -0.0175,
+            -0.0072
+          ],
+          "significant": true
+        },
+        "C2_vs_M2": {
+          "diff": -0.0069,
+          "ci95": [
+            -0.0148,
+            -0.0002
+          ],
+          "significant": true
+        },
+        "C1_vs_C2": {
+          "diff": 0.0089,
+          "ci95": [
+            -0.0004,
+            0.0187
+          ],
+          "significant": false
+        }
+      }
+    },
+    {
+      "cutoff": 39,
+      "n_train": 34197,
+      "n_test": 11184,
+      "test_prevalence": 0.0569,
+      "conditions": {
+        "C1": {
+          "AP": 0.1219,
+          "n_edges": 234355,
+          "CI95": [
+            0.1102,
+            0.1363
+          ]
+        },
+        "C2": {
+          "AP": 0.1008,
+          "n_edges": 72797,
+          "CI95": [
+            0.0917,
+            0.1111
+          ]
+        },
+        "C3": {
+          "AP": 0.1158,
+          "n_edges": 26124,
+          "CI95": [
+            0.1056,
+            0.127
+          ]
+        },
+        "M2": {
+          "AP": 0.121,
+          "n_edges": 72797,
+          "CI95": [
+            0.1096,
+            0.1333
+          ]
+        },
+        "LightGBM-nograph": {
+          "AP": 0.6862,
+          "CI95": [
+            0.6544,
+            0.7208
+          ]
+        }
+      },
+      "paired": {
+        "C2_vs_C3": {
+          "diff": -0.015,
+          "ci95": [
+            -0.0185,
+            -0.0117
+          ],
+          "significant": true
+        },
+        "C2_vs_M2": {
+          "diff": -0.0203,
+          "ci95": [
+            -0.0275,
+            -0.0124
+          ],
+          "significant": true
+        },
+        "C1_vs_C2": {
+          "diff": 0.0211,
+          "ci95": [
+            0.0114,
+            0.031
+          ],
+          "significant": true
+        }
+      }
+    },
+    {
+      "cutoff": 42,
+      "n_train": 37723,
+      "n_test": 6687,
+      "test_prevalence": 0.0253,
+      "conditions": {
+        "C1": {
+          "AP": 0.0316,
+          "n_edges": 234355,
+          "CI95": [
+            0.0223,
+            0.0448
+          ]
+        },
+        "C2": {
+          "AP": 0.0286,
+          "n_edges": 80939,
+          "CI95": [
+            0.0229,
+            0.0359
+          ]
+        },
+        "C3": {
+          "AP": 0.0296,
+          "n_edges": 29407,
+          "CI95": [
+            0.0243,
+            0.0354
+          ]
+        },
+        "M2": {
+          "AP": 0.029,
+          "n_edges": 80939,
+          "CI95": [
+            0.0222,
+            0.0431
+          ]
+        },
+        "LightGBM-nograph": {
+          "AP": 0.0898,
+          "CI95": [
+            0.072,
+            0.1186
+          ]
+        }
+      },
+      "paired": {
+        "C2_vs_C3": {
+          "diff": -0.0008,
+          "ci95": [
+            -0.0036,
+            0.0024
+          ],
+          "significant": false
+        },
+        "C2_vs_M2": {
+          "diff": -0.0011,
+          "ci95": [
+            -0.0152,
+            0.0066
+          ],
+          "significant": false
+        },
+        "C1_vs_C2": {
+          "diff": 0.0027,
+          "ci95": [
+            -0.0068,
+            0.0179
+          ],
+          "significant": false
+        }
+      }
+    }
+  ],
+  "status": "PASS",
+  "aggregate": {
+    "C1": {
+      "mean": 0.0996,
+      "std": 0.0403,
+      "n_splits": 5
+    },
+    "C2": {
+      "mean": 0.0983,
+      "std": 0.0403,
+      "n_splits": 5
+    },
+    "C3": {
+      "mean": 0.1134,
+      "std": 0.0482,
+      "n_splits": 5
+    },
+    "M2": {
+      "mean": 0.1047,
+      "std": 0.0428,
+      "n_splits": 5
+    },
+    "LightGBM-nograph": {
+      "mean": 0.6259,
+      "std": 0.3053,
+      "n_splits": 5
+    }
+  },
+  "verdict": {
+    "C1_lt_C2_lt_C3_all_splits": false,
+    "C2_gt_M2_all_splits": false,
+    "interpretation": "The ordering does not hold on real time steps; the Real-CATS result is specific to derived first-seen times."
+  }
+}

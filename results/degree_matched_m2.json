@@ -1,0 +1,167 @@
+{
+ "experiment": "degree_matched_m2",
+ "dataset": "Real-CATS ETH",
+ "rows": [
+  {
+   "frac": 0.6,
+   "n_test": 600,
+   "n_edges": 4780,
+   "C2": {
+    "AP": 0.5958,
+    "test_degree": 1.8
+   },
+   "M2_degree_matched": {
+    "AP": 0.5982,
+    "test_degree": 1.8,
+    "degree_seq_equal": true,
+    "n_cross": 980,
+    "cross_observed_same": 0.4296,
+    "observed_same_all": 0.5105
+   },
+   "M2_uniform": {
+    "AP": 0.4275,
+    "test_degree": 6.393
+   },
+   "paired_M2p_minus_C2": {
+    "diff": 0.0024,
+    "boot_ci95": [
+     -0.0106,
+     0.0158
+    ],
+    "excludes_zero": false
+   }
+  },
+  {
+   "frac": 0.65,
+   "n_test": 525,
+   "n_edges": 4930,
+   "C2": {
+    "AP": 0.5962,
+    "test_degree": 2.021
+   },
+   "M2_degree_matched": {
+    "AP": 0.6072,
+    "test_degree": 2.021,
+    "degree_seq_equal": true,
+    "n_cross": 941,
+    "cross_observed_same": 0.4219,
+    "observed_same_all": 0.5073
+   },
+   "M2_uniform": {
+    "AP": 0.4321,
+    "test_degree": 6.663
+   },
+   "paired_M2p_minus_C2": {
+    "diff": 0.011,
+    "boot_ci95": [
+     -0.004,
+     0.0249
+    ],
+    "excludes_zero": false
+   }
+  },
+  {
+   "frac": 0.7,
+   "n_test": 450,
+   "n_edges": 5101,
+   "C2": {
+    "AP": 0.6049,
+    "test_degree": 2.062
+   },
+   "M2_degree_matched": {
+    "AP": 0.6224,
+    "test_degree": 2.062,
+    "degree_seq_equal": true,
+    "n_cross": 852,
+    "cross_observed_same": 0.4531,
+    "observed_same_all": 0.506
+   },
+   "M2_uniform": {
+    "AP": 0.4467,
+    "test_degree": 6.944
+   },
+   "paired_M2p_minus_C2": {
+    "diff": 0.0175,
+    "boot_ci95": [
+     0.0025,
+     0.0322
+    ],
+    "excludes_zero": true
+   }
+  },
+  {
+   "frac": 0.75,
+   "n_test": 375,
+   "n_edges": 5349,
+   "C2": {
+    "AP": 0.6185,
+    "test_degree": 2.44
+   },
+   "M2_degree_matched": {
+    "AP": 0.6346,
+    "test_degree": 2.44,
+    "degree_seq_equal": true,
+    "n_cross": 821,
+    "cross_observed_same": 0.4604,
+    "observed_same_all": 0.5055
+   },
+   "M2_uniform": {
+    "AP": 0.414,
+    "test_degree": 7.403
+   },
+   "paired_M2p_minus_C2": {
+    "diff": 0.0161,
+    "boot_ci95": [
+     -0.0015,
+     0.0334
+    ],
+    "excludes_zero": false
+   }
+  },
+  {
+   "frac": 0.8,
+   "n_test": 300,
+   "n_edges": 5813,
+   "C2": {
+    "AP": 0.6135,
+    "test_degree": 2.37
+   },
+   "M2_degree_matched": {
+    "AP": 0.6212,
+    "test_degree": 2.37,
+    "degree_seq_equal": true,
+    "n_cross": 669,
+    "cross_observed_same": 0.4619,
+    "observed_same_all": 0.4961
+   },
+   "M2_uniform": {
+    "AP": 0.4478,
+    "test_degree": 7.977
+   },
+   "paired_M2p_minus_C2": {
+    "diff": 0.0077,
+    "boot_ci95": [
+     -0.0111,
+     0.0291
+    ],
+    "excludes_zero": false
+   }
+  }
+ ],
+ "means": {
+  "C2": 0.6058,
+  "M2_degree_matched": 0.6167,
+  "M2_uniform": 0.4336
+ },
+ "paired_summary": {
+  "mean_diff": 0.0109,
+  "n_splits": 5
+ },
+ "verdict": {
+  "gap_C2_minus_M2p": -0.0109,
+  "gap_M2p_minus_M2u": 0.1831,
+  "degree_matched_recovers_C2": true,
+  "note": "If M2' stays near the uniform M2, degree is not the channel. If it rises toward C2, degree matters and the claim must be softened."
+ },
+ "status": "PASS"
+}

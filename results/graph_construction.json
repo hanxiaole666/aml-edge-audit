@@ -1,0 +1,1323 @@
+{
+ "experiment": "graph_construction",
+ "dataset": "Real-CATS ETH",
+ "n_nodes": 1500,
+ "n_illicit": 750,
+ "protocol": "5 temporal cutoffs x 4 conditions per construction",
+ "constructions": [
+  {
+   "name": "min1_hot50",
+   "description": "shared>=1, hot<=50 (paper baseline)",
+   "n_edges": 26752,
+   "n_contract_nodes": 0,
+   "mean_gain_C3_minus_C1": 0.1234,
+   "min_gain": 0.113,
+   "max_gain": 0.1381,
+   "splits": [
+    {
+     "frac": 0.6,
+     "n_test": 600,
+     "prevalence": 0.4383,
+     "conditions": {
+      "C1": {
+       "AP": 0.4812,
+       "n_edges": 26752,
+       "test_degree": 34.45
+      },
+      "C2": {
+       "AP": 0.5079,
+       "n_edges": 21631,
+       "test_degree": 17.38
+      },
+      "C3": {
+       "AP": 0.5942,
+       "n_edges": 11203,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.4095,
+       "n_edges": 21631,
+       "test_degree": 28.905
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.114,
+      "ci95": [
+       0.0816,
+       0.1532
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 10428,
+      "observed_same": 0.4334,
+      "expected": 0.4949,
+      "excess": -0.0616
+     }
+    },
+    {
+     "frac": 0.65,
+     "n_test": 525,
+     "prevalence": 0.4343,
+     "conditions": {
+      "C1": {
+       "AP": 0.4925,
+       "n_edges": 26752,
+       "test_degree": 34.406
+      },
+      "C2": {
+       "AP": 0.5203,
+       "n_edges": 22603,
+       "test_degree": 18.6
+      },
+      "C3": {
+       "AP": 0.6183,
+       "n_edges": 12838,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.4252,
+       "n_edges": 22603,
+       "test_degree": 30.139
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.125,
+      "ci95": [
+       0.0847,
+       0.1687
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 9765,
+      "observed_same": 0.429,
+      "expected": 0.4953,
+      "excess": -0.0664
+     }
+    },
+    {
+     "frac": 0.7,
+     "n_test": 450,
+     "prevalence": 0.4156,
+     "conditions": {
+      "C1": {
+       "AP": 0.4903,
+       "n_edges": 26752,
+       "test_degree": 34.584
+      },
+      "C2": {
+       "AP": 0.5142,
+       "n_edges": 23548,
+       "test_degree": 20.344
+      },
+      "C3": {
+       "AP": 0.6203,
+       "n_edges": 14393,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.3907,
+       "n_edges": 23548,
+       "test_degree": 31.462
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.1271,
+      "ci95": [
+       0.0834,
+       0.1734
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 9155,
+      "observed_same": 0.4487,
+      "expected": 0.4939,
+      "excess": -0.0452
+     }
+    },
+    {
+     "frac": 0.75,
+     "n_test": 375,
+     "prevalence": 0.4213,
+     "conditions": {
+      "C1": {
+       "AP": 0.5375,
+       "n_edges": 26752,
+       "test_degree": 34.101
+      },
+      "C2": {
+       "AP": 0.5556,
+       "n_edges": 24384,
+       "test_degree": 21.472
+      },
+      "C3": {
+       "AP": 0.6768,
+       "n_edges": 16332,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.4234,
+       "n_edges": 24384,
+       "test_degree": 32.539
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.1381,
+      "ci95": [
+       0.0899,
+       0.1875
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 8052,
+      "observed_same": 0.4616,
+      "expected": 0.4959,
+      "excess": -0.0342
+     }
+    },
+    {
+     "frac": 0.8,
+     "n_test": 300,
+     "prevalence": 0.3733,
+     "conditions": {
+      "C1": {
+       "AP": 0.5171,
+       "n_edges": 26752,
+       "test_degree": 30.847
+      },
+      "C2": {
+       "AP": 0.5254,
+       "n_edges": 25402,
+       "test_degree": 21.847
+      },
+      "C3": {
+       "AP": 0.6317,
+       "n_edges": 18848,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.3708,
+       "n_edges": 25402,
+       "test_degree": 33.757
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.113,
+      "ci95": [
+       0.0499,
+       0.182
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 6554,
+      "observed_same": 0.4982,
+      "expected": 0.492,
+      "excess": 0.0062
+     }
+    }
+   ]
+  },
+  {
+   "name": "min2_hot50",
+   "description": "shared>=2",
+   "n_edges": 7964,
+   "n_contract_nodes": 0,
+   "mean_gain_C3_minus_C1": 0.1019,
+   "min_gain": 0.0876,
+   "max_gain": 0.112,
+   "splits": [
+    {
+     "frac": 0.6,
+     "n_test": 600,
+     "prevalence": 0.4383,
+     "conditions": {
+      "C1": {
+       "AP": 0.5483,
+       "n_edges": 7964,
+       "test_degree": 10.893
+      },
+      "C2": {
+       "AP": 0.5776,
+       "n_edges": 6243,
+       "test_degree": 5.157
+      },
+      "C3": {
+       "AP": 0.65,
+       "n_edges": 3149,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.4938,
+       "n_edges": 6243,
+       "test_degree": 8.338
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.1018,
+      "ci95": [
+       0.0786,
+       0.1338
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 3094,
+      "observed_same": 0.4153,
+      "expected": 0.4949,
+      "excess": -0.0796
+     }
+    },
+    {
+     "frac": 0.65,
+     "n_test": 525,
+     "prevalence": 0.4343,
+     "conditions": {
+      "C1": {
+       "AP": 0.5637,
+       "n_edges": 7964,
+       "test_degree": 11.341
+      },
+      "C2": {
+       "AP": 0.5839,
+       "n_edges": 6494,
+       "test_degree": 5.741
+      },
+      "C3": {
+       "AP": 0.6659,
+       "n_edges": 3480,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.4724,
+       "n_edges": 6494,
+       "test_degree": 8.667
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.1014,
+      "ci95": [
+       0.0714,
+       0.1378
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 3014,
+      "observed_same": 0.4214,
+      "expected": 0.4953,
+      "excess": -0.074
+     }
+    },
+    {
+     "frac": 0.7,
+     "n_test": 450,
+     "prevalence": 0.4156,
+     "conditions": {
+      "C1": {
+       "AP": 0.5524,
+       "n_edges": 7964,
+       "test_degree": 11.816
+      },
+      "C2": {
+       "AP": 0.5725,
+       "n_edges": 6763,
+       "test_degree": 6.478
+      },
+      "C3": {
+       "AP": 0.6611,
+       "n_edges": 3848,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.439,
+       "n_edges": 6763,
+       "test_degree": 9.069
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.1069,
+      "ci95": [
+       0.0709,
+       0.1438
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 2915,
+      "observed_same": 0.4453,
+      "expected": 0.4939,
+      "excess": -0.0486
+     }
+    },
+    {
+     "frac": 0.75,
+     "n_test": 375,
+     "prevalence": 0.4213,
+     "conditions": {
+      "C1": {
+       "AP": 0.5837,
+       "n_edges": 7964,
+       "test_degree": 11.517
+      },
+      "C2": {
+       "AP": 0.5948,
+       "n_edges": 7088,
+       "test_degree": 6.845
+      },
+      "C3": {
+       "AP": 0.6967,
+       "n_edges": 4521,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.4374,
+       "n_edges": 7088,
+       "test_degree": 9.488
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.112,
+      "ci95": [
+       0.0766,
+       0.156
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 2567,
+      "observed_same": 0.4706,
+      "expected": 0.4959,
+      "excess": -0.0253
+     }
+    },
+    {
+     "frac": 0.8,
+     "n_test": 300,
+     "prevalence": 0.3733,
+     "conditions": {
+      "C1": {
+       "AP": 0.5573,
+       "n_edges": 7964,
+       "test_degree": 10.14
+      },
+      "C2": {
+       "AP": 0.553,
+       "n_edges": 7482,
+       "test_degree": 6.927
+      },
+      "C3": {
+       "AP": 0.6442,
+       "n_edges": 5404,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.4855,
+       "n_edges": 7482,
+       "test_degree": 9.983
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.0876,
+      "ci95": [
+       0.0388,
+       0.149
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 2078,
+      "observed_same": 0.5241,
+      "expected": 0.492,
+      "excess": 0.0321
+     }
+    }
+   ]
+  },
+  {
+   "name": "min5_hot50",
+   "description": "shared>=5",
+   "n_edges": 1801,
+   "n_contract_nodes": 0,
+   "mean_gain_C3_minus_C1": 0.0548,
+   "min_gain": 0.0463,
+   "max_gain": 0.0654,
+   "splits": [
+    {
+     "frac": 0.6,
+     "n_test": 600,
+     "prevalence": 0.4383,
+     "conditions": {
+      "C1": {
+       "AP": 0.6368,
+       "n_edges": 1801,
+       "test_degree": 2.59
+      },
+      "C2": {
+       "AP": 0.6656,
+       "n_edges": 1336,
+       "test_degree": 1.04
+      },
+      "C3": {
+       "AP": 0.6887,
+       "n_edges": 712,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.5073,
+       "n_edges": 1336,
+       "test_degree": 1.775
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.052,
+      "ci95": [
+       0.0326,
+       0.0724
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 624,
+      "observed_same": 0.4279,
+      "expected": 0.4949,
+      "excess": -0.067
+     }
+    },
+    {
+     "frac": 0.65,
+     "n_test": 525,
+     "prevalence": 0.4343,
+     "conditions": {
+      "C1": {
+       "AP": 0.6422,
+       "n_edges": 1801,
+       "test_degree": 2.764
+      },
+      "C2": {
+       "AP": 0.6691,
+       "n_edges": 1387,
+       "test_degree": 1.187
+      },
+      "C3": {
+       "AP": 0.6985,
+       "n_edges": 764,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.5795,
+       "n_edges": 1387,
+       "test_degree": 1.827
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.0557,
+      "ci95": [
+       0.0325,
+       0.0804
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 623,
+      "observed_same": 0.4222,
+      "expected": 0.4953,
+      "excess": -0.0732
+     }
+    },
+    {
+     "frac": 0.7,
+     "n_test": 450,
+     "prevalence": 0.4156,
+     "conditions": {
+      "C1": {
+       "AP": 0.628,
+       "n_edges": 1801,
+       "test_degree": 3.016
+      },
+      "C2": {
+       "AP": 0.6512,
+       "n_edges": 1438,
+       "test_degree": 1.402
+      },
+      "C3": {
+       "AP": 0.6837,
+       "n_edges": 807,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.5926,
+       "n_edges": 1438,
+       "test_degree": 1.851
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.0548,
+      "ci95": [
+       0.0287,
+       0.083
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 631,
+      "observed_same": 0.4501,
+      "expected": 0.4939,
+      "excess": -0.0438
+     }
+    },
+    {
+     "frac": 0.75,
+     "n_test": 375,
+     "prevalence": 0.4213,
+     "conditions": {
+      "C1": {
+       "AP": 0.6501,
+       "n_edges": 1801,
+       "test_degree": 3.059
+      },
+      "C2": {
+       "AP": 0.6739,
+       "n_edges": 1522,
+       "test_degree": 1.571
+      },
+      "C3": {
+       "AP": 0.7168,
+       "n_edges": 933,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.5879,
+       "n_edges": 1522,
+       "test_degree": 1.941
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.0654,
+      "ci95": [
+       0.0357,
+       0.0982
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 589,
+      "observed_same": 0.4822,
+      "expected": 0.4959,
+      "excess": -0.0137
+     }
+    },
+    {
+     "frac": 0.8,
+     "n_test": 300,
+     "prevalence": 0.3733,
+     "conditions": {
+      "C1": {
+       "AP": 0.6106,
+       "n_edges": 1801,
+       "test_degree": 2.453
+      },
+      "C2": {
+       "AP": 0.6148,
+       "n_edges": 1664,
+       "test_degree": 1.54
+      },
+      "C3": {
+       "AP": 0.657,
+       "n_edges": 1202,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.5101,
+       "n_edges": 1664,
+       "test_degree": 2.18
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.0463,
+      "ci95": [
+       0.0144,
+       0.0819
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 462,
+      "observed_same": 0.5671,
+      "expected": 0.492,
+      "excess": 0.0751
+     }
+    }
+   ]
+  },
+  {
+   "name": "min1_hot20",
+   "description": "hot<=20",
+   "n_edges": 13547,
+   "n_contract_nodes": 0,
+   "mean_gain_C3_minus_C1": 0.1273,
+   "min_gain": 0.1094,
+   "max_gain": 0.1404,
+   "splits": [
+    {
+     "frac": 0.6,
+     "n_test": 600,
+     "prevalence": 0.4383,
+     "conditions": {
+      "C1": {
+       "AP": 0.5,
+       "n_edges": 13547,
+       "test_degree": 18.935
+      },
+      "C2": {
+       "AP": 0.5268,
+       "n_edges": 10532,
+       "test_degree": 8.885
+      },
+      "C3": {
+       "AP": 0.6264,
+       "n_edges": 5201,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.4371,
+       "n_edges": 10532,
+       "test_degree": 14.088
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.1262,
+      "ci95": [
+       0.0949,
+       0.1631
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 5331,
+      "observed_same": 0.4361,
+      "expected": 0.4949,
+      "excess": -0.0588
+     }
+    },
+    {
+     "frac": 0.65,
+     "n_test": 525,
+     "prevalence": 0.4343,
+     "conditions": {
+      "C1": {
+       "AP": 0.5136,
+       "n_edges": 13547,
+       "test_degree": 19.73
+      },
+      "C2": {
+       "AP": 0.5365,
+       "n_edges": 10957,
+       "test_degree": 9.863
+      },
+      "C3": {
+       "AP": 0.644,
+       "n_edges": 5779,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.394,
+       "n_edges": 10957,
+       "test_degree": 14.712
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.1296,
+      "ci95": [
+       0.093,
+       0.1766
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 5178,
+      "observed_same": 0.4407,
+      "expected": 0.4953,
+      "excess": -0.0546
+     }
+    },
+    {
+     "frac": 0.7,
+     "n_test": 450,
+     "prevalence": 0.4156,
+     "conditions": {
+      "C1": {
+       "AP": 0.5074,
+       "n_edges": 13547,
+       "test_degree": 20.258
+      },
+      "C2": {
+       "AP": 0.5271,
+       "n_edges": 11479,
+       "test_degree": 11.067
+      },
+      "C3": {
+       "AP": 0.6409,
+       "n_edges": 6499,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.4382,
+       "n_edges": 11479,
+       "test_degree": 15.4
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.1309,
+      "ci95": [
+       0.0876,
+       0.1748
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 4980,
+      "observed_same": 0.459,
+      "expected": 0.4939,
+      "excess": -0.0349
+     }
+    },
+    {
+     "frac": 0.75,
+     "n_test": 375,
+     "prevalence": 0.4213,
+     "conditions": {
+      "C1": {
+       "AP": 0.5396,
+       "n_edges": 13547,
+       "test_degree": 20.544
+      },
+      "C2": {
+       "AP": 0.5633,
+       "n_edges": 11994,
+       "test_degree": 12.261
+      },
+      "C3": {
+       "AP": 0.6815,
+       "n_edges": 7396,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.4279,
+       "n_edges": 11994,
+       "test_degree": 16.179
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.1404,
+      "ci95": [
+       0.0896,
+       0.1891
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 4598,
+      "observed_same": 0.4706,
+      "expected": 0.4959,
+      "excess": -0.0252
+     }
+    },
+    {
+     "frac": 0.8,
+     "n_test": 300,
+     "prevalence": 0.3733,
+     "conditions": {
+      "C1": {
+       "AP": 0.5189,
+       "n_edges": 13547,
+       "test_degree": 18.83
+      },
+      "C2": {
+       "AP": 0.5279,
+       "n_edges": 12640,
+       "test_degree": 12.783
+      },
+      "C3": {
+       "AP": 0.6302,
+       "n_edges": 8805,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.4466,
+       "n_edges": 12640,
+       "test_degree": 16.857
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.1094,
+      "ci95": [
+       0.0418,
+       0.1804
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 3835,
+      "observed_same": 0.5108,
+      "expected": 0.492,
+      "excess": 0.0188
+     }
+    }
+   ]
+  },
+  {
+   "name": "min1_hot100",
+   "description": "hot<=100",
+   "n_edges": 34406,
+   "n_contract_nodes": 0,
+   "mean_gain_C3_minus_C1": 0.1439,
+   "min_gain": 0.1195,
+   "max_gain": 0.1671,
+   "splits": [
+    {
+     "frac": 0.6,
+     "n_test": 600,
+     "prevalence": 0.4383,
+     "conditions": {
+      "C1": {
+       "AP": 0.4827,
+       "n_edges": 34406,
+       "test_degree": 45.618
+      },
+      "C2": {
+       "AP": 0.5049,
+       "n_edges": 27861,
+       "test_degree": 23.802
+      },
+      "C3": {
+       "AP": 0.6015,
+       "n_edges": 13580,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.4083,
+       "n_edges": 27861,
+       "test_degree": 37.273
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.1195,
+      "ci95": [
+       0.0835,
+       0.16
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 14281,
+      "observed_same": 0.4283,
+      "expected": 0.4949,
+      "excess": -0.0666
+     }
+    },
+    {
+     "frac": 0.65,
+     "n_test": 525,
+     "prevalence": 0.4343,
+     "conditions": {
+      "C1": {
+       "AP": 0.4849,
+       "n_edges": 34406,
+       "test_degree": 46.785
+      },
+      "C2": {
+       "AP": 0.5082,
+       "n_edges": 28925,
+       "test_degree": 25.905
+      },
+      "C3": {
+       "AP": 0.6215,
+       "n_edges": 15325,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.4012,
+       "n_edges": 28925,
+       "test_degree": 38.758
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.1357,
+      "ci95": [
+       0.0873,
+       0.1802
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 13600,
+      "observed_same": 0.4242,
+      "expected": 0.4953,
+      "excess": -0.0712
+     }
+    },
+    {
+     "frac": 0.7,
+     "n_test": 450,
+     "prevalence": 0.4156,
+     "conditions": {
+      "C1": {
+       "AP": 0.4778,
+       "n_edges": 34406,
+       "test_degree": 47.756
+      },
+      "C2": {
+       "AP": 0.4985,
+       "n_edges": 30094,
+       "test_degree": 28.591
+      },
+      "C3": {
+       "AP": 0.6213,
+       "n_edges": 17228,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.4099,
+       "n_edges": 30094,
+       "test_degree": 40.424
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.1407,
+      "ci95": [
+       0.0913,
+       0.1908
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 12866,
+      "observed_same": 0.4409,
+      "expected": 0.4939,
+      "excess": -0.053
+     }
+    },
+    {
+     "frac": 0.75,
+     "n_test": 375,
+     "prevalence": 0.4213,
+     "conditions": {
+      "C1": {
+       "AP": 0.5164,
+       "n_edges": 34406,
+       "test_degree": 46.965
+      },
+      "C2": {
+       "AP": 0.5325,
+       "n_edges": 31284,
+       "test_degree": 30.315
+      },
+      "C3": {
+       "AP": 0.6828,
+       "n_edges": 19916,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.4171,
+       "n_edges": 31284,
+       "test_degree": 42.088
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.1671,
+      "ci95": [
+       0.1184,
+       0.2183
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 11368,
+      "observed_same": 0.4454,
+      "expected": 0.4959,
+      "excess": -0.0505
+     }
+    },
+    {
+     "frac": 0.8,
+     "n_test": 300,
+     "prevalence": 0.3733,
+     "conditions": {
+      "C1": {
+       "AP": 0.4867,
+       "n_edges": 34406,
+       "test_degree": 43.037
+      },
+      "C2": {
+       "AP": 0.491,
+       "n_edges": 32625,
+       "test_degree": 31.163
+      },
+      "C3": {
+       "AP": 0.6443,
+       "n_edges": 23276,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.4122,
+       "n_edges": 32625,
+       "test_degree": 43.857
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.1564,
+      "ci95": [
+       0.095,
+       0.2206
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 9349,
+      "observed_same": 0.4766,
+      "expected": 0.492,
+      "excess": -0.0153
+     }
+    }
+   ]
+  },
+  {
+   "name": "bipartite",
+   "description": "address--contract bipartite",
+   "n_edges": 15503,
+   "n_contract_nodes": 4015,
+   "mean_gain_C3_minus_C1": 0.0964,
+   "min_gain": 0.0463,
+   "max_gain": 0.1365,
+   "splits": [
+    {
+     "frac": 0.6,
+     "n_test": 600,
+     "prevalence": 0.4383,
+     "conditions": {
+      "C1": {
+       "AP": 0.5611,
+       "n_edges": 15503,
+       "test_degree": 11.73
+      },
+      "C2": {
+       "AP": 0.6453,
+       "n_edges": 8465,
+       "test_degree": 0.0
+      },
+      "C3": {
+       "AP": 0.6986,
+       "n_edges": 0,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.5214,
+       "n_edges": 8465,
+       "test_degree": 3.158
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.1365,
+      "ci95": [
+       0.1045,
+       0.1729
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 0,
+      "observed_same": null,
+      "expected": null,
+      "excess": null
+     }
+    },
+    {
+     "frac": 0.65,
+     "n_test": 525,
+     "prevalence": 0.4343,
+     "conditions": {
+      "C1": {
+       "AP": 0.5902,
+       "n_edges": 15503,
+       "test_degree": 12.623
+      },
+      "C2": {
+       "AP": 0.6668,
+       "n_edges": 8876,
+       "test_degree": 0.0
+      },
+      "C3": {
+       "AP": 0.7105,
+       "n_edges": 0,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.5551,
+       "n_edges": 8876,
+       "test_degree": 3.255
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.1194,
+      "ci95": [
+       0.0826,
+       0.1589
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 0,
+      "observed_same": null,
+      "expected": null,
+      "excess": null
+     }
+    },
+    {
+     "frac": 0.7,
+     "n_test": 450,
+     "prevalence": 0.4156,
+     "conditions": {
+      "C1": {
+       "AP": 0.5897,
+       "n_edges": 15503,
+       "test_degree": 13.542
+      },
+      "C2": {
+       "AP": 0.6628,
+       "n_edges": 9409,
+       "test_degree": 0.0
+      },
+      "C3": {
+       "AP": 0.6941,
+       "n_edges": 0,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.4971,
+       "n_edges": 9409,
+       "test_degree": 3.424
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.102,
+      "ci95": [
+       0.0635,
+       0.1442
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 0,
+      "observed_same": null,
+      "expected": null,
+      "excess": null
+     }
+    },
+    {
+     "frac": 0.75,
+     "n_test": 375,
+     "prevalence": 0.4213,
+     "conditions": {
+      "C1": {
+       "AP": 0.6474,
+       "n_edges": 15503,
+       "test_degree": 14.72
+      },
+      "C2": {
+       "AP": 0.7054,
+       "n_edges": 9983,
+       "test_degree": 0.0
+      },
+      "C3": {
+       "AP": 0.7268,
+       "n_edges": 0,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.6055,
+       "n_edges": 9983,
+       "test_degree": 3.648
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.0777,
+      "ci95": [
+       0.0331,
+       0.121
+      ],
+      "excludes_zero": true
+     },
+     "cross_excess": {
+      "n_edges": 0,
+      "observed_same": null,
+      "expected": null,
+      "excess": null
+     }
+    },
+    {
+     "frac": 0.8,
+     "n_test": 300,
+     "prevalence": 0.3733,
+     "conditions": {
+      "C1": {
+       "AP": 0.6275,
+       "n_edges": 15503,
+       "test_degree": 11.927
+      },
+      "C2": {
+       "AP": 0.6558,
+       "n_edges": 11925,
+       "test_degree": 0.0
+      },
+      "C3": {
+       "AP": 0.6746,
+       "n_edges": 0,
+       "test_degree": 0.0
+      },
+      "M2": {
+       "AP": 0.5624,
+       "n_edges": 11925,
+       "test_degree": 4.333
+      }
+     },
+     "C3_minus_C1": {
+      "diff": 0.0463,
+      "ci95": [
+       -0.0088,
+       0.1021
+      ],
+      "excludes_zero": false
+     },
+     "cross_excess": {
+      "n_edges": 0,
+      "observed_same": null,
+      "expected": null,
+      "excess": null
+     }
+    }
+   ]
+  }
+ ],
+ "verdict": {
+  "gains_by_construction": [
+   0.1234,
+   0.1019,
+   0.0548,
+   0.1273,
+   0.1439,
+   0.0964
+  ],
+  "all_positive": true,
+  "range": [
+   0.0548,
+   0.1439
+  ],
+  "spread": 0.0891,
+  "note": "If every construction keeps the sign, the gain is not an artefact of one edge definition; the spread bounds how much of the magnitude is construction."
+ },
+ "status": "PASS"
+}

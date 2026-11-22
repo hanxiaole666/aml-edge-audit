@@ -1,0 +1,9 @@
+model,split,PR_AUC_mean,PR_AUC_std,AUC_mean,AUC_std,ECE_mean,n
+elliptic2_full_LightGBM,random,0.535606,0.008814,0.931416,0.003284,0.004224,5
+elliptic2_full_LightGBM,size,0.371693,0.000000,0.885070,0.000000,0.004383,5
+elliptic2_full_LogisticRegression,random,0.140958,0.005593,0.876718,0.003018,0.256406,5
+elliptic2_full_LogisticRegression,size,0.088777,0.000000,0.811435,0.000000,0.381541,5
+elliptic2_full_RandomForest,random,0.397738,0.011098,0.914841,0.003221,0.122617,5
+elliptic2_full_RandomForest,size,0.214809,0.004870,0.866327,0.001319,0.158623,5
+elliptic2_full_XGBoost,random,0.508328,0.006686,0.925803,0.003682,0.089955,5
+elliptic2_full_XGBoost,size,0.337489,0.000000,0.865933,0.000000,0.156485,5

@@ -1,0 +1,52 @@
+{
+  "experiment": "end_to_end_resource",
+  "hardware": {
+    "cpu_threads": 6,
+    "gpu": "NVIDIA GeForce RTX 2060"
+  },
+  "n_train": 21443,
+  "n_test": 7148,
+  "status": "PASS",
+  "pipeline": {
+    "feature_extraction_sec": 0.016,
+    "scaling_sec": 0.036,
+    "rss_before_MB": 430.9,
+    "rss_after_MB": 498.4,
+    "rss_delta_MB": 67.5
+  },
+  "models": {
+    "LogisticRegression": {
+      "train_sec": 0.357,
+      "infer_batch100_p50_ms": 0.113,
+      "infer_batch100_p95_ms": 0.148,
+      "n_params_or_trees": 49
+    },
+    "RandomForest": {
+      "train_sec": 2.295,
+      "infer_batch100_p50_ms": 41.109,
+      "infer_batch100_p95_ms": 43.731,
+      "n_params_or_trees": 200
+    }
+  },
+  "feasible_set": [
+    {
+      "model": "LogisticRegression",
+      "latency_ms": 0.113,
+      "memory_MB": 49,
+      "PR_AUC": 0.9641
+    },
+    {
+      "model": "RandomForest",
+      "latency_ms": 41.109,
+      "memory_MB": 200,
+      "PR_AUC": 0.9745
+    }
+  ],
+  "example_budget_L5_M500": {
+    "L_max_ms": 5.0,
+    "M_max": 500,
+    "feasible_models": [
+      "LogisticRegression"
+    ]
+  }
+}

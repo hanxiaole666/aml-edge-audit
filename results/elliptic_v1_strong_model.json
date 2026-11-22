@@ -1,0 +1,278 @@
+{
+  "experiment": "elliptic_v1_strong_model",
+  "model": "LightGBM on [X_local, neighbour-mean, neighbour-max] (279 dims)",
+  "cutoffs": [
+    30,
+    33,
+    36,
+    39,
+    42
+  ],
+  "splits": [
+    {
+      "cutoff": 30,
+      "n_train": 26381,
+      "n_test": 19659,
+      "test_prevalence": 0.0809,
+      "conditions": {
+        "C1": {
+          "AP": 0.8629,
+          "n_edges": 234355,
+          "CI95": [
+            0.8488,
+            0.8771
+          ]
+        },
+        "C2": {
+          "AP": 0.8437,
+          "n_edges": 55309,
+          "CI95": [
+            0.8285,
+            0.8585
+          ]
+        },
+        "C3": {
+          "AP": 0.8469,
+          "n_edges": 20151,
+          "CI95": [
+            0.8307,
+            0.863
+          ]
+        },
+        "M2": {
+          "AP": 0.8434,
+          "n_edges": 55309,
+          "CI95": [
+            0.8279,
+            0.859
+          ]
+        }
+      }
+    },
+    {
+      "cutoff": 33,
+      "n_train": 28938,
+      "n_test": 17185,
+      "test_prevalence": 0.0652,
+      "conditions": {
+        "C1": {
+          "AP": 0.795,
+          "n_edges": 234355,
+          "CI95": [
+            0.7746,
+            0.8134
+          ]
+        },
+        "C2": {
+          "AP": 0.785,
+          "n_edges": 60319,
+          "CI95": [
+            0.7642,
+            0.8038
+          ]
+        },
+        "C3": {
+          "AP": 0.7875,
+          "n_edges": 22042,
+          "CI95": [
+            0.7661,
+            0.8054
+          ]
+        },
+        "M2": {
+          "AP": 0.7856,
+          "n_edges": 60319,
+          "CI95": [
+            0.765,
+            0.8036
+          ]
+        }
+      }
+    },
+    {
+      "cutoff": 36,
+      "n_train": 31235,
+      "n_test": 13621,
+      "test_prevalence": 0.0637,
+      "conditions": {
+        "C1": {
+          "AP": 0.7582,
+          "n_edges": 234355,
+          "CI95": [
+            0.7342,
+            0.7849
+          ]
+        },
+        "C2": {
+          "AP": 0.7283,
+          "n_edges": 65608,
+          "CI95": [
+            0.7018,
+            0.7553
+          ]
+        },
+        "C3": {
+          "AP": 0.7265,
+          "n_edges": 23900,
+          "CI95": [
+            0.6998,
+            0.754
+          ]
+        },
+        "M2": {
+          "AP": 0.7407,
+          "n_edges": 65608,
+          "CI95": [
+            0.7159,
+            0.7677
+          ]
+        }
+      }
+    },
+    {
+      "cutoff": 39,
+      "n_train": 34197,
+      "n_test": 11184,
+      "test_prevalence": 0.0569,
+      "conditions": {
+        "C1": {
+          "AP": 0.7057,
+          "n_edges": 234355,
+          "CI95": [
+            0.6734,
+            0.7365
+          ]
+        },
+        "C2": {
+          "AP": 0.6761,
+          "n_edges": 72797,
+          "CI95": [
+            0.6466,
+            0.7097
+          ]
+        },
+        "C3": {
+          "AP": 0.661,
+          "n_edges": 26124,
+          "CI95": [
+            0.6318,
+            0.6941
+          ]
+        },
+        "M2": {
+          "AP": 0.706,
+          "n_edges": 72797,
+          "CI95": [
+            0.6765,
+            0.7384
+          ]
+        }
+      }
+    },
+    {
+      "cutoff": 42,
+      "n_train": 37723,
+      "n_test": 6687,
+      "test_prevalence": 0.0253,
+      "conditions": {
+        "C1": {
+          "AP": 0.0996,
+          "n_edges": 234355,
+          "CI95": [
+            0.0785,
+            0.1313
+          ]
+        },
+        "C2": {
+          "AP": 0.0465,
+          "n_edges": 80939,
+          "CI95": [
+            0.0377,
+            0.0646
+          ]
+        },
+        "C3": {
+          "AP": 0.0581,
+          "n_edges": 29407,
+          "CI95": [
+            0.0454,
+            0.0787
+          ]
+        },
+        "M2": {
+          "AP": 0.1159,
+          "n_edges": 80939,
+          "CI95": [
+            0.0924,
+            0.1529
+          ]
+        }
+      }
+    }
+  ],
+  "status": "PASS",
+  "edge_homophily": {
+    "n_labelled_edges": 36624,
+    "observed_same": 0.9537,
+    "expected_independent": 0.8238,
+    "labelled_prevalence": 0.0976,
+    "interpretation": "Payment edges show measurable homophily."
+  },
+  "aggregate": {
+    "C1": {
+      "mean": 0.6443,
+      "std": 0.3098
+    },
+    "C2": {
+      "mean": 0.6159,
+      "std": 0.3244
+    },
+    "C3": {
+      "mean": 0.616,
+      "std": 0.3195
+    },
+    "M2": {
+      "mean": 0.6383,
+      "std": 0.2965
+    }
+  },
+  "aggregate_nondegenerate": {
+    "C1": {
+      "mean": 0.7805,
+      "std": 0.0661
+    },
+    "C2": {
+      "mean": 0.7583,
+      "std": 0.0723
+    },
+    "C3": {
+      "mean": 0.7555,
+      "std": 0.0799
+    },
+    "M2": {
+      "mean": 0.7689,
+      "std": 0.0594
+    }
+  },
+  "degenerate_folds": [
+    {
+      "cutoff": 42,
+      "test_prevalence": 0.0253,
+      "AP_by_condition": {
+        "C1": 0.0996,
+        "C2": 0.0465,
+        "C3": 0.0581,
+        "M2": 0.1159
+      }
+    }
+  ],
+  "prevalence_floor": 0.05,
+  "n_folds_used_in_mean": 4,
+  "degenerate_collapse_is_condition_independent": true,
+  "verdict": {
+    "C1_lt_C3": false,
+    "C1_lt_C2": false,
+    "spread_across_conditions": 0.025,
+    "note": "With a model that can ignore neighbour features, the four conditions remain within ~0.03 AP of each other on the non-degenerate cutoffs; the edge-protocol effect does not replicate on a payment-flow graph with near-independent labels."
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "experiment": "resource_profile",
+  "hardware": {
+    "cpu_threads": 12,
+    "gpu": "cpu-only"
+  },
+  "n_train": 21443,
+  "n_test": 7148,
+  "stages": {
+    "feature_extraction_sec": 0.255,
+    "graph_construction_sec": 0.004,
+    "rss_after_features_MB": 237.9
+  },
+  "models": {
+    "LogisticRegression": {
+      "train_sec": 0.24,
+      "AP": 0.6521,
+      "infer_batch100_p50_ms": 0.223,
+      "infer_batch100_p95_ms": 0.257,
+      "infer_batch100_p99_ms": 0.298,
+      "throughput_entities_per_sec": 2746273.2,
+      "peak_rss_MB": 239.8
+    },
+    "RandomForest": {
+      "train_sec": 2.369,
+      "AP": 0.7214,
+      "infer_batch100_p50_ms": 40.036,
+      "infer_batch100_p95_ms": 41.415,
+      "infer_batch100_p99_ms": 42.099,
+      "throughput_entities_per_sec": 118314.6,
+      "peak_rss_MB": 299.4
+    },
+    "LightGBM": {
+      "train_sec": 0.965,
+      "AP": 0.7993,
+      "infer_batch100_p50_ms": 1.692,
+      "infer_batch100_p95_ms": 1.87,
+      "infer_batch100_p99_ms": 2.015,
+      "throughput_entities_per_sec": 171768.7,
+      "peak_rss_MB": 314.3
+    }
+  },
+  "status": "PASS",
+  "feasible_set": [
+    {
+      "L_max_ms": 0.1,
+      "feasible": []
+    },
+    {
+      "L_max_ms": 1,
+      "feasible": [
+        "LogisticRegression"
+      ]
+    },
+    {
+      "L_max_ms": 5,
+      "feasible": [
+        "LogisticRegression",
+        "LightGBM"
+      ]
+    },
+    {
+      "L_max_ms": 50,
+      "feasible": [
+        "LogisticRegression",
+        "RandomForest",
+        "LightGBM"
+      ]
+    },
+    {
+      "L_max_ms": 100,
+      "feasible": [
+        "LogisticRegression",
+        "RandomForest",
+        "LightGBM"
+      ]
+    }
+  ],
+  "pareto": [
+    {
+      "model": "LogisticRegression",
+      "latency_p95_ms": 0.257,
+      "AP": 0.6521
+    },
+    {
+      "model": "LightGBM",
+      "latency_p95_ms": 1.87,
+      "AP": 0.7993
+    }
+  ],
+  "end_to_end": {
+    "feature_extraction_sec": 0.255,
+    "graph_construction_sec": 0.004,
+    "note": "graph construction is measured on a synthetic 3N-edge co-occurrence build and is reported for scale, not as a claim about the production graph"
+  }
+}

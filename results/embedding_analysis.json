@@ -1,0 +1,17 @@
+{
+  "experiment": "embedding_visualization",
+  "status": "PASS",
+  "elliptic2": {
+    "n_sampled": 11052,
+    "n_suspicious": 2763,
+    "silhouette": 0.0315
+  },
+  "realcats": {
+    "n_sampled": 4000,
+    "pca_explained": [
+      0.4282,
+      0.1165
+    ],
+    "silhouette": 0.0789
+  }
+}

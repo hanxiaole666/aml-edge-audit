@@ -1,0 +1,200 @@
+{
+ "experiment": "step_25pct_substitution",
+ "dataset": "Elliptic v1 (real steps)",
+ "purpose": "fix intervention strength at 25% and vary only the split operator; the matching node-rank 25% condition is in index_mismatch_tgn.json",
+ "split": "step boundary: tr=t<=c-2, val=t==c-1, embargo=t==c, te=c+1..c+4",
+ "intervention": "substitute one quarter of training nodes with test-side nodes (node identity substitution, not label randomisation); test set and validation set held fixed",
+ "comparison_reference": {
+  "step_full_random": {
+   "LightGBM": 0.038,
+   "TGN-lite": -0.03
+  },
+  "noderank_25pct": {
+   "LightGBM": 0.131,
+   "TGN-lite": 0.075
+  }
+ },
+ "readouts": [
+  "LightGBM",
+  "TGN-lite"
+ ],
+ "rows": [
+  {
+   "cutoff": 22,
+   "n_train": 18889,
+   "n_val": 641,
+   "n_test": 3424,
+   "n_substituted": 856,
+   "degenerate": false,
+   "LightGBM": {
+    "AP_structured": 0.7637,
+    "AP_substituted": 0.9791,
+    "optimism": 0.2154,
+    "ci95_optimism": [
+     0.1777,
+     0.2525
+    ]
+   },
+   "TGN-lite": {
+    "AP_structured": 0.4192,
+    "AP_substituted": 0.3974,
+    "optimism": -0.0217,
+    "ci95_optimism": [
+     -0.0385,
+     -0.001
+    ]
+   }
+  },
+  {
+   "cutoff": 26,
+   "n_train": 23606,
+   "n_val": 594,
+   "n_test": 2188,
+   "n_substituted": 547,
+   "degenerate": false,
+   "LightGBM": {
+    "AP_structured": 0.986,
+    "AP_substituted": 0.9956,
+    "optimism": 0.0097,
+    "ci95_optimism": [
+     0.0062,
+     0.0135
+    ]
+   },
+   "TGN-lite": {
+    "AP_structured": 0.5395,
+    "AP_substituted": 0.5669,
+    "optimism": 0.0274,
+    "ci95_optimism": [
+     0.0133,
+     0.0403
+    ]
+   }
+  },
+  {
+   "cutoff": 30,
+   "n_train": 25207,
+   "n_val": 1174,
+   "n_test": 2989,
+   "n_substituted": 747,
+   "degenerate": false,
+   "LightGBM": {
+    "AP_structured": 0.9724,
+    "AP_substituted": 0.9945,
+    "optimism": 0.0222,
+    "ci95_optimism": [
+     0.0138,
+     0.0354
+    ]
+   },
+   "TGN-lite": {
+    "AP_structured": 0.369,
+    "AP_substituted": 0.3777,
+    "optimism": 0.0087,
+    "ci95_optimism": [
+     0.0041,
+     0.0138
+    ]
+   }
+  },
+  {
+   "cutoff": 34,
+   "n_train": 28938,
+   "n_val": 441,
+   "n_test": 4303,
+   "n_substituted": 1075,
+   "degenerate": false,
+   "LightGBM": {
+    "AP_structured": 0.9516,
+    "AP_substituted": 0.99,
+    "optimism": 0.0384,
+    "ci95_optimism": [
+     0.0256,
+     0.054
+    ]
+   },
+   "TGN-lite": {
+    "AP_structured": 0.2465,
+    "AP_substituted": 0.2702,
+    "optimism": 0.0237,
+    "ci95_optimism": [
+     0.0166,
+     0.0304
+    ]
+   }
+  },
+  {
+   "cutoff": 38,
+   "n_train": 32943,
+   "n_val": 498,
+   "n_test": 5680,
+   "n_substituted": 1420,
+   "degenerate": false,
+   "LightGBM": {
+    "AP_structured": 0.8816,
+    "AP_substituted": 0.939,
+    "optimism": 0.0574,
+    "ci95_optimism": [
+     0.0452,
+     0.071
+    ]
+   },
+   "TGN-lite": {
+    "AP_structured": 0.2889,
+    "AP_substituted": 0.2864,
+    "optimism": -0.0025,
+    "ci95_optimism": [
+     -0.0057,
+     0.0002
+    ]
+   }
+  },
+  {
+   "cutoff": 42,
+   "n_train": 36591,
+   "n_val": 1132,
+   "n_test": 4894,
+   "n_substituted": 1223,
+   "degenerate": true,
+   "LightGBM": {
+    "AP_structured": 0.0741,
+    "AP_substituted": 0.3361,
+    "optimism": 0.262,
+    "ci95_optimism": [
+     0.1793,
+     0.382
+    ]
+   },
+   "TGN-lite": {
+    "AP_structured": 0.0136,
+    "AP_substituted": 0.0143,
+    "optimism": 0.0007,
+    "ci95_optimism": [
+     0.0002,
+     0.0014
+    ]
+   }
+  }
+ ],
+ "summary": {
+  "LightGBM": {
+   "mean_optimism": 0.0686,
+   "positive_cutoffs": 5,
+   "n_cutoffs": 5
+  },
+  "TGN-lite": {
+   "mean_optimism": 0.0071,
+   "positive_cutoffs": 3,
+   "n_cutoffs": 5
+  }
+ },
+ "architecture_gap": {
+  "step_25pct": 0.0615,
+  "step_full_random": 0.068,
+  "noderank_25pct": 0.056
+ },
+ "verdict": {
+  "note": "With intervention strength fixed at 25%, compare step vs node-rank. TGN's advantage over the tree under each condition is the architecture contribution; the sign of each model's own optimism is the split contribution."
+ },
+ "status": "PASS"
+}

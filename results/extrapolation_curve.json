@@ -1,0 +1,63 @@
+{
+  "experiment": "extrapolation_curve",
+  "data": "Real-CATS ETH, real first_time timestamps (2016-2024)",
+  "t0": 1654364940.0,
+  "extrapolation": {
+    "1": {
+      "PR-AUC": 0.7079,
+      "n_test": 28
+    },
+    "3": {
+      "PR-AUC": 0.7655,
+      "n_test": 83
+    },
+    "7": {
+      "PR-AUC": 0.8709,
+      "n_test": 135
+    },
+    "14": {
+      "PR-AUC": 0.7661,
+      "n_test": 280
+    },
+    "30": {
+      "PR-AUC": 0.8324,
+      "n_test": 558
+    },
+    "90": {
+      "PR-AUC": 0.8202,
+      "n_test": 1834
+    },
+    "180": {
+      "PR-AUC": 0.773,
+      "n_test": 3537
+    },
+    "365": {
+      "PR-AUC": 0.7681,
+      "n_test": 7120
+    }
+  },
+  "embargo": {
+    "0.0": {
+      "PR-AUC": 0.6801,
+      "n_test": 11436
+    },
+    "0.01": {
+      "PR-AUC": 0.6698,
+      "n_test": 10876
+    },
+    "0.05": {
+      "PR-AUC": 0.626,
+      "n_test": 8495
+    },
+    "0.1": {
+      "PR-AUC": 0.5698,
+      "n_test": 5617
+    },
+    "0.2": {
+      "PR-AUC": 0.2572,
+      "n_test": 1590
+    }
+  },
+  "status": "PASS",
+  "random_reference": 0.8776
+}

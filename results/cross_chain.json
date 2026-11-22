@@ -1,0 +1,23 @@
+{
+  "experiment": "cross_chain",
+  "n_common_features": 18,
+  "models": {
+    "LogisticRegression": {
+      "ETH_internal": 0.852171164163048,
+      "BTC_internal": 0.8770993561657937,
+      "ETH_to_BTC": 0.7705712412529316,
+      "BTC_to_ETH": 0.7459977882058101,
+      "ETH_to_BTC_drop": 0.08159992291011631,
+      "BTC_to_ETH_drop": 0.13110156795998362
+    },
+    "RandomForest": {
+      "ETH_internal": 0.9292071168067141,
+      "BTC_internal": 0.9343121101455177,
+      "ETH_to_BTC": 0.8157552659579931,
+      "BTC_to_ETH": 0.649672886270463,
+      "ETH_to_BTC_drop": 0.113451850848721,
+      "BTC_to_ETH_drop": 0.2846392238750547
+    }
+  },
+  "status": "PASS"
+}

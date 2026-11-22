@@ -1,0 +1,23 @@
+================================================================
+TinyAML-Bench v2 - Full Reproduction Test Log (Major Revision)
+Generated: 2026-11-21 20:32:50    
+Interpreter: Python 3.11.5
+================================================================
+[1] Syntax: all scripts
+  all 32 scripts OK
+[2] Consistency: paper numbers vs results
+[done] D:\Financial Micro-Modelling Project\ccfa-financial-blockchain\results\consistency_report.json — 16/16 项一致
+[3] Traceability: claim -> result -> script -> data
+[done] D:\Financial Micro-Modelling Project\ccfa-financial-blockchain\results\reproducibility_audit.json: 19/19 claims fully traceable
+[4] Leakage audit (5 audits)
+  {'label_permutation': 'PASS', 'entity_overlap': 'PASS', 'feature_label_correlation': 'PASS', 'feature_group_ablation': 'PASS', 'size_shift_confound': 'PASS'}
+[5] Bootstrap CI
+  {'point': 0.8944, 'ci95_low': 0.8845, 'ci95_high': 0.9043, 'n_boot': 1000, 'n_test': 7148}
+[6] Resource benchmark
+ models: ['SGC', 'StreamTemporal', 'GCN-lite', 'GAT-standard', 'TGN-like']
+[7] Figures from results
+[done] figures regenerated from results/
+[8] LaTeX v2 compilation
+  OK PDF v2 compiled
+================================================================
+END

@@ -1,0 +1,128 @@
+{
+  "experiment": "elliptic2_subgraph_models",
+  "data": {
+    "n_subgraphs": 121810,
+    "n_nodes": 444521,
+    "n_edges_total": 367137,
+    "n_edges_within": 367137,
+    "prevalence": 0.02268286675970774,
+    "nodes_per_sub_mean": 3.64929808718496
+  },
+  "split": {
+    "train": 97448,
+    "val": 12181,
+    "test": 12181,
+    "test_prevalence": 0.0227,
+    "protocol": "random 80:10:10, stratified, seed 0"
+  },
+  "models": {
+    "LightGBM-pooled": {
+      "test_AP": 0.5352,
+      "sd": 0.0029,
+      "per_seed": [
+        0.5372,
+        0.5331
+      ],
+      "uses_edges": false
+    },
+    "DeepSets": {
+      "test_AP": 0.4407,
+      "sd": 0.0126,
+      "val_AP": 0.4528,
+      "per_seed": [
+        0.4319,
+        0.4496
+      ],
+      "uses_edges": false
+    },
+    "GIN-3": {
+      "test_AP": 0.3765,
+      "sd": 0.004,
+      "val_AP": 0.3739,
+      "per_seed": [
+        0.3737,
+        0.3793
+      ],
+      "uses_edges": true
+    },
+    "GCN-2": {
+      "test_AP": 0.4269,
+      "sd": 0.0179,
+      "val_AP": 0.4163,
+      "per_seed": [
+        0.4396,
+        0.4142
+      ],
+      "uses_edges": true
+    },
+    "SAGE-2": {
+      "test_AP": 0.4134,
+      "sd": 0.0034,
+      "val_AP": 0.4569,
+      "per_seed": [
+        0.4158,
+        0.4111
+      ],
+      "uses_edges": true
+    }
+  },
+  "literature": {
+    "GNN-Seg": {
+      "train": {
+        "f1": 0.397,
+        "pr_auc": 0.024,
+        "roc_auc": 0.538
+      },
+      "test": {
+        "f1": 0.398,
+        "pr_auc": 0.026,
+        "roc_auc": 0.537
+      },
+      "uses_features": false,
+      "uses_background_graph": false
+    },
+    "Sub2Vec": {
+      "train": {
+        "f1": 0.964,
+        "pr_auc": 0.145,
+        "roc_auc": 0.706
+      },
+      "test": {
+        "f1": 0.944,
+        "pr_auc": 0.022,
+        "roc_auc": 0.496
+      },
+      "uses_features": false,
+      "uses_background_graph": false
+    },
+    "GLASS": {
+      "train": {
+        "f1": 0.937,
+        "pr_auc": 0.224,
+        "roc_auc": 0.915
+      },
+      "test": {
+        "f1": 0.933,
+        "pr_auc": 0.208,
+        "roc_auc": 0.889
+      },
+      "uses_features": false,
+      "uses_background_graph": true
+    }
+  },
+  "comparability": {
+    "GNN-Seg": "not reproduced: needs background-graph sampling (SALIENT++) and the official pipeline; our GIN on subgraph-internal edges is the closest structural analogue but uses features",
+    "Sub2Vec": "not reproduced: random-walk embedding over a 49M-node graph",
+    "GLASS": "not reproduced: requires the 49M-cluster background graph for cross-boundary message passing; only the 444K-cluster subgraph release is available locally",
+    "headline": "Literature numbers use no node/edge features; ours do. The 0.208 of GLASS is attributable to the background graph, which is absent here. Within the released topology, adding edges does not beat a no-edge pooling baseline."
+  },
+  "status": "PASS",
+  "verdict": {
+    "best_edge_model_AP": 0.4269,
+    "no_edge_DeepSets_AP": 0.4407,
+    "edge_gain_over_no_edge": -0.0138,
+    "edge_gain_over_tree": -0.1083,
+    "topology_helps_within_release": false,
+    "literature_gap_explained_by_background_graph": true
+  }
+}

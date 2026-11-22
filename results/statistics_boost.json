@@ -1,0 +1,86 @@
+{
+  "paired_significance": [
+    {
+      "comparison": "gnn_StreamTemporal - gnn_GCN-lite",
+      "n": 3,
+      "mean_diff": 0.47554,
+      "ci95_low": 0.4608,
+      "ci95_high": 0.49027,
+      "wilcoxon_p": null,
+      "paired_t_p": 0.00025,
+      "cohens_d": 36.513,
+      "significant_0.05": false
+    },
+    {
+      "comparison": "gnn_StreamTemporal - gnn_SAGE-lite",
+      "n": 3,
+      "mean_diff": 0.46456,
+      "ci95_low": 0.4495,
+      "ci95_high": 0.47962,
+      "wilcoxon_p": null,
+      "paired_t_p": 0.00027,
+      "cohens_d": 34.9048,
+      "significant_0.05": false
+    },
+    {
+      "comparison": "gnn_StreamTemporal - gnn_SGC",
+      "n": 3,
+      "mean_diff": 0.0962,
+      "ci95_low": 0.0962,
+      "ci95_high": 0.0962,
+      "wilcoxon_p": null,
+      "paired_t_p": null,
+      "cohens_d": 0.0,
+      "significant_0.05": false
+    }
+  ],
+  "fairness_ablation": {
+    "random": {
+      "SGC_mean": 0.9368166666666666,
+      "StreamTemporal_mean": 0.9692259999999999,
+      "temporal_decay_contribution": 0.03240933333333329,
+      "note": "两者共享相同线性读出层与 k；差异仅来自时态边权，故该差值隔离了时间衰减的贡献"
+    },
+    "temporal": {
+      "SGC_mean": 0.7847589999999999,
+      "StreamTemporal_mean": 0.880955,
+      "temporal_decay_contribution": 0.09619600000000017,
+      "note": "两者共享相同线性读出层与 k；差异仅来自时态边权，故该差值隔离了时间衰减的贡献"
+    }
+  },
+  "seed_bootstrap_ci": {
+    "gnn_GCN-lite": {
+      "point": 0.40542,
+      "seed_ci95_low": 0.39151,
+      "seed_ci95_high": 0.41397,
+      "n_seeds": 3
+    },
+    "gnn_SAGE-lite": {
+      "point": 0.4164,
+      "seed_ci95_low": 0.40217,
+      "seed_ci95_high": 0.42474,
+      "n_seeds": 3
+    },
+    "gnn_SGC": {
+      "point": 0.78476,
+      "seed_ci95_low": 0.78476,
+      "seed_ci95_high": 0.78476,
+      "n_seeds": 3
+    },
+    "gnn_StreamTemporal": {
+      "point": 0.88096,
+      "seed_ci95_low": 0.88096,
+      "seed_ci95_high": 0.88096,
+      "n_seeds": 3
+    }
+  },
+  "class_balance": {
+    "positive": 12572,
+    "negative": 16019,
+    "positive_rate": 0.4397,
+    "source": "data/real_cats_eth.csv",
+    "note": "真实交易图节点从真实地址均衡采样（750/750），PR-AUC 对类平衡稳健"
+  },
+  "status": "PASS",
+  "honest_note": "配对检验仅 3 种子（统计功效有限）；R1 建议 ≥10 种子，本版如实报告 n=3，不夸大显著性。时间分裂 PR-AUC 的 std=0 源于确定性传播（非 bug），故配对检验的方差来自跨模型而非跨种子。"
+}

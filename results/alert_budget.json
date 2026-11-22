@@ -1,0 +1,114 @@
+{
+  "experiment": "alert_budget",
+  "test": {
+    "n": 7148,
+    "prevalence": 0.2738,
+    "AP": 0.8017,
+    "days": 575,
+    "volume_per_day": 12.4
+  },
+  "budget_note": "Daily volume is 12.4 entities, so an absolute cap of 100/day never binds; quotas are given per 1,000 scored entities, which is the same rule at production volume.",
+  "budgets": [
+    {
+      "quota_per_1000": 10,
+      "flagged": 71,
+      "precision": 1.0,
+      "recall": 0.0363,
+      "TP": 71,
+      "FP": 0,
+      "cost_per_TP": 0.0
+    },
+    {
+      "quota_per_1000": 50,
+      "flagged": 357,
+      "precision": 0.9608,
+      "recall": 0.1753,
+      "TP": 343,
+      "FP": 14,
+      "cost_per_TP": 0.04
+    },
+    {
+      "quota_per_1000": 100,
+      "flagged": 714,
+      "precision": 0.9188,
+      "recall": 0.3352,
+      "TP": 656,
+      "FP": 58,
+      "cost_per_TP": 0.09
+    },
+    {
+      "quota_absolute": 100,
+      "flagged": 100,
+      "precision": 0.99,
+      "recall": 0.0506,
+      "TP": 99,
+      "FP": 1,
+      "cost_per_TP": 0.01
+    },
+    {
+      "quota_absolute": 500,
+      "flagged": 500,
+      "precision": 0.944,
+      "recall": 0.2412,
+      "TP": 472,
+      "FP": 28,
+      "cost_per_TP": 0.06
+    },
+    {
+      "quota_absolute": 1000,
+      "flagged": 1000,
+      "precision": 0.874,
+      "recall": 0.4466,
+      "TP": 874,
+      "FP": 126,
+      "cost_per_TP": 0.14
+    }
+  ],
+  "risk_coverage": [
+    {
+      "coverage": 0.8,
+      "n_accepted": 5718,
+      "risk_error_rate": 0.0899,
+      "FNR_accepted": 0.278,
+      "positives_deferred": 0.3291,
+      "FNR_end_to_end": 0.5156,
+      "precision_at_0.5": 0.8642
+    },
+    {
+      "coverage": 0.9,
+      "n_accepted": 6433,
+      "risk_error_rate": 0.1174,
+      "FNR_accepted": 0.3184,
+      "positives_deferred": 0.1768,
+      "FNR_end_to_end": 0.4389,
+      "precision_at_0.5": 0.8194
+    },
+    {
+      "coverage": 0.95,
+      "n_accepted": 6790,
+      "risk_error_rate": 0.1306,
+      "FNR_accepted": 0.3298,
+      "positives_deferred": 0.0904,
+      "FNR_end_to_end": 0.3904,
+      "precision_at_0.5": 0.7991
+    },
+    {
+      "coverage": 1.0,
+      "n_accepted": 7148,
+      "risk_error_rate": 0.1477,
+      "FNR_accepted": 0.3485,
+      "positives_deferred": 0.0,
+      "FNR_end_to_end": 0.3485,
+      "precision_at_0.5": 0.7732
+    }
+  ],
+  "status": "PASS",
+  "verdict": {
+    "cost_per_TP_at_1pct_quota": 0.0,
+    "cost_per_TP_at_10pct_quota": 0.09,
+    "FNR_accepted_at_80pct_coverage": 0.278,
+    "FNR_end_to_end_at_80pct_coverage": 0.5156,
+    "positives_deferred_at_80pct_coverage": 0.3291,
+    "note": "A per-day budget equalises operational load; the global top-k column shows how much of the apparent precision comes from ignoring the daily cap."
+  }
+}

@@ -1,0 +1,337 @@
+{
+  "experiment": "cross_edge_homophily",
+  "definition": "excess = P(same label | cross-split edge) - [p_tr*p_te + (1-p_tr)*(1-p_te)]; positive means cross-split edges are more label-homophilous than independence.",
+  "real_cats": [
+    {
+      "split": "frac=0.6",
+      "n_train": 900,
+      "n_test": 600,
+      "prevalence_train": 0.5656,
+      "prevalence_test": 0.4017,
+      "cross_edges": {
+        "n_edges": 2373,
+        "observed_same": 0.4307,
+        "expected_independent": 0.4871,
+        "excess": -0.0564
+      },
+      "train_train_edges": {
+        "n_edges": 3700,
+        "observed_same": 0.6586,
+        "expected_independent": 0.5086,
+        "excess": 0.1501
+      },
+      "test_test_edges": {
+        "n_edges": 869,
+        "observed_same": 0.7514,
+        "expected_independent": 0.5193,
+        "excess": 0.2321
+      },
+      "all_edges": {
+        "n_edges": 6942,
+        "observed_same": 0.5923,
+        "expected_independent": 0.5,
+        "excess": 0.0923
+      }
+    },
+    {
+      "split": "frac=0.65",
+      "n_train": 975,
+      "n_test": 525,
+      "prevalence_train": 0.56,
+      "prevalence_test": 0.3886,
+      "cross_edges": {
+        "n_edges": 2269,
+        "observed_same": 0.4332,
+        "expected_independent": 0.4866,
+        "excess": -0.0534
+      },
+      "train_train_edges": {
+        "n_edges": 3869,
+        "observed_same": 0.6524,
+        "expected_independent": 0.5072,
+        "excess": 0.1452
+      },
+      "test_test_edges": {
+        "n_edges": 804,
+        "observed_same": 0.7525,
+        "expected_independent": 0.5248,
+        "excess": 0.2277
+      },
+      "all_edges": {
+        "n_edges": 6942,
+        "observed_same": 0.5923,
+        "expected_independent": 0.5,
+        "excess": 0.0923
+      }
+    },
+    {
+      "split": "frac=0.7",
+      "n_train": 1050,
+      "n_test": 450,
+      "prevalence_train": 0.5533,
+      "prevalence_test": 0.3756,
+      "cross_edges": {
+        "n_edges": 2098,
+        "observed_same": 0.4438,
+        "expected_independent": 0.4867,
+        "excess": -0.043
+      },
+      "train_train_edges": {
+        "n_edges": 4173,
+        "observed_same": 0.6425,
+        "expected_independent": 0.5057,
+        "excess": 0.1368
+      },
+      "test_test_edges": {
+        "n_edges": 671,
+        "observed_same": 0.7452,
+        "expected_independent": 0.531,
+        "excess": 0.2142
+      },
+      "all_edges": {
+        "n_edges": 6942,
+        "observed_same": 0.5923,
+        "expected_independent": 0.5,
+        "excess": 0.0923
+      }
+    },
+    {
+      "split": "frac=0.75",
+      "n_train": 1125,
+      "n_test": 375,
+      "prevalence_train": 0.5404,
+      "prevalence_test": 0.3787,
+      "cross_edges": {
+        "n_edges": 1958,
+        "observed_same": 0.4397,
+        "expected_independent": 0.4902,
+        "excess": -0.0505
+      },
+      "train_train_edges": {
+        "n_edges": 4434,
+        "observed_same": 0.6371,
+        "expected_independent": 0.5033,
+        "excess": 0.1339
+      },
+      "test_test_edges": {
+        "n_edges": 550,
+        "observed_same": 0.7745,
+        "expected_independent": 0.5294,
+        "excess": 0.2451
+      },
+      "all_edges": {
+        "n_edges": 6942,
+        "observed_same": 0.5923,
+        "expected_independent": 0.5,
+        "excess": 0.0923
+      }
+    },
+    {
+      "split": "frac=0.8",
+      "n_train": 1200,
+      "n_test": 300,
+      "prevalence_train": 0.5358,
+      "prevalence_test": 0.3567,
+      "cross_edges": {
+        "n_edges": 1542,
+        "observed_same": 0.4741,
+        "expected_independent": 0.4897,
+        "excess": -0.0157
+      },
+      "train_train_edges": {
+        "n_edges": 5102,
+        "observed_same": 0.6174,
+        "expected_independent": 0.5026,
+        "excess": 0.1148
+      },
+      "test_test_edges": {
+        "n_edges": 298,
+        "observed_same": 0.7752,
+        "expected_independent": 0.5411,
+        "excess": 0.2341
+      },
+      "all_edges": {
+        "n_edges": 6942,
+        "observed_same": 0.5923,
+        "expected_independent": 0.5,
+        "excess": 0.0923
+      }
+    }
+  ],
+  "elliptic_v1": [
+    {
+      "split": "cutoff=30",
+      "n_train": 26381,
+      "n_test": 19659,
+      "prevalence_train": 0.1088,
+      "prevalence_test": 0.0809,
+      "n_cross_edges": 0,
+      "n_cross_edges_both_labelled": 0,
+      "n_cross_step_edges": 0,
+      "max_step_gap": 0,
+      "cross_edges": null,
+      "train_train_edges": {
+        "n_edges": 20151,
+        "observed_same": 0.9501,
+        "expected_independent": 0.806,
+        "excess": 0.1441
+      },
+      "test_test_edges": {
+        "n_edges": 16101,
+        "observed_same": 0.9584,
+        "expected_independent": 0.8512,
+        "excess": 0.1071
+      },
+      "two_hop_reach_train_rate": 0.0
+    },
+    {
+      "split": "cutoff=33",
+      "n_train": 28938,
+      "n_test": 17185,
+      "prevalence_train": 0.1176,
+      "prevalence_test": 0.0652,
+      "n_cross_edges": 0,
+      "n_cross_edges_both_labelled": 0,
+      "n_cross_step_edges": 0,
+      "max_step_gap": 0,
+      "cross_edges": null,
+      "train_train_edges": {
+        "n_edges": 22042,
+        "observed_same": 0.9482,
+        "expected_independent": 0.7925,
+        "excess": 0.1557
+      },
+      "test_test_edges": {
+        "n_edges": 14153,
+        "observed_same": 0.9632,
+        "expected_independent": 0.8781,
+        "excess": 0.085
+      },
+      "two_hop_reach_train_rate": 0.0
+    },
+    {
+      "split": "cutoff=36",
+      "n_train": 31235,
+      "n_test": 13621,
+      "prevalence_train": 0.1167,
+      "prevalence_test": 0.0637,
+      "n_cross_edges": 0,
+      "n_cross_edges_both_labelled": 0,
+      "n_cross_step_edges": 0,
+      "max_step_gap": 0,
+      "cross_edges": null,
+      "train_train_edges": {
+        "n_edges": 23900,
+        "observed_same": 0.9468,
+        "expected_independent": 0.7939,
+        "excess": 0.1529
+      },
+      "test_test_edges": {
+        "n_edges": 11576,
+        "observed_same": 0.9684,
+        "expected_independent": 0.8807,
+        "excess": 0.0877
+      },
+      "two_hop_reach_train_rate": 0.0
+    },
+    {
+      "split": "cutoff=39",
+      "n_train": 34197,
+      "n_test": 11184,
+      "prevalence_train": 0.1119,
+      "prevalence_test": 0.0569,
+      "n_cross_edges": 0,
+      "n_cross_edges_both_labelled": 0,
+      "n_cross_step_edges": 0,
+      "max_step_gap": 0,
+      "cross_edges": null,
+      "train_train_edges": {
+        "n_edges": 26124,
+        "observed_same": 0.9461,
+        "expected_independent": 0.8012,
+        "excess": 0.145
+      },
+      "test_test_edges": {
+        "n_edges": 9445,
+        "observed_same": 0.9736,
+        "expected_independent": 0.8927,
+        "excess": 0.0809
+      },
+      "two_hop_reach_train_rate": 0.0
+    },
+    {
+      "split": "cutoff=42",
+      "n_train": 37723,
+      "n_test": 6687,
+      "prevalence_train": 0.1097,
+      "prevalence_test": 0.0253,
+      "n_cross_edges": 0,
+      "n_cross_edges_both_labelled": 0,
+      "n_cross_step_edges": 0,
+      "max_step_gap": 0,
+      "cross_edges": null,
+      "train_train_edges": {
+        "n_edges": 29407,
+        "observed_same": 0.9483,
+        "expected_independent": 0.8047,
+        "excess": 0.1436
+      },
+      "test_test_edges": {
+        "n_edges": 5774,
+        "observed_same": 0.9792,
+        "expected_independent": 0.9507,
+        "excess": 0.0285
+      },
+      "two_hop_reach_train_rate": 0.0
+    }
+  ],
+  "status": "PASS",
+  "sign_test": {
+    "n_pairs": 5,
+    "n_sign_agree": 5,
+    "agreement_rate": 1.0,
+    "rule": "sign(AP[C1]-AP[C3]) == sign(homophily excess)",
+    "pairs": [
+      {
+        "dataset": "Real-CATS",
+        "split": "frac=0.6",
+        "excess": -0.0564,
+        "delta_AP_C1_minus_C3": -0.1165
+      },
+      {
+        "dataset": "Real-CATS",
+        "split": "frac=0.65",
+        "excess": -0.0534,
+        "delta_AP_C1_minus_C3": -0.1251
+      },
+      {
+        "dataset": "Real-CATS",
+        "split": "frac=0.7",
+        "excess": -0.043,
+        "delta_AP_C1_minus_C3": -0.1389
+      },
+      {
+        "dataset": "Real-CATS",
+        "split": "frac=0.75",
+        "excess": -0.0505,
+        "delta_AP_C1_minus_C3": -0.129
+      },
+      {
+        "dataset": "Real-CATS",
+        "split": "frac=0.8",
+        "excess": -0.0157,
+        "delta_AP_C1_minus_C3": -0.1308
+      }
+    ]
+  },
+  "real_cats_summary": {
+    "mean_excess": -0.0438,
+    "n_splits": 5
+  },
+  "elliptic_v1_summary": {
+    "mean_excess": null,
+    "n_splits": 0
+  },
+  "elliptic_no_cross_split_edges": true,
+  "elliptic_note": "All Elliptic edges join nodes in the same time step (max |t_u - t_v| = 0), so no edge can cross a temporal cutoff. C2 and C3 therefore differ only by train-to-unlabelled adjacency, and the C1 advantage is test-test edge retention, not homophily of cross-split edges. The homophily sign rule applies only to graphs that actually have cross-split edges."
+}

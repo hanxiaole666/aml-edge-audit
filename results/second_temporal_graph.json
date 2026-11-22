@@ -1,0 +1,263 @@
+{
+ "experiment": "second_temporal_graph",
+ "version": "v14-multiseed",
+ "dataset": "Real-CATS ETH",
+ "time_source": "account first_time (real ledger node event time; edges remain derived)",
+ "edge_time_note": "edges are address-contract co-occurrence with derived times; only node times are real",
+ "n_nodes": 1500,
+ "n_edges": 6942,
+ "models": [
+  "LightGBM",
+  "GCN",
+  "SAGE",
+  "TGN-lite"
+ ],
+ "n_seeds": 5,
+ "protocol": "temporal forward chaining + 5% embargo vs fixed-size random split; 4 terminal blocks, not folds",
+ "reliability_rule": "a block is sign-only (excluded from magnitude summary) if any read-out bootstrap CI includes zero",
+ "rows": [
+  {
+   "frac": 0.6,
+   "n_test": 468,
+   "n_positive_temporal": 176,
+   "prevalence_temporal": 0.3761,
+   "prevalence_random": 0.4957,
+   "sign_only": false,
+   "LightGBM": {
+    "AP_temporal": 0.6427,
+    "AP_random": 0.931,
+    "delta": 0.2883,
+    "ci95_delta": [
+     0.2178,
+     0.3646
+    ],
+    "ci_excludes_zero": true,
+    "n_seeds": 5
+   },
+   "GCN": {
+    "AP_temporal": 0.6231,
+    "AP_random": 0.883,
+    "delta": 0.2598,
+    "ci95_delta": [
+     0.1813,
+     0.3368
+    ],
+    "ci_excludes_zero": true,
+    "n_seeds": 5
+   },
+   "SAGE": {
+    "AP_temporal": 0.6198,
+    "AP_random": 0.8813,
+    "delta": 0.2615,
+    "ci95_delta": [
+     0.1842,
+     0.3408
+    ],
+    "ci_excludes_zero": true,
+    "n_seeds": 5
+   },
+   "TGN-lite": {
+    "AP_temporal": 0.5911,
+    "AP_random": 0.8808,
+    "delta": 0.2897,
+    "ci95_delta": [
+     0.2116,
+     0.3648
+    ],
+    "ci_excludes_zero": true,
+    "n_seeds": 5
+   }
+  },
+  {
+   "frac": 0.7,
+   "n_test": 320,
+   "n_positive_temporal": 117,
+   "prevalence_temporal": 0.3656,
+   "prevalence_random": 0.5031,
+   "sign_only": false,
+   "LightGBM": {
+    "AP_temporal": 0.6708,
+    "AP_random": 0.9327,
+    "delta": 0.2618,
+    "ci95_delta": [
+     0.1646,
+     0.3598
+    ],
+    "ci_excludes_zero": true,
+    "n_seeds": 5
+   },
+   "GCN": {
+    "AP_temporal": 0.6482,
+    "AP_random": 0.8876,
+    "delta": 0.2395,
+    "ci95_delta": [
+     0.1269,
+     0.3302
+    ],
+    "ci_excludes_zero": true,
+    "n_seeds": 5
+   },
+   "SAGE": {
+    "AP_temporal": 0.6415,
+    "AP_random": 0.8866,
+    "delta": 0.2451,
+    "ci95_delta": [
+     0.1323,
+     0.3389
+    ],
+    "ci_excludes_zero": true,
+    "n_seeds": 5
+   },
+   "TGN-lite": {
+    "AP_temporal": 0.6099,
+    "AP_random": 0.881,
+    "delta": 0.2711,
+    "ci95_delta": [
+     0.1494,
+     0.3619
+    ],
+    "ci_excludes_zero": true,
+    "n_seeds": 5
+   }
+  },
+  {
+   "frac": 0.75,
+   "n_test": 222,
+   "n_positive_temporal": 66,
+   "prevalence_temporal": 0.2973,
+   "prevalence_random": 0.473,
+   "sign_only": false,
+   "LightGBM": {
+    "AP_temporal": 0.6554,
+    "AP_random": 0.9262,
+    "delta": 0.2708,
+    "ci95_delta": [
+     0.15,
+     0.414
+    ],
+    "ci_excludes_zero": true,
+    "n_seeds": 5
+   },
+   "GCN": {
+    "AP_temporal": 0.6227,
+    "AP_random": 0.8912,
+    "delta": 0.2685,
+    "ci95_delta": [
+     0.1315,
+     0.3887
+    ],
+    "ci_excludes_zero": true,
+    "n_seeds": 5
+   },
+   "SAGE": {
+    "AP_temporal": 0.617,
+    "AP_random": 0.8913,
+    "delta": 0.2744,
+    "ci95_delta": [
+     0.1359,
+     0.3993
+    ],
+    "ci_excludes_zero": true,
+    "n_seeds": 5
+   },
+   "TGN-lite": {
+    "AP_temporal": 0.5846,
+    "AP_random": 0.8845,
+    "delta": 0.2999,
+    "ci95_delta": [
+     0.1555,
+     0.4179
+    ],
+    "ci_excludes_zero": true,
+    "n_seeds": 5
+   }
+  },
+  {
+   "frac": 0.8,
+   "n_test": 149,
+   "n_positive_temporal": 25,
+   "prevalence_temporal": 0.1678,
+   "prevalence_random": 0.5101,
+   "sign_only": false,
+   "LightGBM": {
+    "AP_temporal": 0.6071,
+    "AP_random": 0.9486,
+    "delta": 0.3415,
+    "ci95_delta": [
+     0.1755,
+     0.5457
+    ],
+    "ci_excludes_zero": true,
+    "n_seeds": 5
+   },
+   "GCN": {
+    "AP_temporal": 0.4486,
+    "AP_random": 0.9112,
+    "delta": 0.4625,
+    "ci95_delta": [
+     0.2696,
+     0.6306
+    ],
+    "ci_excludes_zero": true,
+    "n_seeds": 5
+   },
+   "SAGE": {
+    "AP_temporal": 0.4483,
+    "AP_random": 0.9116,
+    "delta": 0.4633,
+    "ci95_delta": [
+     0.275,
+     0.6294
+    ],
+    "ci_excludes_zero": true,
+    "n_seeds": 5
+   },
+   "TGN-lite": {
+    "AP_temporal": 0.4362,
+    "AP_random": 0.8977,
+    "delta": 0.4615,
+    "ci95_delta": [
+     0.2704,
+     0.6318
+    ],
+    "ci_excludes_zero": true,
+    "n_seeds": 5
+   }
+  }
+ ],
+ "summary": {
+  "LightGBM": {
+   "mean_delta": 0.2906,
+   "positive_blocks": 4,
+   "n_blocks": 4,
+   "sign_only_blocks": []
+  },
+  "GCN": {
+   "mean_delta": 0.3076,
+   "positive_blocks": 4,
+   "n_blocks": 4,
+   "sign_only_blocks": []
+  },
+  "SAGE": {
+   "mean_delta": 0.3111,
+   "positive_blocks": 4,
+   "n_blocks": 4,
+   "sign_only_blocks": []
+  },
+  "TGN-lite": {
+   "mean_delta": 0.3306,
+   "positive_blocks": 4,
+   "n_blocks": 4,
+   "sign_only_blocks": []
+  }
+ },
+ "verdict": {
+  "n_datasets_with_real_node_timestamps": 2,
+  "datasets": [
+   "Elliptic (49 real time steps)",
+   "Real-CATS ETH (real account first_time; edges derived)"
+  ],
+  "note": "Both datasets show random >= temporal on the tree and GCN read-outs; magnitude is dataset-specific and no correction factor is offered."
+ },
+ "status": "PASS"
+}

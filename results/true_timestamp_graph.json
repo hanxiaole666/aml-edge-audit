@@ -1,0 +1,66 @@
+{
+  "experiment": "true_timestamp_graph",
+  "protocol": "node times are real first-seen timestamps from Real-CATS; strict temporal split with 5% embargo; all cross-split edges removed from training graph; inductive evaluation on test subgraph",
+  "honest_note": "Individual edges lack independent exact event timestamps. The time semantics come from real node activity times and a leakage-free split, not from per-edge event times.",
+  "results": {
+    "static": {
+      "train60": {
+        "PR-AUC": 0.6386998517299016,
+        "AUC": 0.7515377921805143,
+        "n_train": 900,
+        "n_test": 529,
+        "n_train_edges": 3700,
+        "n_test_edges": 804,
+        "cross_split_edges_removed": 2373
+      },
+      "train75": {
+        "PR-AUC": 0.6588721865406945,
+        "AUC": 0.8020714917266641,
+        "n_train": 1125,
+        "n_test": 320,
+        "n_train_edges": 4434,
+        "n_test_edges": 419,
+        "cross_split_edges_removed": 1958
+      },
+      "train90": {
+        "PR-AUC": 0.3677991726598297,
+        "AUC": 0.8236409608091024,
+        "n_train": 1350,
+        "n_test": 127,
+        "n_train_edges": 6487,
+        "n_test_edges": 13,
+        "cross_split_edges_removed": 425
+      }
+    },
+    "temporal_weighted": {
+      "train60": {
+        "PR-AUC": 0.63917482069423,
+        "AUC": 0.7518378491913463,
+        "n_train": 900,
+        "n_test": 529,
+        "n_train_edges": 3700,
+        "n_test_edges": 804,
+        "cross_split_edges_removed": 2373
+      },
+      "train75": {
+        "PR-AUC": 0.6589148682969884,
+        "AUC": 0.8021556987074229,
+        "n_train": 1125,
+        "n_test": 320,
+        "n_train_edges": 4434,
+        "n_test_edges": 419,
+        "cross_split_edges_removed": 1958
+      },
+      "train90": {
+        "PR-AUC": 0.3677991726598297,
+        "AUC": 0.8236409608091024,
+        "n_train": 1350,
+        "n_test": 127,
+        "n_train_edges": 6487,
+        "n_test_edges": 13,
+        "cross_split_edges_removed": 425
+      }
+    }
+  },
+  "status": "PASS"
+}

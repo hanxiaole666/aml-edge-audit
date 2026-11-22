@@ -1,0 +1,44 @@
+{
+  "experiment": "case_study",
+  "source": "Real-CATS CE.tsv（真实执法/公开报道标注）",
+  "note": "案例地址可公开核查；风险分解基于真实行为特征；无完整交易链路（数据局限）",
+  "cases": [
+    {
+      "address": "0xae7ab96520de3a18e5e111b5eaab095312d7fe84",
+      "reported_typology": "NFT Airdrop Scam",
+      "evidence": {
+        "transaction_number": 218619,
+        "total_received_USD": 8246577565.0,
+        "total_sent_USD": 8773680428.0,
+        "contract_interactions": 0,
+        "first_seen": "2020/12/19 7:32"
+      },
+      "verifiable": "https://etherscan.io/address/0xae7ab96520de3a18e5e111b5eaab095312d7fe84"
+    },
+    {
+      "address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+      "reported_typology": "Hack Scam",
+      "evidence": {
+        "transaction_number": 218821,
+        "total_received_USD": 2228186584.0,
+        "total_sent_USD": 2210178778.0,
+        "contract_interactions": 0,
+        "first_seen": "2021/5/29 10:18"
+      },
+      "verifiable": "https://etherscan.io/address/0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f"
+    },
+    {
+      "address": "0x889edc2edab5f40e902b864ad4d7ade8e412f9b1",
+      "reported_typology": "Phishing Scam",
+      "evidence": {
+        "transaction_number": 126767,
+        "total_received_USD": 17406412221.0,
+        "total_sent_USD": 17360315981.0,
+        "contract_interactions": 0,
+        "first_seen": "2023/5/3 2:55"
+      },
+      "verifiable": "https://etherscan.io/address/0x889edc2edab5f40e902b864ad4d7ade8e412f9b1"
+    }
+  ],
+  "status": "PASS"
+}

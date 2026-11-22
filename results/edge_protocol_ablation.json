@@ -1,0 +1,46 @@
+{
+  "experiment": "edge_protocol_ablation",
+  "honest_note": "Edge times are derived from endpoint first-seen times, not per-transaction event times. 100% of edges have approximated timestamps. Conclusions are limited to this setting.",
+  "conditions": {
+    "C1_keep_all": {
+      "PR-AUC": 0.7366,
+      "n_train": 1125,
+      "n_test": 375,
+      "n_edges_kept": 6942,
+      "n_cross_split_edges": 1958,
+      "n_future_edges_excluded": 0
+    },
+    "C2_past_only": {
+      "PR-AUC": 0.817,
+      "n_train": 1125,
+      "n_test": 375,
+      "n_edges_kept": 5899,
+      "n_cross_split_edges": 1958,
+      "n_future_edges_excluded": 1043
+    },
+    "C3_remove_all": {
+      "PR-AUC": 0.8659,
+      "n_train": 1125,
+      "n_test": 375,
+      "n_edges_kept": 4984,
+      "n_cross_split_edges": 1958,
+      "n_future_edges_excluded": 0
+    },
+    "C4_transductive": {
+      "PR-AUC": 0.7366,
+      "n_train": 1125,
+      "n_test": 375,
+      "n_edges_kept": 6942,
+      "n_cross_split_edges": 1958,
+      "n_future_edges_excluded": 0
+    }
+  },
+  "status": "PASS",
+  "decomposition": {
+    "pattern": "C1 < C2 < C3 (cross-split edges HURT performance)",
+    "C3_minus_C1": 0.1293,
+    "harm_from_edges_beyond_past_only_share": 0.3782,
+    "verdict": "cross_split_edges_are_harmful_not_leaking_future",
+    "claim": "The title 'temporal gains are leakage' is NOT supported: removing cross-split edges improves AP, so those edges carry harmful noise rather than exploitable future labels. The paper's central claim must be revised to an evaluation-sensitivity finding."
+  }
+}

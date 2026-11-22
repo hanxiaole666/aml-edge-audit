@@ -1,0 +1,1142 @@
+{
+  "paper": "tdsc_manuscript_v8.tex",
+  "n_claims": 162,
+  "n_ok": 126,
+  "n_bad": 36,
+  "rows": [
+    {
+      "label": "Audit: permuted PR-AUC",
+      "key": "audit.permuted",
+      "paper": 0.028,
+      "actual": 0.028,
+      "status": "OK"
+    },
+    {
+      "label": "Audit: shared components",
+      "key": "audit.overlap",
+      "paper": 0,
+      "actual": 0.0,
+      "status": "OK"
+    },
+    {
+      "label": "Audit: max |r|",
+      "key": "audit.max_corr",
+      "paper": 0.099,
+      "actual": 0.099,
+      "status": "OK"
+    },
+    {
+      "label": "Audit: group max AP",
+      "key": "audit.group_max",
+      "paper": 0.499,
+      "actual": 0.499,
+      "status": "OK"
+    },
+    {
+      "label": "Audit: struct-only AP",
+      "key": "audit.struct_only",
+      "paper": 0.026,
+      "actual": 0.026,
+      "status": "OK"
+    },
+    {
+      "label": "Audit: prevalence change",
+      "key": "audit.prev_change",
+      "paper": 0.263,
+      "actual": 0.263,
+      "status": "OK"
+    },
+    {
+      "label": "G2 cross-step edges",
+      "key": "av.cross_step",
+      "paper": 0,
+      "actual": 0.0,
+      "status": "OK"
+    },
+    {
+      "label": "G2 total edges",
+      "key": "av.n_edges",
+      "paper": 234355,
+      "actual": 234355.0,
+      "status": "OK"
+    },
+    {
+      "label": "G1 future-neighbour fraction",
+      "key": "av.future_frac",
+      "paper": 0.0,
+      "actual": 0.0,
+      "status": "OK"
+    },
+    {
+      "label": "G3 AP all",
+      "key": "av.g3_all",
+      "paper": 0.863,
+      "actual": 0.8625,
+      "status": "OK"
+    },
+    {
+      "label": "G3 AP delta=0",
+      "key": "av.g3_past",
+      "paper": 0.863,
+      "actual": 0.8625,
+      "status": "OK"
+    },
+    {
+      "label": "G3 AP delta>=1",
+      "key": "av.g3_d1",
+      "paper": 0.844,
+      "actual": 0.8439,
+      "status": "OK"
+    },
+    {
+      "label": "G4 feature-only AUC",
+      "key": "av.local_probe",
+      "paper": 0.944,
+      "actual": 0.9439,
+      "status": "OK"
+    },
+    {
+      "label": "G6 internal-only AP",
+      "key": "av.e2_internal",
+      "paper": 0.025,
+      "actual": 0.025,
+      "status": "OK"
+    },
+    {
+      "label": "G6 full-feature AP",
+      "key": "av.e2_full",
+      "paper": 0.392,
+      "actual": 0.392,
+      "status": "OK"
+    },
+    {
+      "label": "Provenance RF all",
+      "key": "prov.rf.all",
+      "paper": 0.875,
+      "actual": 0.8758,
+      "status": "OK"
+    },
+    {
+      "label": "Provenance RF clean",
+      "key": "prov.rf.clean",
+      "paper": 0.721,
+      "actual": 0.7213,
+      "status": "OK"
+    },
+    {
+      "label": "Provenance RF gap",
+      "key": "prov.rf.gap",
+      "paper": 0.152,
+      "actual": 0.1545,
+      "status": "OK"
+    },
+    {
+      "label": "Provenance RF AUC",
+      "key": "prov.rf.auc",
+      "paper": 0.856,
+      "actual": 0.8558,
+      "status": "OK"
+    },
+    {
+      "label": "Provenance LGBM all",
+      "key": "prov.lgbm.all",
+      "paper": 0.892,
+      "actual": 0.8922,
+      "status": "OK"
+    },
+    {
+      "label": "Provenance LGBM clean",
+      "key": "prov.lgbm.clean",
+      "paper": 0.8,
+      "actual": 0.7996,
+      "status": "OK"
+    },
+    {
+      "label": "Provenance LGBM gap",
+      "key": "prov.lgbm.gap",
+      "paper": 0.091,
+      "actual": 0.0926,
+      "status": "OK"
+    },
+    {
+      "label": "Provenance LGBM AUC",
+      "key": "prov.lgbm.auc",
+      "paper": 0.9,
+      "actual": 0.899,
+      "status": "OK"
+    },
+    {
+      "label": "E2 random AP",
+      "key": "e2.random",
+      "paper": 0.535,
+      "actual": 0.535,
+      "status": "OK"
+    },
+    {
+      "label": "E2 size-shift AP",
+      "key": "e2.sizeshift",
+      "paper": 0.363,
+      "actual": 0.3633,
+      "status": "OK"
+    },
+    {
+      "label": "Sub LightGBM pooled",
+      "key": "sub.LightGBM-pooled",
+      "paper": 0.535,
+      "actual": 0.5352,
+      "status": "OK"
+    },
+    {
+      "label": "Sub DeepSets",
+      "key": "sub.DeepSets",
+      "paper": 0.441,
+      "actual": 0.4407,
+      "status": "OK"
+    },
+    {
+      "label": "Sub GIN-3",
+      "key": "sub.GIN-3",
+      "paper": 0.377,
+      "actual": 0.3765,
+      "status": "OK"
+    },
+    {
+      "label": "Sub GCN-2",
+      "key": "sub.GCN-2",
+      "paper": 0.427,
+      "actual": 0.4269,
+      "status": "OK"
+    },
+    {
+      "label": "Sub SAGE-2",
+      "key": "sub.SAGE-2",
+      "paper": 0.413,
+      "actual": 0.4134,
+      "status": "OK"
+    },
+    {
+      "label": "Tab LR random",
+      "key": "tab.Logistic.random",
+      "paper": 0.878,
+      "actual": 0.8776,
+      "status": "OK"
+    },
+    {
+      "label": "Tab LR temporal",
+      "key": "tab.Logistic.temporal",
+      "paper": 0.652,
+      "actual": 0.6521,
+      "status": "OK"
+    },
+    {
+      "label": "Tab LR delta",
+      "key": "tab.Logistic.delta",
+      "paper": 0.226,
+      "actual": 0.2255,
+      "status": "OK"
+    },
+    {
+      "label": "Tab RF random",
+      "key": "tab.RandomForest.random",
+      "paper": 0.937,
+      "actual": 0.9366,
+      "status": "OK"
+    },
+    {
+      "label": "Tab RF temporal",
+      "key": "tab.RandomForest.temporal",
+      "paper": 0.721,
+      "actual": 0.7213,
+      "status": "OK"
+    },
+    {
+      "label": "Tab RF delta",
+      "key": "tab.RandomForest.delta",
+      "paper": 0.214,
+      "actual": 0.2153,
+      "status": "OK"
+    },
+    {
+      "label": "Tab LGBM random",
+      "key": "tab.LightGBM.random",
+      "paper": 0.955,
+      "actual": 0.9551,
+      "status": "OK"
+    },
+    {
+      "label": "Tab LGBM temporal",
+      "key": "tab.LightGBM.temporal",
+      "paper": 0.8,
+      "actual": 0.7996,
+      "status": "OK"
+    },
+    {
+      "label": "Tab LGBM delta",
+      "key": "tab.LightGBM.delta",
+      "paper": 0.158,
+      "actual": 0.1555,
+      "status": "OK"
+    },
+    {
+      "label": "EP mean C1",
+      "key": "ep.mean.C1",
+      "paper": 0.527,
+      "actual": 0.5266,
+      "status": "OK"
+    },
+    {
+      "label": "EP mean C2",
+      "key": "ep.mean.C2",
+      "paper": 0.606,
+      "actual": 0.6058,
+      "status": "OK"
+    },
+    {
+      "label": "EP mean C3",
+      "key": "ep.mean.C3",
+      "paper": 0.641,
+      "actual": 0.6412,
+      "status": "OK"
+    },
+    {
+      "label": "EP mean M2",
+      "key": "ep.mean.M2",
+      "paper": 0.542,
+      "actual": 0.4336,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "EP std C1",
+      "key": "ep.std.C1",
+      "paper": 0.006,
+      "actual": 0.006,
+      "status": "OK"
+    },
+    {
+      "label": "EP std C2",
+      "key": "ep.std.C2",
+      "paper": 0.01,
+      "actual": 0.0102,
+      "status": "OK"
+    },
+    {
+      "label": "EP std C3",
+      "key": "ep.std.C3",
+      "paper": 0.011,
+      "actual": 0.011,
+      "status": "OK"
+    },
+    {
+      "label": "EP std M2",
+      "key": "ep.std.M2",
+      "paper": 0.006,
+      "actual": 0.0141,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "EP C2-M2 diff",
+      "key": "ep.c2m2.diff",
+      "paper": 0.065,
+      "actual": 0.1543,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "EP C2-M2 CI low",
+      "key": "ep.c2m2.lo",
+      "paper": 0.04,
+      "actual": 0.0847,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "EP C2-M2 CI high",
+      "key": "ep.c2m2.hi",
+      "paper": 0.093,
+      "actual": 0.2197,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "Mech C1 AP",
+      "key": "mech.C1.ap",
+      "paper": 0.537,
+      "actual": 0.5366,
+      "status": "OK"
+    },
+    {
+      "label": "Mech C2 AP",
+      "key": "mech.C2.ap",
+      "paper": 0.619,
+      "actual": 0.6185,
+      "status": "OK"
+    },
+    {
+      "label": "Mech C3 AP",
+      "key": "mech.C3.ap",
+      "paper": 0.659,
+      "actual": 0.6593,
+      "status": "OK"
+    },
+    {
+      "label": "Mech M2 AP",
+      "key": "mech.M2.ap",
+      "paper": 0.547,
+      "actual": 0.414,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "Mech C1 degree",
+      "key": "mech.C1.deg",
+      "paper": 8.16,
+      "actual": 8.15,
+      "status": "OK"
+    },
+    {
+      "label": "Mech C2 degree",
+      "key": "mech.C2.deg",
+      "paper": 2.44,
+      "actual": 2.44,
+      "status": "OK"
+    },
+    {
+      "label": "Mech C3 degree",
+      "key": "mech.C3.deg",
+      "paper": 0.0,
+      "actual": 0.0,
+      "status": "OK"
+    },
+    {
+      "label": "Mech M2 degree",
+      "key": "mech.M2.deg",
+      "paper": 6.39,
+      "actual": 7.4,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "Mech C1 coverage",
+      "key": "mech.C1.cov",
+      "paper": 0.365,
+      "actual": 0.3653,
+      "status": "OK"
+    },
+    {
+      "label": "Mech C2 coverage",
+      "key": "mech.C2.cov",
+      "paper": 0.176,
+      "actual": 0.176,
+      "status": "OK"
+    },
+    {
+      "label": "Mech M2 coverage",
+      "key": "mech.M2.cov",
+      "paper": 0.352,
+      "actual": 0.992,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "Mech C1 neighbour AUC",
+      "key": "mech.C1.auc",
+      "paper": 0.826,
+      "actual": 0.8257,
+      "status": "OK"
+    },
+    {
+      "label": "Mech C2 neighbour AUC",
+      "key": "mech.C2.auc",
+      "paper": 0.875,
+      "actual": 0.8745,
+      "status": "OK"
+    },
+    {
+      "label": "Mech M2 neighbour AUC",
+      "key": "mech.M2.auc",
+      "paper": 0.8,
+      "actual": 0.4818,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "Mech C1 MMD",
+      "key": "mech.C1.mmd",
+      "paper": 0.0219,
+      "actual": 0.0219,
+      "status": "OK"
+    },
+    {
+      "label": "Mech C2 MMD",
+      "key": "mech.C2.mmd",
+      "paper": 0.0041,
+      "actual": 0.0041,
+      "status": "OK"
+    },
+    {
+      "label": "Mech M2 MMD",
+      "key": "mech.M2.mmd",
+      "paper": 0.0203,
+      "actual": 0.4291,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "Homophily observed",
+      "key": "homophily.obs",
+      "paper": 0.44,
+      "actual": 0.4397,
+      "status": "OK"
+    },
+    {
+      "label": "Norm row C1",
+      "key": "norm.row.C1",
+      "paper": 0.562,
+      "actual": 0.5622,
+      "status": "OK"
+    },
+    {
+      "label": "Norm row C2",
+      "key": "norm.row.C2",
+      "paper": 0.621,
+      "actual": 0.6212,
+      "status": "OK"
+    },
+    {
+      "label": "Norm row C3",
+      "key": "norm.row.C3",
+      "paper": 0.663,
+      "actual": 0.6633,
+      "status": "OK"
+    },
+    {
+      "label": "Norm row M2",
+      "key": "norm.row.M2",
+      "paper": 0.563,
+      "actual": 0.4196,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "Norm raw C1",
+      "key": "norm.raw.C1",
+      "paper": 0.551,
+      "actual": 0.5474,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "Norm raw C2",
+      "key": "norm.raw.C2",
+      "paper": 0.605,
+      "actual": 0.6028,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "Norm raw C3",
+      "key": "norm.raw.C3",
+      "paper": 0.642,
+      "actual": 0.646,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "Norm raw M2",
+      "key": "norm.raw.M2",
+      "paper": 0.536,
+      "actual": 0.5863,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "EL 30 C1",
+      "key": "el.30.C1",
+      "paper": 0.863,
+      "actual": 0.8629,
+      "status": "OK"
+    },
+    {
+      "label": "EL 30 C2",
+      "key": "el.30.C2",
+      "paper": 0.844,
+      "actual": 0.8437,
+      "status": "OK"
+    },
+    {
+      "label": "EL 33 C1",
+      "key": "el.33.C1",
+      "paper": 0.795,
+      "actual": 0.795,
+      "status": "OK"
+    },
+    {
+      "label": "EL 36 C1",
+      "key": "el.36.C1",
+      "paper": 0.758,
+      "actual": 0.7582,
+      "status": "OK"
+    },
+    {
+      "label": "EL 39 C1",
+      "key": "el.39.C1",
+      "paper": 0.706,
+      "actual": 0.7057,
+      "status": "OK"
+    },
+    {
+      "label": "EL 42 C1",
+      "key": "el.42.C1",
+      "paper": 0.1,
+      "actual": 0.0996,
+      "status": "OK"
+    },
+    {
+      "label": "EL mean C1",
+      "key": "el.mean.C1",
+      "paper": 0.781,
+      "actual": 0.7805,
+      "status": "OK"
+    },
+    {
+      "label": "EL mean C2",
+      "key": "el.mean.C2",
+      "paper": 0.758,
+      "actual": 0.7583,
+      "status": "OK"
+    },
+    {
+      "label": "EL mean C3",
+      "key": "el.mean.C3",
+      "paper": 0.756,
+      "actual": 0.7555,
+      "status": "OK"
+    },
+    {
+      "label": "EL mean M2",
+      "key": "el.mean.M2",
+      "paper": 0.775,
+      "actual": 0.7689,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "EL folds in mean",
+      "key": "el.n_folds_in_mean",
+      "paper": 4,
+      "actual": 4.0,
+      "status": "OK"
+    },
+    {
+      "label": "EL 42 best cond.",
+      "key": "el.degenerate_maxAP",
+      "paper": 0.111,
+      "actual": 0.1159,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "Roll c22 LGBM t",
+      "key": "roll.22.lightgbm.t",
+      "paper": 0.764,
+      "actual": 0.7637,
+      "status": "OK"
+    },
+    {
+      "label": "Roll c22 LGBM r",
+      "key": "roll.22.lightgbm.r",
+      "paper": 0.966,
+      "actual": 0.966,
+      "status": "OK"
+    },
+    {
+      "label": "Roll c26 LGBM t",
+      "key": "roll.26.lightgbm.t",
+      "paper": 0.986,
+      "actual": 0.986,
+      "status": "OK"
+    },
+    {
+      "label": "Roll c34 GCN t",
+      "key": "roll.34.gcn.t",
+      "paper": 0.272,
+      "actual": 0.2674,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "Roll c38 SAGE t",
+      "key": "roll.38.sage.t",
+      "paper": 0.854,
+      "actual": 0.8046,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "Roll mean LGBM t",
+      "key": "roll.mean.lightgbm.t",
+      "paper": 0.911,
+      "actual": null,
+      "status": "MISSING"
+    },
+    {
+      "label": "Roll mean LGBM r",
+      "key": "roll.mean.lightgbm.r",
+      "paper": 0.968,
+      "actual": null,
+      "status": "MISSING"
+    },
+    {
+      "label": "Roll mean GCN t",
+      "key": "roll.mean.gcn.t",
+      "paper": 0.583,
+      "actual": null,
+      "status": "MISSING"
+    },
+    {
+      "label": "Roll mean SAGE t",
+      "key": "roll.mean.sage.t",
+      "paper": 0.847,
+      "actual": null,
+      "status": "MISSING"
+    },
+    {
+      "label": "Roll mean TGN t",
+      "key": "roll.mean.tgn_lite.t",
+      "paper": 0.394,
+      "actual": null,
+      "status": "MISSING"
+    },
+    {
+      "label": "Roll mean TGN r",
+      "key": "roll.mean.tgn_lite.r",
+      "paper": 0.366,
+      "actual": null,
+      "status": "MISSING"
+    },
+    {
+      "label": "Roll delta LGBM",
+      "key": "roll.mean.lightgbm.d",
+      "paper": 0.056,
+      "actual": null,
+      "status": "MISSING"
+    },
+    {
+      "label": "Roll delta GCN",
+      "key": "roll.mean.gcn.d",
+      "paper": 0.019,
+      "actual": null,
+      "status": "MISSING"
+    },
+    {
+      "label": "Roll delta SAGE",
+      "key": "roll.mean.sage.d",
+      "paper": 0.057,
+      "actual": null,
+      "status": "MISSING"
+    },
+    {
+      "label": "Roll delta TGN",
+      "key": "roll.mean.tgn_lite.d",
+      "paper": -0.028,
+      "actual": null,
+      "status": "MISSING"
+    },
+    {
+      "label": "Roll pos LGBM",
+      "key": "roll.pos.lightgbm",
+      "paper": 5,
+      "actual": null,
+      "status": "MISSING"
+    },
+    {
+      "label": "Roll pos TGN",
+      "key": "roll.pos.tgn_lite",
+      "paper": 1,
+      "actual": null,
+      "status": "MISSING"
+    },
+    {
+      "label": "Size 60/40",
+      "key": "sizeshift.60/40",
+      "paper": 0.348,
+      "actual": 0.348,
+      "status": "OK"
+    },
+    {
+      "label": "Size 70/30",
+      "key": "sizeshift.70/30",
+      "paper": 0.368,
+      "actual": 0.3684,
+      "status": "OK"
+    },
+    {
+      "label": "Size 75/25",
+      "key": "sizeshift.75/25",
+      "paper": 0.363,
+      "actual": 0.3633,
+      "status": "OK"
+    },
+    {
+      "label": "Size 80/20",
+      "key": "sizeshift.80/20",
+      "paper": 0.338,
+      "actual": 0.3375,
+      "status": "OK"
+    },
+    {
+      "label": "Size interleaved",
+      "key": "sizeshift.interleaved-1-in-5",
+      "paper": 0.524,
+      "actual": 0.5239,
+      "status": "OK"
+    },
+    {
+      "label": "Size random ctrl",
+      "key": "sizeshift.random-matched-size",
+      "paper": 0.526,
+      "actual": 0.5258,
+      "status": "OK"
+    },
+    {
+      "label": "Size n seeds",
+      "key": "sizeshift.n_seeds",
+      "paper": 5,
+      "actual": 5.0,
+      "status": "OK"
+    },
+    {
+      "label": "OP El LGBM AP",
+      "key": "op.Elliptic v1.LightGBM.AP",
+      "paper": 0.769,
+      "actual": 0.7693,
+      "status": "OK"
+    },
+    {
+      "label": "OP El LGBM F1*",
+      "key": "op.Elliptic v1.LightGBM.F1star",
+      "paper": 0.726,
+      "actual": 0.7261,
+      "status": "OK"
+    },
+    {
+      "label": "OP El LGBM P100",
+      "key": "op.Elliptic v1.LightGBM.P100",
+      "paper": 0.502,
+      "actual": 0.5019,
+      "status": "OK"
+    },
+    {
+      "label": "OP El LR ECE",
+      "key": "op.Elliptic v1.Logistic.ECE",
+      "paper": 0.33,
+      "actual": 0.3296,
+      "status": "OK"
+    },
+    {
+      "label": "OP ETH LGBM AP",
+      "key": "op.Real-CATS ETH.LightGBM.AP",
+      "paper": 0.8,
+      "actual": 0.7996,
+      "status": "OK"
+    },
+    {
+      "label": "OP ETH LGBM P100",
+      "key": "op.Real-CATS ETH.LightGBM.P100",
+      "paper": 0.92,
+      "actual": 0.9203,
+      "status": "OK"
+    },
+    {
+      "label": "OP ETH LGBM ECE",
+      "key": "op.Real-CATS ETH.LightGBM.ECE",
+      "paper": 0.025,
+      "actual": 0.0254,
+      "status": "OK"
+    },
+    {
+      "label": "OP BTC LGBM AP",
+      "key": "op.Real-CATS BTC.LightGBM.AP",
+      "paper": 0.205,
+      "actual": 0.2048,
+      "status": "OK"
+    },
+    {
+      "label": "OP BTC LGBM P10",
+      "key": "op.Real-CATS BTC.LightGBM.P10",
+      "paper": 0.417,
+      "actual": 0.4168,
+      "status": "OK"
+    },
+    {
+      "label": "Uni BTC LGBM",
+      "key": "uni.Real-CATS BTC.LightGBM",
+      "paper": 0.205,
+      "actual": 0.2048,
+      "status": "OK"
+    },
+    {
+      "label": "Uni ETH LGBM",
+      "key": "uni.Real-CATS ETH.LightGBM",
+      "paper": 0.8,
+      "actual": 0.7996,
+      "status": "OK"
+    },
+    {
+      "label": "Var grand mean",
+      "key": "var.grand",
+      "paper": 0.756,
+      "actual": 0.7558,
+      "status": "OK"
+    },
+    {
+      "label": "Var CI low",
+      "key": "var.lo",
+      "paper": 0.686,
+      "actual": 0.6856,
+      "status": "OK"
+    },
+    {
+      "label": "Var CI high",
+      "key": "var.hi",
+      "paper": 0.826,
+      "actual": 0.826,
+      "status": "OK"
+    },
+    {
+      "label": "Var fold SD",
+      "key": "var.sd",
+      "paper": 0.113,
+      "actual": 0.1133,
+      "status": "OK"
+    },
+    {
+      "label": "Var share fold",
+      "key": "var.share_fold",
+      "paper": 0.971,
+      "actual": 0.971,
+      "status": "OK"
+    },
+    {
+      "label": "Var share bootstrap",
+      "key": "var.share_boot",
+      "paper": 0.028,
+      "actual": 0.028,
+      "status": "OK"
+    },
+    {
+      "label": "Var f0 AP",
+      "key": "var.f0.ap",
+      "paper": 0.849,
+      "actual": 0.8486,
+      "status": "OK"
+    },
+    {
+      "label": "Var f9 AP",
+      "key": "var.f9.ap",
+      "paper": 0.451,
+      "actual": 0.4513,
+      "status": "OK"
+    },
+    {
+      "label": "Var f0 n",
+      "key": "var.f0.n",
+      "paper": 15726,
+      "actual": 15726.0,
+      "status": "OK"
+    },
+    {
+      "label": "Var f9 n",
+      "key": "var.f9.n",
+      "paper": 2860,
+      "actual": 2860.0,
+      "status": "OK"
+    },
+    {
+      "label": "Drift E2 Q1 AP",
+      "key": "drift.e2.Q1.ap",
+      "paper": 0.63,
+      "actual": 0.6299,
+      "status": "OK"
+    },
+    {
+      "label": "Drift E2 Q3 AP",
+      "key": "drift.e2.Q3.ap",
+      "paper": 0.577,
+      "actual": 0.5772,
+      "status": "OK"
+    },
+    {
+      "label": "Drift E2 Q5 AP",
+      "key": "drift.e2.Q5.ap",
+      "paper": 0.394,
+      "actual": 0.3943,
+      "status": "OK"
+    },
+    {
+      "label": "Drift E2 Q5 MMD",
+      "key": "drift.e2.Q5.mmd",
+      "paper": 0.0288,
+      "actual": 0.0288,
+      "status": "OK"
+    },
+    {
+      "label": "Drift E2 Q3 MMD",
+      "key": "drift.e2.Q3.mmd",
+      "paper": 0.0025,
+      "actual": 0.0025,
+      "status": "OK"
+    },
+    {
+      "label": "Drift age 0-30 AP",
+      "key": "drift.age.age 0-30d.ap",
+      "paper": 0.894,
+      "actual": 0.8936,
+      "status": "OK"
+    },
+    {
+      "label": "Drift age 90-180 AP",
+      "key": "drift.age.age 90-180d.ap",
+      "paper": 0.887,
+      "actual": 0.8872,
+      "status": "OK"
+    },
+    {
+      "label": "Drift age >180 AP",
+      "key": "drift.age.age 180-3650d.ap",
+      "paper": 0.609,
+      "actual": 0.6087,
+      "status": "OK"
+    },
+    {
+      "label": "Budget q10 precision",
+      "key": "budget.q10.p",
+      "paper": 0.986,
+      "actual": 1.0,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "Budget q50 precision",
+      "key": "budget.q50.p",
+      "paper": 0.966,
+      "actual": 0.9608,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "Budget q100 precision",
+      "key": "budget.q100.p",
+      "paper": 0.913,
+      "actual": 0.9188,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "Budget top100 precision",
+      "key": "budget.top100.p",
+      "paper": 0.98,
+      "actual": 0.99,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "Budget top1000 precision",
+      "key": "budget.top1000.p",
+      "paper": 0.877,
+      "actual": 0.874,
+      "status": "MISMATCH"
+    },
+    {
+      "label": "FNR in accepted set at 80% coverage",
+      "key": "budget.fnr80.accepted",
+      "paper": 0.278,
+      "actual": 0.278,
+      "status": "OK"
+    },
+    {
+      "label": "Positives deferred at 80% coverage",
+      "key": "budget.fnr80.deferred",
+      "paper": 0.329,
+      "actual": 0.3291,
+      "status": "OK"
+    },
+    {
+      "label": "End-to-end FNR at 80% coverage",
+      "key": "budget.fnr80.end",
+      "paper": 0.516,
+      "actual": 0.5156,
+      "status": "OK"
+    },
+    {
+      "label": "FNR at full coverage",
+      "key": "budget.fnrfull",
+      "paper": 0.349,
+      "actual": 0.3485,
+      "status": "OK"
+    },
+    {
+      "label": "Attack base AP",
+      "key": "atk.base",
+      "paper": 0.799,
+      "actual": 0.7993,
+      "status": "OK"
+    },
+    {
+      "label": "Attack smurf m8 AP",
+      "key": "atk.smurfing.8",
+      "paper": 0.941,
+      "actual": 0.9411,
+      "status": "OK"
+    },
+    {
+      "label": "Attack smurf m8 drop",
+      "key": "atk.drop_smurf8",
+      "paper": -0.142,
+      "actual": -0.1418,
+      "status": "OK"
+    },
+    {
+      "label": "Attack layer h1 AP",
+      "key": "atk.layering.1",
+      "paper": 0.373,
+      "actual": 0.3726,
+      "status": "OK"
+    },
+    {
+      "label": "Attack layer h2 AP",
+      "key": "atk.layering.2",
+      "paper": 0.333,
+      "actual": 0.3356,
+      "status": "OK"
+    },
+    {
+      "label": "Attack layer h2 drop",
+      "key": "atk.drop_layer2",
+      "paper": 0.464,
+      "actual": 0.4637,
+      "status": "OK"
+    },
+    {
+      "label": "Attack PGD eps0.4 AP",
+      "key": "atk.pgd_linf.0.4",
+      "paper": 0.484,
+      "actual": 0.4839,
+      "status": "OK"
+    },
+    {
+      "label": "Res LR p95",
+      "key": "res.LogisticRegression.p95",
+      "paper": 0.26,
+      "actual": 0.257,
+      "status": "OK"
+    },
+    {
+      "label": "Res RF p95",
+      "key": "res.RandomForest.p95",
+      "paper": 41.4,
+      "actual": 41.415,
+      "status": "OK"
+    },
+    {
+      "label": "Res LGBM p95",
+      "key": "res.LightGBM.p95",
+      "paper": 1.87,
+      "actual": 1.87,
+      "status": "OK"
+    },
+    {
+      "label": "Res LR AP",
+      "key": "res.LogisticRegression.ap",
+      "paper": 0.652,
+      "actual": 0.6521,
+      "status": "OK"
+    },
+    {
+      "label": "Res LGBM AP",
+      "key": "res.LightGBM.ap",
+      "paper": 0.799,
+      "actual": 0.7993,
+      "status": "OK"
+    }
+  ]
+}

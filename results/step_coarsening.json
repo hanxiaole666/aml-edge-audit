@@ -1,0 +1,312 @@
+{
+  "experiment": "step_coarsening",
+  "dataset": "Elliptic v1 (real steps)",
+  "readout": "LightGBM on [93 local, neighbour-mean, neighbour-max]",
+  "note": "Coarsening places the split inside a merged window and assigns boundary-window nodes at random, which creates cross-split edges of near-zero homophily excess. The injection arm sets the same-label rate of added cross-split edges directly; labels are used only to construct the intervention, never as model input.",
+  "coarsening": [
+    {
+      "window": 1,
+      "cutoff_window": 30,
+      "boundary_steps": [
+        30,
+        30
+      ],
+      "n_train": 26643,
+      "n_test": 19921,
+      "test_prevalence": 0.082,
+      "n_cross_edges": 35616,
+      "AP_keep": 0.8681,
+      "AP_remove": 0.8644,
+      "delta_AP": 0.0037,
+      "degree_keep": 3.168,
+      "degree_remove": 3.1583,
+      "delta_degree": 0.0097,
+      "cross_homophily": {
+        "n_labelled": 192,
+        "observed_same": 0.9375,
+        "expected_independent": 0.8266,
+        "excess": 0.1109
+      },
+      "neighbour_label_auc_keep": 0.5014,
+      "neighbour_label_auc_remove": 0.5
+    },
+    {
+      "window": 2,
+      "cutoff_window": 15,
+      "boundary_steps": [
+        30,
+        31
+      ],
+      "n_train": 26998,
+      "n_test": 19566,
+      "test_prevalence": 0.0808,
+      "n_cross_edges": 36227,
+      "AP_keep": 0.8618,
+      "AP_remove": 0.8545,
+      "delta_AP": 0.0073,
+      "degree_keep": 3.1828,
+      "degree_remove": 3.16,
+      "delta_degree": 0.0228,
+      "cross_homophily": {
+        "n_labelled": 446,
+        "observed_same": 0.9552,
+        "expected_independent": 0.8272,
+        "excess": 0.128
+      },
+      "neighbour_label_auc_keep": 0.5103,
+      "neighbour_label_auc_remove": 0.5
+    },
+    {
+      "window": 4,
+      "cutoff_window": 7,
+      "boundary_steps": [
+        28,
+        31
+      ],
+      "n_train": 26269,
+      "n_test": 20295,
+      "test_prevalence": 0.0883,
+      "n_cross_edges": 36142,
+      "AP_keep": 0.885,
+      "AP_remove": 0.8768,
+      "delta_AP": 0.0082,
+      "degree_keep": 3.1404,
+      "degree_remove": 3.095,
+      "delta_degree": 0.0454,
+      "cross_homophily": {
+        "n_labelled": 921,
+        "observed_same": 0.9425,
+        "expected_independent": 0.8254,
+        "excess": 0.1171
+      },
+      "neighbour_label_auc_keep": 0.528,
+      "neighbour_label_auc_remove": 0.5
+    },
+    {
+      "window": 8,
+      "cutoff_window": 3,
+      "boundary_steps": [
+        24,
+        31
+      ],
+      "n_train": 25047,
+      "n_test": 21517,
+      "test_prevalence": 0.0926,
+      "n_cross_edges": 35505,
+      "AP_keep": 0.8917,
+      "AP_remove": 0.8848,
+      "delta_AP": 0.0069,
+      "degree_keep": 3.1327,
+      "degree_remove": 3.0431,
+      "delta_degree": 0.0896,
+      "cross_homophily": {
+        "n_labelled": 1928,
+        "observed_same": 0.918,
+        "expected_independent": 0.8244,
+        "excess": 0.0937
+      },
+      "neighbour_label_auc_keep": 0.5412,
+      "neighbour_label_auc_remove": 0.5
+    },
+    {
+      "window": 16,
+      "cutoff_window": 1,
+      "boundary_steps": [
+        16,
+        31
+      ],
+      "n_train": 21564,
+      "n_test": 25000,
+      "test_prevalence": 0.0977,
+      "n_cross_edges": 34033,
+      "AP_keep": 0.9088,
+      "AP_remove": 0.9075,
+      "delta_AP": 0.0013,
+      "degree_keep": 3.0774,
+      "degree_remove": 2.8905,
+      "delta_degree": 0.1869,
+      "cross_homophily": {
+        "n_labelled": 4673,
+        "observed_same": 0.9352,
+        "expected_independent": 0.8239,
+        "excess": 0.1113
+      },
+      "neighbour_label_auc_keep": 0.5486,
+      "neighbour_label_auc_remove": 0.5
+    }
+  ],
+  "injection": [
+    {
+      "K_target": 8000,
+      "lambda": -1.0,
+      "K_unique": 8000,
+      "q_realised": 0.0,
+      "excess": -0.8338,
+      "independence_expectation": 0.8338,
+      "AP_base": 0.8816,
+      "AP_injected": 0.8177,
+      "delta_AP": -0.064,
+      "degree_base": 0.0,
+      "degree_injected": 0.7436,
+      "delta_degree": 0.7436,
+      "n_test": 21517,
+      "test_prevalence": 0.0915
+    },
+    {
+      "K_target": 8000,
+      "lambda": -0.5,
+      "K_unique": 7999,
+      "q_realised": 0.4132,
+      "excess": -0.4197,
+      "independence_expectation": 0.8329,
+      "AP_base": 0.8835,
+      "AP_injected": 0.8461,
+      "delta_AP": -0.0374,
+      "degree_base": 0.0,
+      "degree_injected": 0.7435,
+      "delta_degree": 0.7435,
+      "n_test": 21517,
+      "test_prevalence": 0.092
+    },
+    {
+      "K_target": 8000,
+      "lambda": 0.0,
+      "K_unique": 7999,
+      "q_realised": 0.8317,
+      "excess": -0.0014,
+      "independence_expectation": 0.8331,
+      "AP_base": 0.8815,
+      "AP_injected": 0.8676,
+      "delta_AP": -0.0139,
+      "degree_base": 0.0,
+      "degree_injected": 0.7435,
+      "delta_degree": 0.7435,
+      "n_test": 21517,
+      "test_prevalence": 0.0919
+    },
+    {
+      "K_target": 8000,
+      "lambda": 0.5,
+      "K_unique": 7999,
+      "q_realised": 0.91,
+      "excess": 0.0774,
+      "independence_expectation": 0.8326,
+      "AP_base": 0.8821,
+      "AP_injected": 0.8791,
+      "delta_AP": -0.003,
+      "degree_base": 0.0,
+      "degree_injected": 0.7435,
+      "delta_degree": 0.7435,
+      "n_test": 21517,
+      "test_prevalence": 0.0922
+    },
+    {
+      "K_target": 8000,
+      "lambda": 1.0,
+      "K_unique": 8000,
+      "q_realised": 1.0,
+      "excess": 0.1675,
+      "independence_expectation": 0.8325,
+      "AP_base": 0.8777,
+      "AP_injected": 0.8863,
+      "delta_AP": 0.0085,
+      "degree_base": 0.0,
+      "degree_injected": 0.7436,
+      "delta_degree": 0.7436,
+      "n_test": 21517,
+      "test_prevalence": 0.0923
+    },
+    {
+      "K_target": 40000,
+      "lambda": -1.0,
+      "K_unique": 39982,
+      "q_realised": 0.0,
+      "excess": -0.8338,
+      "independence_expectation": 0.8338,
+      "AP_base": 0.8828,
+      "AP_injected": 0.7834,
+      "delta_AP": -0.0994,
+      "degree_base": 0.0,
+      "degree_injected": 3.7163,
+      "delta_degree": 3.7163,
+      "n_test": 21517,
+      "test_prevalence": 0.0915
+    },
+    {
+      "K_target": 40000,
+      "lambda": -0.5,
+      "K_unique": 39987,
+      "q_realised": 0.4184,
+      "excess": -0.4142,
+      "independence_expectation": 0.8326,
+      "AP_base": 0.882,
+      "AP_injected": 0.8337,
+      "delta_AP": -0.0483,
+      "degree_base": 0.0,
+      "degree_injected": 3.7168,
+      "delta_degree": 3.7168,
+      "n_test": 21517,
+      "test_prevalence": 0.0922
+    },
+    {
+      "K_target": 40000,
+      "lambda": 0.0,
+      "K_unique": 39995,
+      "q_realised": 0.8298,
+      "excess": -0.0048,
+      "independence_expectation": 0.8346,
+      "AP_base": 0.8835,
+      "AP_injected": 0.8684,
+      "delta_AP": -0.0151,
+      "degree_base": 0.0,
+      "degree_injected": 3.7175,
+      "delta_degree": 3.7175,
+      "n_test": 21517,
+      "test_prevalence": 0.091
+    },
+    {
+      "K_target": 40000,
+      "lambda": 0.5,
+      "K_unique": 39996,
+      "q_realised": 0.9152,
+      "excess": 0.0822,
+      "independence_expectation": 0.833,
+      "AP_base": 0.881,
+      "AP_injected": 0.8835,
+      "delta_AP": 0.0025,
+      "degree_base": 0.0,
+      "degree_injected": 3.7176,
+      "delta_degree": 3.7176,
+      "n_test": 21517,
+      "test_prevalence": 0.0919
+    },
+    {
+      "K_target": 40000,
+      "lambda": 1.0,
+      "K_unique": 39996,
+      "q_realised": 1.0,
+      "excess": 0.1665,
+      "independence_expectation": 0.8335,
+      "AP_base": 0.8786,
+      "AP_injected": 0.9064,
+      "delta_AP": 0.0278,
+      "degree_base": 0.0,
+      "degree_injected": 3.7176,
+      "delta_degree": 3.7176,
+      "n_test": 21517,
+      "test_prevalence": 0.0916
+    }
+  ],
+  "status": "PASS",
+  "verdict": {
+    "mean_delta_AP_negative_excess": -0.0623,
+    "mean_delta_AP_positive_excess": 0.0089,
+    "mean_delta_AP_lambda_zero": -0.0145,
+    "sign_flips_with_assortativity": true,
+    "coarsening_delta_AP_range": [
+      0.0013,
+      0.0082
+    ],
+    "coarsening_note": "At near-zero excess, coarsening changes test-node degree without changing edge composition; the AP gap stays small, which isolates the composition channel from the degree channel."
+  }
+}

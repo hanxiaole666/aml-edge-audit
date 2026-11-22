@@ -1,0 +1,124 @@
+{
+  "experiment": "label_provenance_audit",
+  "n_rows": 28591,
+  "n_features_all": 49,
+  "n_features_clean": 46,
+  "test": {
+    "n": 7148,
+    "prevalence": 0.2738
+  },
+  "label_provenance_columns": {
+    "etherscan_checked": {
+      "single_feature_AUC": 0.819,
+      "abs_corr_with_label": 0.7048
+    },
+    "watchback_checked": {
+      "single_feature_AUC": 0.5001,
+      "abs_corr_with_label": 0.0116
+    },
+    "gs_checked": {
+      "single_feature_AUC": 0.72,
+      "abs_corr_with_label": 0.5528
+    }
+  },
+  "top_single_feature_AUC": [
+    {
+      "column": "etherscan_checked",
+      "AUC": 0.819
+    },
+    {
+      "column": "gs_checked",
+      "AUC": 0.72
+    },
+    {
+      "column": "from_contract_wd_normal",
+      "AUC": 0.6954
+    },
+    {
+      "column": "balance",
+      "AUC": 0.6911
+    },
+    {
+      "column": "transaction_fee_Variance",
+      "AUC": 0.6896
+    },
+    {
+      "column": "total_gas_limit",
+      "AUC": 0.684
+    }
+  ],
+  "models": {
+    "lr": {
+      "with_provenance": {
+        "AP": 0.8503,
+        "AP_sd": 0.0,
+        "AUC": 0.8972,
+        "n_seeds": 5
+      },
+      "without_provenance": {
+        "AP": 0.6521,
+        "AP_sd": 0.0,
+        "AUC": 0.8224,
+        "n_seeds": 5,
+        "CI95": [
+          0.6332,
+          0.6716
+        ],
+        "CI_width": 0.0384
+      },
+      "AP_gap": 0.1982,
+      "AUC_gap": 0.0748
+    },
+    "rf": {
+      "with_provenance": {
+        "AP": 0.8758,
+        "AP_sd": 0.0011,
+        "AUC": 0.9145,
+        "n_seeds": 5
+      },
+      "without_provenance": {
+        "AP": 0.7213,
+        "AP_sd": 0.0015,
+        "AUC": 0.8558,
+        "n_seeds": 5,
+        "CI95": [
+          0.697,
+          0.739
+        ],
+        "CI_width": 0.042
+      },
+      "AP_gap": 0.1545,
+      "AUC_gap": 0.0587
+    },
+    "lgbm": {
+      "with_provenance": {
+        "AP": 0.8922,
+        "AP_sd": 0.0009,
+        "AUC": 0.9302,
+        "n_seeds": 5
+      },
+      "without_provenance": {
+        "AP": 0.7996,
+        "AP_sd": 0.0009,
+        "AUC": 0.899,
+        "n_seeds": 5,
+        "CI95": [
+          0.7835,
+          0.814
+        ],
+        "CI_width": 0.0305
+      },
+      "AP_gap": 0.0926,
+      "AUC_gap": 0.0312
+    }
+  },
+  "status": "PASS",
+  "verdict": {
+    "action": "excluded from all pipelines (07, 10, 38, 42, 55..60)",
+    "graph_features": {
+      "before": 49,
+      "after": 46
+    },
+    "note": "Two of the three columns are label sources, not behaviour. Their removal lowers tabular AP by 0.154 (RF) and 0.093 (LightGBM), which is the size of the leak. Every Real-CATS number in the paper is recomputed after removal."
+  }
+}

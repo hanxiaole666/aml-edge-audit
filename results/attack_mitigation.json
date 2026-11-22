@@ -1,0 +1,73 @@
+{
+  "experiment": "attack_mitigation",
+  "attack": "layering h=2, q=1.0 (adds 4 transactions, 60 days lifetime, 4 active days)",
+  "n_test": 7148,
+  "prevalence": 0.2738,
+  "variants": [
+    {
+      "variant": "none",
+      "n_features": 46,
+      "base_AP": 0.7993,
+      "attacked_AP": 0.3356,
+      "AP_drop": 0.4637,
+      "base_recall@1%": 0.0363,
+      "attacked_recall@1%": 0.0322,
+      "capped_columns": []
+    },
+    {
+      "variant": "drop-age",
+      "n_features": 42,
+      "base_AP": 0.7661,
+      "attacked_AP": 0.8762,
+      "AP_drop": -0.1102,
+      "base_recall@1%": 0.0363,
+      "attacked_recall@1%": 0.0363,
+      "capped_columns": []
+    },
+    {
+      "variant": "winsorise",
+      "n_features": 46,
+      "base_AP": 0.7996,
+      "attacked_AP": 0.4486,
+      "AP_drop": 0.351,
+      "base_recall@1%": 0.0358,
+      "attacked_recall@1%": 0.0337,
+      "capped_columns": [
+        "activity_d",
+        "activity_time",
+        "activity_w",
+        "lifetime"
+      ]
+    },
+    {
+      "variant": "both",
+      "n_features": 42,
+      "base_AP": 0.7661,
+      "attacked_AP": 0.8762,
+      "AP_drop": -0.1102,
+      "base_recall@1%": 0.0363,
+      "attacked_recall@1%": 0.0363,
+      "capped_columns": [
+        "activity_d",
+        "activity_time",
+        "activity_w",
+        "lifetime"
+      ]
+    }
+  ],
+  "detection_side": {
+    "rule": "threshold at the 99th percentile within each training-lifetime quintile",
+    "base_recall@1%": 0.0373,
+    "attacked_recall@1%": 0.0082,
+    "n_flagged_base": 73,
+    "n_flagged_attacked": 16
+  },
+  "status": "PASS",
+  "verdict": {
+    "undefended_drop": 0.4637,
+    "best_feature_side_drop": -0.1102,
+    "drop_reduction": 0.5739,
+    "mitigation_effective": true,
+    "note": "Effective means the layering attack no longer moves AP by more than 0.1. If only winsorisation helps, the shortcut is the unbounded tail of the age features; if only removal helps, the model needs the age signal and the fix costs accuracy."
+  }
+}

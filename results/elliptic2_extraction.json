@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "files": {
+    "connected_components.csv": "D:\\Financial Micro-Modelling Project\\ccfa-financial-blockchain\\data\\elliptic2\\connected_components.csv",
+    "edges.csv": "D:\\Financial Micro-Modelling Project\\ccfa-financial-blockchain\\data\\elliptic2\\edges.csv",
+    "nodes.csv": "D:\\Financial Micro-Modelling Project\\ccfa-financial-blockchain\\data\\elliptic2\\nodes.csv"
+  },
+  "detail": "从 25.8GB ZIP 中用 Range 只提取 3 个标注子图文件：connected_components.csv, edges.csv, nodes.csv"
+}

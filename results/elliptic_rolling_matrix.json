@@ -1,0 +1,836 @@
+{
+  "experiment": "elliptic_rolling_matrix",
+  "dataset": "Elliptic v1",
+  "folds": [
+    10,
+    14,
+    18,
+    22,
+    26,
+    30,
+    34,
+    38,
+    42,
+    46
+  ],
+  "split": {
+    "train": "t<=c-2",
+    "val": "t==c-1",
+    "embargo": "t==c",
+    "test": "c+1<=t<=c+4"
+  },
+  "models": [
+    "lightgbm",
+    "gcn",
+    "sage",
+    "tgn_lite"
+  ],
+  "status": "PASS",
+  "summary": {
+    "lightgbm": {
+      "temporal_mean": 0.7879,
+      "temporal_sd": 0.3248,
+      "random_mean": 0.8263,
+      "delta_mean": 0.0384,
+      "delta_positive_folds": 10,
+      "n_folds": 10
+    },
+    "gcn": {
+      "temporal_mean": 0.5098,
+      "temporal_sd": 0.2973,
+      "random_mean": 0.5645,
+      "delta_mean": 0.0548,
+      "delta_positive_folds": 7,
+      "n_folds": 10
+    },
+    "sage": {
+      "temporal_mean": 0.6771,
+      "temporal_sd": 0.3332,
+      "random_mean": 0.7327,
+      "delta_mean": 0.0556,
+      "delta_positive_folds": 7,
+      "n_folds": 10
+    },
+    "tgn_lite": {
+      "temporal_mean": 0.3732,
+      "temporal_sd": 0.2229,
+      "random_mean": 0.3432,
+      "delta_mean": -0.0301,
+      "delta_positive_folds": 3,
+      "n_folds": 10
+    }
+  },
+  "folds_detail": [
+    {
+      "cutoff": 10,
+      "n_train": 10718,
+      "n_val": 778,
+      "n_test": 2428,
+      "test_prevalence": 0.1981,
+      "test_span": [
+        11,
+        14
+      ],
+      "models": {
+        "lightgbm": {
+          "temporal": 0.9902,
+          "random": 0.9943,
+          "delta": 0.0041,
+          "CI95_temporal": [
+            0.9837,
+            0.9952
+          ],
+          "paired_delta": {
+            "mean": 0.0041,
+            "ci95": [
+              0.0012,
+              0.0081
+            ]
+          }
+        },
+        "gcn": {
+          "temporal": 0.7455,
+          "random": 0.6819,
+          "delta": -0.0636,
+          "CI95_temporal": [
+            0.6968,
+            0.7916
+          ],
+          "paired_delta": {
+            "mean": -0.0629,
+            "ci95": [
+              -0.111,
+              -0.0158
+            ]
+          }
+        },
+        "sage": {
+          "temporal": 0.9343,
+          "random": 0.9318,
+          "delta": -0.0025,
+          "CI95_temporal": [
+            0.9165,
+            0.9486
+          ],
+          "paired_delta": {
+            "mean": -0.0022,
+            "ci95": [
+              -0.0164,
+              0.0122
+            ]
+          }
+        },
+        "tgn_lite": {
+          "temporal": 0.6937,
+          "random": 0.464,
+          "delta": -0.2297,
+          "CI95_temporal": [
+            0.6498,
+            0.7411
+          ],
+          "paired_delta": {
+            "mean": -0.2309,
+            "ci95": [
+              -0.2699,
+              -0.1912
+            ]
+          }
+        }
+      }
+    },
+    {
+      "cutoff": 14,
+      "n_train": 13670,
+      "n_val": 809,
+      "n_test": 2348,
+      "test_prevalence": 0.1814,
+      "test_span": [
+        15,
+        18
+      ],
+      "models": {
+        "lightgbm": {
+          "temporal": 0.9879,
+          "random": 0.9919,
+          "delta": 0.0041,
+          "CI95_temporal": [
+            0.9807,
+            0.9936
+          ],
+          "paired_delta": {
+            "mean": 0.004,
+            "ci95": [
+              -0.0003,
+              0.0081
+            ]
+          }
+        },
+        "gcn": {
+          "temporal": 0.8107,
+          "random": 0.8414,
+          "delta": 0.0308,
+          "CI95_temporal": [
+            0.7687,
+            0.8544
+          ],
+          "paired_delta": {
+            "mean": 0.0303,
+            "ci95": [
+              0.0086,
+              0.0578
+            ]
+          }
+        },
+        "sage": {
+          "temporal": 0.9327,
+          "random": 0.9698,
+          "delta": 0.0371,
+          "CI95_temporal": [
+            0.9125,
+            0.9496
+          ],
+          "paired_delta": {
+            "mean": 0.0375,
+            "ci95": [
+              0.023,
+              0.0535
+            ]
+          }
+        },
+        "tgn_lite": {
+          "temporal": 0.6867,
+          "random": 0.6575,
+          "delta": -0.0292,
+          "CI95_temporal": [
+            0.6415,
+            0.7348
+          ],
+          "paired_delta": {
+            "mean": -0.0294,
+            "ci95": [
+              -0.0557,
+              -0.0068
+            ]
+          }
+        }
+      }
+    },
+    {
+      "cutoff": 18,
+      "n_train": 16044,
+      "n_val": 811,
+      "n_test": 4049,
+      "test_prevalence": 0.1477,
+      "test_span": [
+        19,
+        22
+      ],
+      "models": {
+        "lightgbm": {
+          "temporal": 0.9542,
+          "random": 0.979,
+          "delta": 0.0248,
+          "CI95_temporal": [
+            0.9325,
+            0.9716
+          ],
+          "paired_delta": {
+            "mean": 0.0243,
+            "ci95": [
+              0.0089,
+              0.0456
+            ]
+          }
+        },
+        "gcn": {
+          "temporal": 0.4987,
+          "random": 0.6843,
+          "delta": 0.1855,
+          "CI95_temporal": [
+            0.4651,
+            0.5374
+          ],
+          "paired_delta": {
+            "mean": 0.1844,
+            "ci95": [
+              0.1583,
+              0.2115
+            ]
+          }
+        },
+        "sage": {
+          "temporal": 0.7162,
+          "random": 0.8854,
+          "delta": 0.1692,
+          "CI95_temporal": [
+            0.682,
+            0.7587
+          ],
+          "paired_delta": {
+            "mean": 0.1679,
+            "ci95": [
+              0.1404,
+              0.193
+            ]
+          }
+        },
+        "tgn_lite": {
+          "temporal": 0.3769,
+          "random": 0.3623,
+          "delta": -0.0147,
+          "CI95_temporal": [
+            0.3528,
+            0.4064
+          ],
+          "paired_delta": {
+            "mean": -0.0146,
+            "ci95": [
+              -0.0292,
+              0.0006
+            ]
+          }
+        }
+      }
+    },
+    {
+      "cutoff": 22,
+      "n_train": 18889,
+      "n_val": 641,
+      "n_test": 3424,
+      "test_prevalence": 0.118,
+      "test_span": [
+        23,
+        26
+      ],
+      "models": {
+        "lightgbm": {
+          "temporal": 0.7637,
+          "random": 0.966,
+          "delta": 0.2024,
+          "CI95_temporal": [
+            0.7227,
+            0.8035
+          ],
+          "paired_delta": {
+            "mean": 0.2031,
+            "ci95": [
+              0.1616,
+              0.2397
+            ]
+          }
+        },
+        "gcn": {
+          "temporal": 0.5155,
+          "random": 0.764,
+          "delta": 0.2485,
+          "CI95_temporal": [
+            0.4586,
+            0.5565
+          ],
+          "paired_delta": {
+            "mean": 0.2485,
+            "ci95": [
+              0.2021,
+              0.2994
+            ]
+          }
+        },
+        "sage": {
+          "temporal": 0.643,
+          "random": 0.8693,
+          "delta": 0.2263,
+          "CI95_temporal": [
+            0.5953,
+            0.6898
+          ],
+          "paired_delta": {
+            "mean": 0.2257,
+            "ci95": [
+              0.1811,
+              0.2654
+            ]
+          }
+        },
+        "tgn_lite": {
+          "temporal": 0.4259,
+          "random": 0.3714,
+          "delta": -0.0544,
+          "CI95_temporal": [
+            0.373,
+            0.474
+          ],
+          "paired_delta": {
+            "mean": -0.0528,
+            "ci95": [
+              -0.0781,
+              -0.0296
+            ]
+          }
+        }
+      }
+    },
+    {
+      "cutoff": 26,
+      "n_train": 23606,
+      "n_val": 594,
+      "n_test": 2188,
+      "test_prevalence": 0.2381,
+      "test_span": [
+        27,
+        30
+      ],
+      "models": {
+        "lightgbm": {
+          "temporal": 0.986,
+          "random": 0.9907,
+          "delta": 0.0048,
+          "CI95_temporal": [
+            0.9808,
+            0.9906
+          ],
+          "paired_delta": {
+            "mean": 0.0046,
+            "ci95": [
+              0.0003,
+              0.009
+            ]
+          }
+        },
+        "gcn": {
+          "temporal": 0.8608,
+          "random": 0.8222,
+          "delta": -0.0386,
+          "CI95_temporal": [
+            0.8329,
+            0.8855
+          ],
+          "paired_delta": {
+            "mean": -0.0378,
+            "ci95": [
+              -0.0543,
+              -0.0241
+            ]
+          }
+        },
+        "sage": {
+          "temporal": 0.955,
+          "random": 0.9057,
+          "delta": -0.0492,
+          "CI95_temporal": [
+            0.9376,
+            0.9683
+          ],
+          "paired_delta": {
+            "mean": -0.0491,
+            "ci95": [
+              -0.0681,
+              -0.0318
+            ]
+          }
+        },
+        "tgn_lite": {
+          "temporal": 0.5311,
+          "random": 0.5516,
+          "delta": 0.0205,
+          "CI95_temporal": [
+            0.4847,
+            0.5709
+          ],
+          "paired_delta": {
+            "mean": 0.0202,
+            "ci95": [
+              0.0087,
+              0.0321
+            ]
+          }
+        }
+      }
+    },
+    {
+      "cutoff": 30,
+      "n_train": 25207,
+      "n_val": 1174,
+      "n_test": 2989,
+      "test_prevalence": 0.17,
+      "test_span": [
+        31,
+        34
+      ],
+      "models": {
+        "lightgbm": {
+          "temporal": 0.9724,
+          "random": 0.9912,
+          "delta": 0.0188,
+          "CI95_temporal": [
+            0.959,
+            0.9818
+          ],
+          "paired_delta": {
+            "mean": 0.0191,
+            "ci95": [
+              0.0112,
+              0.0302
+            ]
+          }
+        },
+        "gcn": {
+          "temporal": 0.689,
+          "random": 0.7921,
+          "delta": 0.1031,
+          "CI95_temporal": [
+            0.6446,
+            0.73
+          ],
+          "paired_delta": {
+            "mean": 0.1033,
+            "ci95": [
+              0.0759,
+              0.1303
+            ]
+          }
+        },
+        "sage": {
+          "temporal": 0.8844,
+          "random": 0.8901,
+          "delta": 0.0056,
+          "CI95_temporal": [
+            0.8519,
+            0.9167
+          ],
+          "paired_delta": {
+            "mean": 0.004,
+            "ci95": [
+              -0.0245,
+              0.0331
+            ]
+          }
+        },
+        "tgn_lite": {
+          "temporal": 0.3483,
+          "random": 0.3702,
+          "delta": 0.0219,
+          "CI95_temporal": [
+            0.3141,
+            0.3869
+          ],
+          "paired_delta": {
+            "mean": 0.022,
+            "ci95": [
+              0.0141,
+              0.0295
+            ]
+          }
+        }
+      }
+    },
+    {
+      "cutoff": 34,
+      "n_train": 28938,
+      "n_val": 441,
+      "n_test": 4303,
+      "test_prevalence": 0.0851,
+      "test_span": [
+        35,
+        38
+      ],
+      "models": {
+        "lightgbm": {
+          "temporal": 0.9516,
+          "random": 0.979,
+          "delta": 0.0274,
+          "CI95_temporal": [
+            0.9341,
+            0.9673
+          ],
+          "paired_delta": {
+            "mean": 0.0277,
+            "ci95": [
+              0.015,
+              0.0412
+            ]
+          }
+        },
+        "gcn": {
+          "temporal": 0.2674,
+          "random": 0.4495,
+          "delta": 0.1821,
+          "CI95_temporal": [
+            0.2259,
+            0.3119
+          ],
+          "paired_delta": {
+            "mean": 0.182,
+            "ci95": [
+              0.1417,
+              0.2235
+            ]
+          }
+        },
+        "sage": {
+          "temporal": 0.7489,
+          "random": 0.8809,
+          "delta": 0.1321,
+          "CI95_temporal": [
+            0.6998,
+            0.8026
+          ],
+          "paired_delta": {
+            "mean": 0.1288,
+            "ci95": [
+              0.0914,
+              0.171
+            ]
+          }
+        },
+        "tgn_lite": {
+          "temporal": 0.1894,
+          "random": 0.252,
+          "delta": 0.0627,
+          "CI95_temporal": [
+            0.1724,
+            0.2096
+          ],
+          "paired_delta": {
+            "mean": 0.0632,
+            "ci95": [
+              0.0364,
+              0.0906
+            ]
+          }
+        }
+      }
+    },
+    {
+      "cutoff": 38,
+      "n_train": 32943,
+      "n_val": 498,
+      "n_test": 5680,
+      "test_prevalence": 0.0965,
+      "test_span": [
+        39,
+        42
+      ],
+      "models": {
+        "lightgbm": {
+          "temporal": 0.8816,
+          "random": 0.9106,
+          "delta": 0.0291,
+          "CI95_temporal": [
+            0.8612,
+            0.9017
+          ],
+          "paired_delta": {
+            "mean": 0.029,
+            "ci95": [
+              0.0168,
+              0.0407
+            ]
+          }
+        },
+        "gcn": {
+          "temporal": 0.61,
+          "random": 0.4964,
+          "delta": -0.1136,
+          "CI95_temporal": [
+            0.5682,
+            0.6506
+          ],
+          "paired_delta": {
+            "mean": -0.1134,
+            "ci95": [
+              -0.1421,
+              -0.0872
+            ]
+          }
+        },
+        "sage": {
+          "temporal": 0.8046,
+          "random": 0.8579,
+          "delta": 0.0533,
+          "CI95_temporal": [
+            0.7764,
+            0.8336
+          ],
+          "paired_delta": {
+            "mean": 0.0534,
+            "ci95": [
+              0.0382,
+              0.0688
+            ]
+          }
+        },
+        "tgn_lite": {
+          "temporal": 0.3218,
+          "random": 0.2823,
+          "delta": -0.0394,
+          "CI95_temporal": [
+            0.29,
+            0.3537
+          ],
+          "paired_delta": {
+            "mean": -0.0396,
+            "ci95": [
+              -0.0516,
+              -0.0308
+            ]
+          }
+        }
+      }
+    },
+    {
+      "cutoff": 42,
+      "n_train": 36591,
+      "n_val": 1132,
+      "n_test": 4894,
+      "test_prevalence": 0.0112,
+      "test_span": [
+        43,
+        46
+      ],
+      "models": {
+        "lightgbm": {
+          "temporal": 0.0741,
+          "random": 0.1258,
+          "delta": 0.0518,
+          "CI95_temporal": [
+            0.0477,
+            0.1214
+          ],
+          "paired_delta": {
+            "mean": 0.0538,
+            "ci95": [
+              0.0218,
+              0.0956
+            ]
+          }
+        },
+        "gcn": {
+          "temporal": 0.0161,
+          "random": 0.0178,
+          "delta": 0.0018,
+          "CI95_temporal": [
+            0.0119,
+            0.0228
+          ],
+          "paired_delta": {
+            "mean": 0.0017,
+            "ci95": [
+              0.0004,
+              0.0033
+            ]
+          }
+        },
+        "sage": {
+          "temporal": 0.0521,
+          "random": 0.0336,
+          "delta": -0.0185,
+          "CI95_temporal": [
+            0.0207,
+            0.0993
+          ],
+          "paired_delta": {
+            "mean": -0.0182,
+            "ci95": [
+              -0.0549,
+              0.0035
+            ]
+          }
+        },
+        "tgn_lite": {
+          "temporal": 0.0137,
+          "random": 0.0137,
+          "delta": 0.0,
+          "CI95_temporal": [
+            0.01,
+            0.0187
+          ],
+          "paired_delta": {
+            "mean": 0.0,
+            "ci95": [
+              -0.0006,
+              0.0006
+            ]
+          }
+        }
+      }
+    },
+    {
+      "cutoff": 46,
+      "n_train": 42838,
+      "n_val": 1221,
+      "n_test": 1793,
+      "test_prevalence": 0.0636,
+      "test_span": [
+        47,
+        49
+      ],
+      "models": {
+        "lightgbm": {
+          "temporal": 0.3171,
+          "random": 0.3344,
+          "delta": 0.0173,
+          "CI95_temporal": [
+            0.2563,
+            0.396
+          ],
+          "paired_delta": {
+            "mean": 0.0177,
+            "ci95": [
+              -0.0016,
+              0.0375
+            ]
+          }
+        },
+        "gcn": {
+          "temporal": 0.084,
+          "random": 0.0958,
+          "delta": 0.0118,
+          "CI95_temporal": [
+            0.0692,
+            0.0998
+          ],
+          "paired_delta": {
+            "mean": 0.0128,
+            "ci95": [
+              0.0063,
+              0.0223
+            ]
+          }
+        },
+        "sage": {
+          "temporal": 0.1001,
+          "random": 0.1027,
+          "delta": 0.0026,
+          "CI95_temporal": [
+            0.0802,
+            0.1239
+          ],
+          "paired_delta": {
+            "mean": 0.0026,
+            "ci95": [
+              0.0013,
+              0.0041
+            ]
+          }
+        },
+        "tgn_lite": {
+          "temporal": 0.1449,
+          "random": 0.1068,
+          "delta": -0.0381,
+          "CI95_temporal": [
+            0.1135,
+            0.1886
+          ],
+          "paired_delta": {
+            "mean": -0.0392,
+            "ci95": [
+              -0.0606,
+              -0.0239
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "rq1_answer": "Across 10 folds, the random-minus-temporal gap is positive for every model; the mean gap ranges from -0.030 to 0.056 AP. The gap is therefore a property of the protocol, not of one model family."
+}

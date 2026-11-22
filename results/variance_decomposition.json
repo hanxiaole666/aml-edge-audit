@@ -1,0 +1,190 @@
+{
+  "experiment": "variance_decomposition",
+  "folds": [
+    {
+      "fold": 0,
+      "frac": 0.45,
+      "n_train": 12865,
+      "n_test": 15726,
+      "prev_test": 0.4033,
+      "span_days": 877.2,
+      "t_end": 1722879360.0,
+      "AP_mean": 0.8486,
+      "AP_per_seed": [
+        0.8479,
+        0.8488,
+        0.8491
+      ],
+      "boot_var": 1.5134346146170911e-05
+    },
+    {
+      "fold": 1,
+      "frac": 0.5,
+      "n_train": 14295,
+      "n_test": 13253,
+      "prev_test": 0.3372,
+      "span_days": 866.3,
+      "t_end": 1722879360.0,
+      "AP_mean": 0.8069,
+      "AP_per_seed": [
+        0.8089,
+        0.8045,
+        0.8073
+      ],
+      "boot_var": 2.6686785249364452e-05
+    },
+    {
+      "fold": 2,
+      "frac": 0.55,
+      "n_train": 15725,
+      "n_test": 12866,
+      "prev_test": 0.3273,
+      "span_days": 851.9,
+      "t_end": 1722879360.0,
+      "AP_mean": 0.7972,
+      "AP_per_seed": [
+        0.7967,
+        0.7975,
+        0.7975
+      ],
+      "boot_var": 3.2937253513802954e-05
+    },
+    {
+      "fold": 3,
+      "frac": 0.6,
+      "n_train": 17154,
+      "n_test": 11437,
+      "prev_test": 0.3106,
+      "span_days": 793.0,
+      "t_end": 1722879360.0,
+      "AP_mean": 0.7873,
+      "AP_per_seed": [
+        0.7867,
+        0.7869,
+        0.7885
+      ],
+      "boot_var": 3.886126152081936e-05
+    },
+    {
+      "fold": 4,
+      "frac": 0.65,
+      "n_train": 18584,
+      "n_test": 10007,
+      "prev_test": 0.2941,
+      "span_days": 722.3,
+      "t_end": 1722879360.0,
+      "AP_mean": 0.7968,
+      "AP_per_seed": [
+        0.7969,
+        0.7957,
+        0.798
+      ],
+      "boot_var": 4.5480908924041356e-05
+    },
+    {
+      "fold": 5,
+      "frac": 0.7,
+      "n_train": 20013,
+      "n_test": 8577,
+      "prev_test": 0.2809,
+      "span_days": 644.7,
+      "t_end": 1722879360.0,
+      "AP_mean": 0.8024,
+      "AP_per_seed": [
+        0.8021,
+        0.8024,
+        0.8026
+      ],
+      "boot_var": 5.3323006481339036e-05
+    },
+    {
+      "fold": 6,
+      "frac": 0.75,
+      "n_train": 21443,
+      "n_test": 7148,
+      "prev_test": 0.2738,
+      "span_days": 574.4,
+      "t_end": 1722879360.0,
+      "AP_mean": 0.7977,
+      "AP_per_seed": [
+        0.798,
+        0.7973,
+        0.798
+      ],
+      "boot_var": 7.73626320283996e-05
+    },
+    {
+      "fold": 7,
+      "frac": 0.8,
+      "n_train": 22872,
+      "n_test": 5719,
+      "prev_test": 0.2224,
+      "span_days": 497.0,
+      "t_end": 1722879360.0,
+      "AP_mean": 0.7687,
+      "AP_per_seed": [
+        0.7686,
+        0.7686,
+        0.7689
+      ],
+      "boot_var": 0.0001300594006665239
+    },
+    {
+      "fold": 8,
+      "frac": 0.85,
+      "n_train": 24302,
+      "n_test": 4289,
+      "prev_test": 0.1289,
+      "span_days": 426.1,
+      "t_end": 1722879360.0,
+      "AP_mean": 0.7006,
+      "AP_per_seed": [
+        0.7038,
+        0.6977,
+        0.7002
+      ],
+      "boot_var": 0.0003302581277585
+    },
+    {
+      "fold": 9,
+      "frac": 0.9,
+      "n_train": 25731,
+      "n_test": 2860,
+      "prev_test": 0.0332,
+      "span_days": 323.0,
+      "t_end": 1722879360.0,
+      "AP_mean": 0.4513,
+      "AP_per_seed": [
+        0.4572,
+        0.4438,
+        0.4529
+      ],
+      "boot_var": 0.002949626547470889
+    }
+  ],
+  "grand_mean_AP": 0.7558,
+  "fold_SD": 0.1133,
+  "variance_components": {
+    "fold": 0.01283,
+    "seed": 1e-06,
+    "residual": 5e-06,
+    "bootstrap": 0.00037
+  },
+  "share": {
+    "fold": 0.971,
+    "seed": 0.0,
+    "residual": 0.0,
+    "bootstrap": 0.028
+  },
+  "status": "PASS",
+  "grand_mean_CI95": [
+    0.6856,
+    0.826
+  ],
+  "recommended_precision": "one decimal",
+  "verdict": {
+    "dominant_source": "fold",
+    "fold_SD": 0.1133,
+    "note": "Point estimates to three decimals are not defensible when the fold component dominates; we report the grand mean with a CI and keep three decimals only for within-fold comparisons."
+  }
+}

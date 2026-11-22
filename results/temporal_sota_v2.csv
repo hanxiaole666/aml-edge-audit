@@ -1,0 +1,13 @@
+model,seed,PR-AUC,AUC,train_seconds,device,status,split
+tgn,0,0.954634,0.936995,1.000000,cuda,done,random
+tgn,1,0.968256,0.962908,0.180000,cuda,done,random
+tgat,0,0.937684,0.914439,0.970000,cuda,done,random
+tgat,1,0.950909,0.941688,0.270000,cuda,done,random
+dyformer,0,0.896352,0.873820,1.050000,cuda,done,random
+dyformer,1,0.954625,0.936199,0.280000,cuda,done,random
+tgn,0,0.832546,0.874116,0.820000,cuda,done,temporal
+tgn,1,0.812772,0.860364,0.160000,cuda,done,temporal
+tgat,0,0.791962,0.850390,0.960000,cuda,done,temporal
+tgat,1,0.749595,0.827631,0.270000,cuda,done,temporal
+dyformer,0,0.812385,0.867346,1.020000,cuda,done,temporal
+dyformer,1,0.871684,0.889712,0.280000,cuda,done,temporal

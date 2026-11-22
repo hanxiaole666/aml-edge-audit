@@ -1,0 +1,290 @@
+{
+  "experiment": "edge_protocol_final",
+  "model": "LogisticRegression(C=0.1) on 2-hop normalized adjacency smoothing",
+  "conditions": {
+    "C1": "keep all edges",
+    "C2": "past-only edges",
+    "C3": "remove all cross-split edges",
+    "M2": "random edges count-matched to C2"
+  },
+  "n_splits": 5,
+  "status": "PASS",
+  "splits": [
+    {
+      "frac": 0.6,
+      "n_train": 900,
+      "n_test": 600,
+      "test_prevalence": 0.4017,
+      "conditions": {
+        "C1": {
+          "AP": 0.5231,
+          "n_edges": 6942,
+          "CI95": [
+            0.4646,
+            0.5925
+          ]
+        },
+        "C2": {
+          "AP": 0.5958,
+          "n_edges": 4780,
+          "CI95": [
+            0.5363,
+            0.6617
+          ]
+        },
+        "C3": {
+          "AP": 0.6313,
+          "n_edges": 3700,
+          "CI95": [
+            0.5718,
+            0.6962
+          ]
+        },
+        "M2": {
+          "AP": 0.4275,
+          "n_edges": 4780,
+          "CI95": [
+            0.3757,
+            0.4964
+          ]
+        }
+      },
+      "C3_minus_C1": {
+        "diff": 0.1076,
+        "ci95": [
+          0.0822,
+          0.1341
+        ],
+        "significant": true
+      }
+    },
+    {
+      "frac": 0.65,
+      "n_train": 975,
+      "n_test": 525,
+      "test_prevalence": 0.3886,
+      "conditions": {
+        "C1": {
+          "AP": 0.5213,
+          "n_edges": 6942,
+          "CI95": [
+            0.4541,
+            0.5849
+          ]
+        },
+        "C2": {
+          "AP": 0.5962,
+          "n_edges": 4930,
+          "CI95": [
+            0.5257,
+            0.656
+          ]
+        },
+        "C3": {
+          "AP": 0.6354,
+          "n_edges": 3869,
+          "CI95": [
+            0.5635,
+            0.6953
+          ]
+        },
+        "M2": {
+          "AP": 0.4321,
+          "n_edges": 4930,
+          "CI95": [
+            0.3647,
+            0.502
+          ]
+        }
+      },
+      "C3_minus_C1": {
+        "diff": 0.1144,
+        "ci95": [
+          0.0835,
+          0.1475
+        ],
+        "significant": true
+      }
+    },
+    {
+      "frac": 0.7,
+      "n_train": 1050,
+      "n_test": 450,
+      "test_prevalence": 0.3756,
+      "conditions": {
+        "C1": {
+          "AP": 0.5253,
+          "n_edges": 6942,
+          "CI95": [
+            0.4493,
+            0.5992
+          ]
+        },
+        "C2": {
+          "AP": 0.6049,
+          "n_edges": 5101,
+          "CI95": [
+            0.524,
+            0.6736
+          ]
+        },
+        "C3": {
+          "AP": 0.6366,
+          "n_edges": 4173,
+          "CI95": [
+            0.5596,
+            0.7032
+          ]
+        },
+        "M2": {
+          "AP": 0.4467,
+          "n_edges": 5101,
+          "CI95": [
+            0.3827,
+            0.5227
+          ]
+        }
+      },
+      "C3_minus_C1": {
+        "diff": 0.1115,
+        "ci95": [
+          0.078,
+          0.1476
+        ],
+        "significant": true
+      }
+    },
+    {
+      "frac": 0.75,
+      "n_train": 1125,
+      "n_test": 375,
+      "test_prevalence": 0.3787,
+      "conditions": {
+        "C1": {
+          "AP": 0.5366,
+          "n_edges": 6942,
+          "CI95": [
+            0.4524,
+            0.622
+          ]
+        },
+        "C2": {
+          "AP": 0.6185,
+          "n_edges": 5349,
+          "CI95": [
+            0.5343,
+            0.6977
+          ]
+        },
+        "C3": {
+          "AP": 0.6593,
+          "n_edges": 4434,
+          "CI95": [
+            0.5769,
+            0.7383
+          ]
+        },
+        "M2": {
+          "AP": 0.414,
+          "n_edges": 5349,
+          "CI95": [
+            0.3451,
+            0.4992
+          ]
+        }
+      },
+      "C3_minus_C1": {
+        "diff": 0.1232,
+        "ci95": [
+          0.0863,
+          0.1669
+        ],
+        "significant": true
+      }
+    },
+    {
+      "frac": 0.8,
+      "n_train": 1200,
+      "n_test": 300,
+      "test_prevalence": 0.3567,
+      "conditions": {
+        "C1": {
+          "AP": 0.5266,
+          "n_edges": 6942,
+          "CI95": [
+            0.437,
+            0.6168
+          ]
+        },
+        "C2": {
+          "AP": 0.6135,
+          "n_edges": 5813,
+          "CI95": [
+            0.5195,
+            0.6978
+          ]
+        },
+        "C3": {
+          "AP": 0.6436,
+          "n_edges": 5102,
+          "CI95": [
+            0.5529,
+            0.7257
+          ]
+        },
+        "M2": {
+          "AP": 0.4478,
+          "n_edges": 5813,
+          "CI95": [
+            0.3599,
+            0.5386
+          ]
+        }
+      },
+      "C3_minus_C1": {
+        "diff": 0.1161,
+        "ci95": [
+          0.0717,
+          0.1601
+        ],
+        "significant": true
+      }
+    }
+  ],
+  "aggregate": {
+    "C1": {
+      "AP_mean": 0.5266,
+      "AP_std": 0.006
+    },
+    "C2": {
+      "AP_mean": 0.6058,
+      "AP_std": 0.0102
+    },
+    "C3": {
+      "AP_mean": 0.6412,
+      "AP_std": 0.011
+    },
+    "M2": {
+      "AP_mean": 0.4336,
+      "AP_std": 0.0141
+    }
+  },
+  "paired_tests": {
+    "C2_vs_C3": {
+      "diff": -0.0313,
+      "ci95": [
+        -0.055,
+        -0.0088
+      ],
+      "significant": true
+    },
+    "C2_vs_M2": {
+      "diff": 0.1543,
+      "ci95": [
+        0.0847,
+        0.2197
+      ],
+      "significant": true
+    }
+  }
+}

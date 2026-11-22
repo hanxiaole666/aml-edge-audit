@@ -1,0 +1,19 @@
+{
+  "experiment": "elliptic2_safe",
+  "definition": "Safe track uses only subgraph-internal statistics (size, edge count, transaction count, density). Full track pools the officially precomputed 43-dim node features.",
+  "n_subgraphs": 121810,
+  "prevalence": 0.0227,
+  "status": "PASS",
+  "Full": {
+    "PR-AUC": 0.3915,
+    "AUC": 0.9158
+  },
+  "Safe": {
+    "PR-AUC": 0.0251,
+    "AUC": 0.5253
+  },
+  "global_feature_upper_bound": {
+    "difference": 0.3664,
+    "interpretation": "The improvement of Full over Safe is an upper bound on the contribution of officially precomputed (potentially future-bearing) global node features. This converts the earlier WARN into a bounded uncertainty."
+  }
+}

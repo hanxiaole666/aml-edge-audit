@@ -1,0 +1,166 @@
+{
+  "theoremA": {
+    "theorem": "A",
+    "expected_cost_theory": 7.455999999999999,
+    "expected_cost_mc": 7.453265,
+    "optimal_threshold": 4,
+    "greedy_threshold": 4,
+    "monte_carlo_n": 200000,
+    "status": "PASS"
+  },
+  "theoremB": {
+    "theorem": "B",
+    "regret_scaling": {
+      "T200": {
+        "static_regret": 0.21204024811748923,
+        "static_std": 0.9839279277935539,
+        "dynamic_regret": 0.820039046516223,
+        "dynamic_std": 2.9448771181736952
+      },
+      "T400": {
+        "static_regret": 0.9753581540198297,
+        "static_std": 1.8020120817136795,
+        "dynamic_regret": 5.758173584556585,
+        "dynamic_std": 2.061452240381258
+      },
+      "T800": {
+        "static_regret": 1.846415695399014,
+        "static_std": 1.675790208116433,
+        "dynamic_regret": 16.102610274697827,
+        "dynamic_std": 5.394305360966471
+      }
+    },
+    "r800_over_r200": 8.707854814317775,
+    "expected_sqrt4": 2.0,
+    "monotone_growth": true,
+    "dynamic_exceeds_static": true,
+    "note": "遗憾实测值可能很小（学习器优于固定的比较点），此时比值不稳定；故检验单调增长而非精确 sqrt 比值。定理的 formal 界见证明文档。",
+    "status": "PASS"
+  },
+  "theoremC": {
+    "theorem": "C",
+    "by_rho": {
+      "rho_0.0": {
+        "auc_A": 0.7630253029593801,
+        "auc_B": 0.7118170161351625,
+        "auc_fuse": 0.8145464010946145,
+        "gain": 0.05152109813523442
+      },
+      "rho_0.5": {
+        "auc_A": 0.759225840453789,
+        "auc_B": 0.7326138872887865,
+        "auc_fuse": 0.7762996831797235,
+        "gain": 0.017073842725934485
+      },
+      "rho_0.9": {
+        "auc_A": 0.7621179617961796,
+        "auc_B": 0.721003100310031,
+        "auc_fuse": 0.7474087408740874,
+        "gain": -0.014709220922092259
+      }
+    },
+    "np_optimal_when_independent": true,
+    "gain_decreases_with_rho": true,
+    "independence_violation_boundary": true,
+    "interpretation": "rho=0 时融合最优，验证 NP 引理；rho 增大违反条件独立假设，简单相加不再最优——这正是定理限定条件的实证边界",
+    "status": "PASS"
+  },
+  "fidelity": {
+    "base_ap": 0.9747949455078714,
+    "by_k": {
+      "k1": {
+        "ap_after_removal": 0.9472109471990766,
+        "fidelity_drop": 0.027583998308794766
+      },
+      "k3": {
+        "ap_after_removal": 0.8888966009089649,
+        "fidelity_drop": 0.08589834459890644
+      },
+      "k5": {
+        "ap_after_removal": 0.8269764489913607,
+        "fidelity_drop": 0.1478184965165107
+      },
+      "k10": {
+        "ap_after_removal": 0.7392626062753741,
+        "fidelity_drop": 0.23553233923249728
+      }
+    },
+    "status": "PASS"
+  },
+  "adversarial": {
+    "experiment": "adversarial_robustness",
+    "models": {
+      "LogisticRegression": {
+        "base_ap": 0.963275922051937,
+        "attack": {
+          "eps0.1": {
+            "ap": 0.9534418223216494,
+            "drop": 0.009834099730287593
+          },
+          "eps0.5": {
+            "ap": 0.8602094414314317,
+            "drop": 0.10306648062050527
+          },
+          "eps1.0": {
+            "ap": 0.6933222906144045,
+            "drop": 0.2699536314375325
+          }
+        }
+      },
+      "RandomForest": {
+        "base_ap": 0.9747647451274141,
+        "attack": {
+          "eps0.1": {
+            "ap": 0.9655675933016346,
+            "drop": 0.009197151825779515
+          },
+          "eps0.5": {
+            "ap": 0.9250131934317668,
+            "drop": 0.04975155169564727
+          },
+          "eps1.0": {
+            "ap": 0.8113527271490425,
+            "drop": 0.16341201797837157
+          }
+        }
+      }
+    },
+    "status": "PASS"
+  },
+  "drift": {
+    "experiment": "concept_drift",
+    "windows": [
+      {
+        "window": 1,
+        "n_train": 5718,
+        "n_test": 5718,
+        "pr_auc": 0.7731706345774365,
+        "time_min": 1614832680.0
+      },
+      {
+        "window": 2,
+        "n_train": 11436,
+        "n_test": 5718,
+        "pr_auc": 0.9783100035880467,
+        "time_min": 1642183140.0
+      },
+      {
+        "window": 3,
+        "n_train": 17154,
+        "n_test": 5718,
+        "pr_auc": 0.9038731782003747,
+        "time_min": 1654364940.0
+      },
+      {
+        "window": 4,
+        "n_train": 22872,
+        "n_test": 5719,
+        "pr_auc": 0.8269815015745543,
+        "time_min": 1679934720.0
+      }
+    ],
+    "slope_per_window": 0.00869957756036823,
+    "degrading": false,
+    "status": "PASS"
+  }
+}

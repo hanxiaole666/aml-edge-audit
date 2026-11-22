@@ -1,0 +1,34 @@
+{
+  "experiment": "bootstrap_ci_demo",
+  "dataset": "Real-CATS ETH, temporal split",
+  "n_test": 7148,
+  "prevalence": 0.2738,
+  "n_boot": 1000,
+  "ci_by_model": {
+    "XGBoost": {
+      "point": 0.8944,
+      "ci95_low": 0.8845,
+      "ci95_high": 0.9043,
+      "n_boot": 1000,
+      "n_test": 7148
+    },
+    "RandomForest": {
+      "point": 0.8751,
+      "ci95_low": 0.8638,
+      "ci95_high": 0.8866,
+      "n_boot": 1000,
+      "n_test": 7148
+    }
+  },
+  "paired_comparison": {
+    "XGBoost_vs_RandomForest": {
+      "mean_diff": 0.0192,
+      "ci95_low": 0.0141,
+      "ci95_high": 0.0246,
+      "p_improvement": 1.0,
+      "significant_0.05": true,
+      "n_boot": 1000
+    }
+  },
+  "status": "PASS"
+}

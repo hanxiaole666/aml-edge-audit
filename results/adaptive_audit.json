@@ -1,0 +1,125 @@
+{
+  "adaptive": {
+    "experiment": "adaptive_attack",
+    "models": {
+      "LogisticRegression": {
+        "eps0.1": {
+          "base_ap": 0.963275922051937,
+          "adaptive_ap": 0.947122067315248,
+          "ap_drop": 0.016153854736689066,
+          "evasion_rate_before": 0.147932131495228,
+          "evasion_rate_after": 0.20121951219512196,
+          "evasion_increase": 0.05328738069989397,
+          "eps": 0.1,
+          "n_iter": 30,
+          "n_coords": 8,
+          "status": "PASS"
+        },
+        "eps0.5": {
+          "base_ap": 0.963275922051937,
+          "adaptive_ap": 0.8732999440328811,
+          "ap_drop": 0.08997597801905588,
+          "evasion_rate_before": 0.147932131495228,
+          "evasion_rate_after": 0.26537645811240723,
+          "evasion_increase": 0.11744432661717924,
+          "eps": 0.5,
+          "n_iter": 30,
+          "n_coords": 8,
+          "status": "PASS"
+        }
+      },
+      "RandomForest": {
+        "eps0.1": {
+          "base_ap": 0.9747647451274141,
+          "adaptive_ap": 0.9707174928961372,
+          "ap_drop": 0.004047252231276888,
+          "evasion_rate_before": 0.11585365853658537,
+          "evasion_rate_after": 0.12857900318133617,
+          "evasion_increase": 0.012725344644750794,
+          "eps": 0.1,
+          "n_iter": 30,
+          "n_coords": 8,
+          "status": "PASS"
+        },
+        "eps0.5": {
+          "base_ap": 0.9747647451274141,
+          "adaptive_ap": 0.9626727663927415,
+          "ap_drop": 0.012091978734672604,
+          "evasion_rate_before": 0.11585365853658537,
+          "evasion_rate_after": 0.16436903499469777,
+          "evasion_increase": 0.048515376458112394,
+          "eps": 0.5,
+          "n_iter": 30,
+          "n_coords": 8,
+          "status": "PASS"
+        }
+      }
+    },
+    "status": "PASS"
+  },
+  "label_audit": {
+    "experiment": "label_quality_audit",
+    "n_total": 28591,
+    "n_positive": 12572,
+    "n_negative": 16019,
+    "positive_rate": 0.4397187926270505,
+    "imbalance_ratio": 1.2741807190582246,
+    "time_distribution": {
+      "positive_mean": 1620470644.777283,
+      "negative_mean": 1655900485.3536425,
+      "ks_statistic": 0.28245052799514225,
+      "ks_pvalue": 0.0,
+      "temporal_label_bias": true
+    },
+    "top_label_correlated_features": [
+      {
+        "feature": "etherscan_checked",
+        "corr": 0.7048
+      },
+      {
+        "feature": "gs_checked",
+        "corr": 0.5528
+      },
+      {
+        "feature": "balance",
+        "corr": -0.3496
+      },
+      {
+        "feature": "gas_limit_Variance",
+        "corr": -0.348
+      },
+      {
+        "feature": "gasP_set_Variance",
+        "corr": -0.3438
+      },
+      {
+        "feature": "transaction_fee_Variance",
+        "corr": -0.3435
+      },
+      {
+        "feature": "total_gas_limit",
+        "corr": -0.3332
+      },
+      {
+        "feature": "total_gas_used",
+        "corr": -0.3299
+      },
+      {
+        "feature": "transaction_fee",
+        "corr": -0.3132
+      },
+      {
+        "feature": "total_gasP_set",
+        "corr": -0.3034
+      }
+    ],
+    "suspicious_single_feature": false,
+    "source_notes": [
+      "Real-CATS 犯罪地址：来自公开报道/执法公告（Phishing Scam 等 21 类）",
+      "Real-CATS 良性地址：交易所客户，可能存在选择偏差（非随机抽样）",
+      "时间缺失样本用中位数填补（见 provenance）",
+      "标签质量局限：犯罪标签依赖第三方报告，存在报告偏差；良性标签不保证绝对干净"
+    ],
+    "status": "PASS"
+  }
+}

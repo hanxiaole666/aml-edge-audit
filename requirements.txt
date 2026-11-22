@@ -1,0 +1,14 @@
+# TinyAML-Bench 依赖（经 Anaconda Python 3.11.5 实测）
+# 核心（必须）
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+scikit-learn>=1.3
+requests>=2.28
+
+# 增强（可选，缺失自动降级）
+lightgbm>=4.0
+xgboost>=2.0
+torch>=2.0          # CPU 版即可；图/文本轨道无需 GPU
+transformers>=4.30  # 真实小 LLM 轨道（可选，缺失时文本降级 TF-IDF）
+peft>=0.5           # LoRA 微调（可选）

@@ -1,0 +1,360 @@
+{
+  "experiment": "sign_law",
+  "real_cats": [
+    {
+      "dataset": "Real-CATS",
+      "split": 0.6,
+      "condition": "C1",
+      "delta_AP": -0.1082,
+      "delta_degree": 6.8517,
+      "excess": -0.0564,
+      "delta_nbr_auc": 0.252
+    },
+    {
+      "dataset": "Real-CATS",
+      "split": 0.6,
+      "condition": "C2",
+      "delta_AP": -0.0355,
+      "delta_degree": 1.8,
+      "excess": -0.0677,
+      "delta_nbr_auc": 0.3105
+    },
+    {
+      "dataset": "Real-CATS",
+      "split": 0.6,
+      "condition": "M2",
+      "delta_AP": -0.211,
+      "delta_degree": 6.505,
+      "excess": -0.0026,
+      "delta_nbr_auc": -0.001
+    },
+    {
+      "dataset": "Real-CATS",
+      "split": 0.65,
+      "condition": "C1",
+      "delta_AP": -0.1141,
+      "delta_degree": 7.3848,
+      "excess": -0.0534,
+      "delta_nbr_auc": 0.2701
+    },
+    {
+      "dataset": "Real-CATS",
+      "split": 0.65,
+      "condition": "C2",
+      "delta_AP": -0.0392,
+      "delta_degree": 2.021,
+      "excess": -0.0691,
+      "delta_nbr_auc": 0.2943
+    },
+    {
+      "dataset": "Real-CATS",
+      "split": 0.65,
+      "condition": "M2",
+      "delta_AP": -0.1871,
+      "delta_degree": 6.659,
+      "excess": 0.0036,
+      "delta_nbr_auc": 0.0261
+    },
+    {
+      "dataset": "Real-CATS",
+      "split": 0.7,
+      "condition": "C1",
+      "delta_AP": -0.1113,
+      "delta_degree": 7.6444,
+      "excess": -0.043,
+      "delta_nbr_auc": 0.2869
+    },
+    {
+      "dataset": "Real-CATS",
+      "split": 0.7,
+      "condition": "C2",
+      "delta_AP": -0.0317,
+      "delta_degree": 2.0622,
+      "excess": -0.0449,
+      "delta_nbr_auc": 0.346
+    },
+    {
+      "dataset": "Real-CATS",
+      "split": 0.7,
+      "condition": "M2",
+      "delta_AP": -0.1977,
+      "delta_degree": 6.78,
+      "excess": 0.006,
+      "delta_nbr_auc": 0.0024
+    },
+    {
+      "dataset": "Real-CATS",
+      "split": 0.75,
+      "condition": "C1",
+      "delta_AP": -0.1227,
+      "delta_degree": 8.1547,
+      "excess": -0.0505,
+      "delta_nbr_auc": 0.2801
+    },
+    {
+      "dataset": "Real-CATS",
+      "split": 0.75,
+      "condition": "C2",
+      "delta_AP": -0.0408,
+      "delta_degree": 2.44,
+      "excess": -0.0366,
+      "delta_nbr_auc": 0.3745
+    },
+    {
+      "dataset": "Real-CATS",
+      "split": 0.75,
+      "condition": "M2",
+      "delta_AP": -0.2093,
+      "delta_degree": 7.064,
+      "excess": 0.009,
+      "delta_nbr_auc": 0.0306
+    },
+    {
+      "dataset": "Real-CATS",
+      "split": 0.8,
+      "condition": "C1",
+      "delta_AP": -0.117,
+      "delta_degree": 7.1267,
+      "excess": -0.0157,
+      "delta_nbr_auc": 0.3436
+    },
+    {
+      "dataset": "Real-CATS",
+      "split": 0.8,
+      "condition": "C2",
+      "delta_AP": -0.0301,
+      "delta_degree": 2.37,
+      "excess": -0.0087,
+      "delta_nbr_auc": 0.3638
+    },
+    {
+      "dataset": "Real-CATS",
+      "split": 0.8,
+      "condition": "M2",
+      "delta_AP": -0.1549,
+      "delta_degree": 7.85,
+      "excess": -0.0136,
+      "delta_nbr_auc": -0.0362
+    }
+  ],
+  "elliptic": [
+    {
+      "dataset": "Elliptic",
+      "split": 30,
+      "condition": "M2",
+      "delta_AP": -0.0035,
+      "delta_degree": 0.5432,
+      "excess": -1.0238,
+      "delta_nbr_auc": -0.0012
+    },
+    {
+      "dataset": "Elliptic",
+      "split": 33,
+      "condition": "M2",
+      "delta_AP": -0.0019,
+      "delta_degree": 0.596,
+      "excess": -0.8476,
+      "delta_nbr_auc": 0.004
+    },
+    {
+      "dataset": "Elliptic",
+      "split": 36,
+      "condition": "M2",
+      "delta_AP": 0.0142,
+      "delta_degree": 0.6416,
+      "excess": -0.716,
+      "delta_nbr_auc": 0.0
+    },
+    {
+      "dataset": "Elliptic",
+      "split": 39,
+      "condition": "M2",
+      "delta_AP": 0.045,
+      "delta_degree": 0.7207,
+      "excess": -0.5578,
+      "delta_nbr_auc": -0.0021
+    }
+  ],
+  "injection": [
+    {
+      "dataset": "Elliptic-injection",
+      "split": "K8000lam-1.0",
+      "condition": "inject",
+      "delta_AP": -0.064,
+      "delta_degree": 0.7436,
+      "excess": -0.8338,
+      "delta_nbr_auc": null
+    },
+    {
+      "dataset": "Elliptic-injection",
+      "split": "K8000lam-0.5",
+      "condition": "inject",
+      "delta_AP": -0.0374,
+      "delta_degree": 0.7435,
+      "excess": -0.4197,
+      "delta_nbr_auc": null
+    },
+    {
+      "dataset": "Elliptic-injection",
+      "split": "K8000lam0.0",
+      "condition": "inject",
+      "delta_AP": -0.0139,
+      "delta_degree": 0.7435,
+      "excess": -0.0014,
+      "delta_nbr_auc": null
+    },
+    {
+      "dataset": "Elliptic-injection",
+      "split": "K8000lam0.5",
+      "condition": "inject",
+      "delta_AP": -0.003,
+      "delta_degree": 0.7435,
+      "excess": 0.0774,
+      "delta_nbr_auc": null
+    },
+    {
+      "dataset": "Elliptic-injection",
+      "split": "K8000lam1.0",
+      "condition": "inject",
+      "delta_AP": 0.0085,
+      "delta_degree": 0.7436,
+      "excess": 0.1675,
+      "delta_nbr_auc": null
+    },
+    {
+      "dataset": "Elliptic-injection",
+      "split": "K40000lam-1.0",
+      "condition": "inject",
+      "delta_AP": -0.0994,
+      "delta_degree": 3.7163,
+      "excess": -0.8338,
+      "delta_nbr_auc": null
+    },
+    {
+      "dataset": "Elliptic-injection",
+      "split": "K40000lam-0.5",
+      "condition": "inject",
+      "delta_AP": -0.0483,
+      "delta_degree": 3.7168,
+      "excess": -0.4142,
+      "delta_nbr_auc": null
+    },
+    {
+      "dataset": "Elliptic-injection",
+      "split": "K40000lam0.0",
+      "condition": "inject",
+      "delta_AP": -0.0151,
+      "delta_degree": 3.7175,
+      "excess": -0.0048,
+      "delta_nbr_auc": null
+    },
+    {
+      "dataset": "Elliptic-injection",
+      "split": "K40000lam0.5",
+      "condition": "inject",
+      "delta_AP": 0.0025,
+      "delta_degree": 3.7176,
+      "excess": 0.0822,
+      "delta_nbr_auc": null
+    },
+    {
+      "dataset": "Elliptic-injection",
+      "split": "K40000lam1.0",
+      "condition": "inject",
+      "delta_AP": 0.0278,
+      "delta_degree": 3.7176,
+      "excess": 0.1665,
+      "delta_nbr_auc": null
+    }
+  ],
+  "status": "PASS",
+  "fit_H_real": {
+    "coef": {
+      "delta_degree": -0.02139,
+      "excess": -0.02706
+    },
+    "intercept": 0.00362,
+    "r2": 0.7765,
+    "rmse": 0.037,
+    "n": 19
+  },
+  "fit_N_real": {
+    "coef": {
+      "delta_degree": -0.02358,
+      "delta_nbr_auc": 0.10771
+    },
+    "intercept": 0.00075,
+    "r2": 0.817,
+    "rmse": 0.0335,
+    "n": 19
+  },
+  "fit_H_all": {
+    "coef": {
+      "delta_degree": -0.0236,
+      "excess": 0.03084
+    },
+    "intercept": 0.02796,
+    "r2": 0.6908,
+    "rmse": 0.0407,
+    "n": 29
+  },
+  "fit_N_all": {
+    "coef": {
+      "delta_degree": -0.02358,
+      "delta_nbr_auc": 0.10771
+    },
+    "intercept": 0.00075,
+    "r2": 0.817,
+    "rmse": 0.0335,
+    "n": 19
+  },
+  "logo_H": {
+    "train_realcats_test_elliptic": {
+      "r2": -2001.7208,
+      "rmse": 0.8721,
+      "n": 4,
+      "sign_agreement": 0.5
+    },
+    "train_elliptic_test_realcats": {
+      "r2": -5521.4809,
+      "rmse": 4.8377,
+      "n": 15,
+      "sign_agreement": 0.0
+    },
+    "train_real_test_injection": {
+      "r2": -1.4318,
+      "rmse": 0.0565,
+      "n": 10,
+      "sign_agreement": 0.6
+    }
+  },
+  "logo_N": {
+    "train_realcats_test_elliptic": {
+      "r2": -43.0653,
+      "rmse": 0.1294,
+      "n": 4,
+      "sign_agreement": 0.5
+    },
+    "train_elliptic_test_realcats": {
+      "r2": -386.3836,
+      "rmse": 1.2813,
+      "n": 15,
+      "sign_agreement": 0.333
+    },
+    "train_real_test_injection": {
+      "r2": NaN,
+      "rmse": NaN,
+      "n": 10,
+      "sign_agreement": 0.0
+    }
+  },
+  "verdict": {
+    "r2_H_real": 0.7765,
+    "r2_N_real": 0.817,
+    "r2_H_all": 0.6908,
+    "r2_N_all": 0.817,
+    "composition_variable": "homophily-excess",
+    "law_supported_N": false,
+    "note": "If law_supported is false the manuscript describes two case studies plus a controlled intervention, not a quantitative law."
+  }
+}

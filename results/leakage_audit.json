@@ -1,0 +1,94 @@
+{
+  "experiment": "leakage_audit",
+  "summary": "Five audits requested by TDSC reviewers. Label permutation and entity overlap are pass/fail gates; the other three are diagnostic.",
+  "checks": [
+    {
+      "audit": "label_permutation",
+      "prevalence_test": 0.0227,
+      "real_model_pr_auc": 0.536,
+      "permuted_pr_auc_by_seed": [
+        0.0317,
+        0.0273,
+        0.0278,
+        0.0271,
+        0.0281
+      ],
+      "permuted_mean": 0.0284,
+      "max_deviation_from_prevalence": 0.009,
+      "pass_criterion": "permuted AP within 0.05 of test prevalence",
+      "status": "PASS",
+      "interpretation": "If permuted AP stays near prevalence, the learned signal is real, not memorized labels."
+    },
+    {
+      "audit": "entity_overlap",
+      "n_train_subgraphs": 91357,
+      "n_test_subgraphs": 30453,
+      "shared_subgraph_ids": 0,
+      "overlap_rate": 0.0,
+      "pass_criterion": "zero shared connected components between train and test",
+      "status": "PASS",
+      "note": "Each ccId is one connected component; disjoint ccIds imply no shared nodes or cross-split edges by construction."
+    },
+    {
+      "audit": "feature_label_correlation",
+      "max_abs_correlation": 0.0995,
+      "top_features": [
+        {
+          "index": 28,
+          "abs_corr": 0.0995
+        },
+        {
+          "index": 27,
+          "abs_corr": 0.0781
+        },
+        {
+          "index": 19,
+          "abs_corr": 0.0417
+        },
+        {
+          "index": 33,
+          "abs_corr": 0.039
+        },
+        {
+          "index": 29,
+          "abs_corr": 0.0318
+        },
+        {
+          "index": 4,
+          "abs_corr": 0.0174
+        },
+        {
+          "index": 26,
+          "abs_corr": 0.0142
+        },
+        {
+          "index": 38,
+          "abs_corr": 0.0137
+        }
+      ],
+      "pass_criterion": "max single-feature |corr| < 0.3",
+      "status": "PASS"
+    },
+    {
+      "audit": "feature_group_ablation",
+      "pr_auc_by_group": {
+        "mean_only": 0.3686,
+        "max_only": 0.4988,
+        "std_only": 0.3716,
+        "structure_only": 0.0256,
+        "all": 0.4851
+      },
+      "status": "PASS",
+      "interpretation": "Shows which pooling group carries the signal; helps rule out a single derived feature dominating the result."
+    },
+    {
+      "audit": "size_shift_confound",
+      "train_prevalence": 0.0213,
+      "test_prevalence": 0.0269,
+      "relative_prevalence_shift": 0.2617,
+      "status": "PASS",
+      "note": "If prevalence differs materially between size-based splits, the 30.6% gap is a joint size/label distribution shift, not pure temporal drift."
+    }
+  ],
+  "status": "PASS"
+}

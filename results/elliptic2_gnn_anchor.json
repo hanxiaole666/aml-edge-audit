@@ -1,0 +1,67 @@
+{
+  "experiment": "elliptic2_gnn_anchor",
+  "data": {
+    "n_subgraphs": 121810,
+    "n_nodes": 444521,
+    "n_edges_total": 367137,
+    "n_edges_within": 367137,
+    "prevalence": 0.02268286675970774,
+    "nodes_per_sub_mean": 3.64929808718496
+  },
+  "models": [
+    "LightGBM-pooled",
+    "DeepSets",
+    "GIN-3"
+  ],
+  "status": "PASS",
+  "random": {
+    "LightGBM-pooled": {
+      "mean": 0.5449,
+      "std": 0.0414,
+      "folds": [
+        0.5765,
+        0.4981,
+        0.5601
+      ]
+    },
+    "DeepSets": {
+      "mean": 0.4644,
+      "std": 0.0588,
+      "folds": [
+        0.4972,
+        0.3965,
+        0.4994
+      ]
+    },
+    "GIN-3": {
+      "mean": 0.4115,
+      "std": 0.0128,
+      "folds": [
+        0.4166,
+        0.3969,
+        0.421
+      ]
+    }
+  },
+  "size_shift": {
+    "LightGBM-pooled": {
+      "value": 0.3562
+    },
+    "DeepSets": {
+      "value": 0.2074
+    },
+    "GIN-3": {
+      "value": 0.2001
+    }
+  },
+  "size_shift_prevalence": {
+    "train": 0.0213,
+    "test": 0.0268
+  },
+  "elapsed_sec": 1754.2,
+  "verdict": {
+    "topology_gain_over_deepsets": -0.0529,
+    "gnn_vs_tree_gap": -0.1334,
+    "interpretation": "GNN does not exceed the pooled-feature tree baseline"
+  }
+}

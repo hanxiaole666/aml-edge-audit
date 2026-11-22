@@ -1,0 +1,150 @@
+{
+  "experiment": "conformal_guarantee",
+  "method": "split conformal with nonconformity score = 1 - P(positive)",
+  "guarantee": "Under exchangeability, P(Y=1 included in prediction set) >= 1-alpha. Under temporal drift this marginal guarantee may not hold; we report empirical coverage per fold.",
+  "alphas": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "folds": [
+    {
+      "fold": 0,
+      "n_train": 4766,
+      "n_calib": 4765,
+      "n_test": 5807,
+      "test_prevalence": 0.5543,
+      "alphas": {
+        "0.05": {
+          "coverage": 1.0,
+          "FNR": 0.0,
+          "FPR": 0.9872,
+          "target_coverage": 0.95,
+          "coverage_gap": 0.05
+        },
+        "0.1": {
+          "coverage": 0.9994,
+          "FNR": 0.0006,
+          "FPR": 0.9594,
+          "target_coverage": 0.9,
+          "coverage_gap": 0.0994
+        },
+        "0.2": {
+          "coverage": 0.9969,
+          "FNR": 0.0031,
+          "FPR": 0.8895,
+          "target_coverage": 0.8,
+          "coverage_gap": 0.1969
+        }
+      }
+    },
+    {
+      "fold": 1,
+      "n_train": 9531,
+      "n_calib": 5807,
+      "n_test": 3723,
+      "test_prevalence": 0.4633,
+      "alphas": {
+        "0.05": {
+          "coverage": 1.0,
+          "FNR": 0.0,
+          "FPR": 0.9735,
+          "target_coverage": 0.95,
+          "coverage_gap": 0.05
+        },
+        "0.1": {
+          "coverage": 0.9983,
+          "FNR": 0.0017,
+          "FPR": 0.9184,
+          "target_coverage": 0.9,
+          "coverage_gap": 0.0983
+        },
+        "0.2": {
+          "coverage": 0.9849,
+          "FNR": 0.0151,
+          "FPR": 0.7503,
+          "target_coverage": 0.8,
+          "coverage_gap": 0.1849
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "n_train": 15338,
+      "n_calib": 3723,
+      "n_test": 4765,
+      "test_prevalence": 0.4109,
+      "alphas": {
+        "0.05": {
+          "coverage": 0.999,
+          "FNR": 0.001,
+          "FPR": 0.9491,
+          "target_coverage": 0.95,
+          "coverage_gap": 0.049
+        },
+        "0.1": {
+          "coverage": 0.9913,
+          "FNR": 0.0087,
+          "FPR": 0.8603,
+          "target_coverage": 0.9,
+          "coverage_gap": 0.0913
+        },
+        "0.2": {
+          "coverage": 0.954,
+          "FNR": 0.046,
+          "FPR": 0.7353,
+          "target_coverage": 0.8,
+          "coverage_gap": 0.154
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "n_train": 19061,
+      "n_calib": 4765,
+      "n_test": 4765,
+      "test_prevalence": 0.165,
+      "alphas": {
+        "0.05": {
+          "coverage": 0.9962,
+          "FNR": 0.0038,
+          "FPR": 0.9442,
+          "target_coverage": 0.95,
+          "coverage_gap": 0.0462
+        },
+        "0.1": {
+          "coverage": 0.9885,
+          "FNR": 0.0115,
+          "FPR": 0.8907,
+          "target_coverage": 0.9,
+          "coverage_gap": 0.0885
+        },
+        "0.2": {
+          "coverage": 0.9771,
+          "FNR": 0.0229,
+          "FPR": 0.7421,
+          "target_coverage": 0.8,
+          "coverage_gap": 0.1771
+        }
+      }
+    }
+  ],
+  "status": "PASS",
+  "summary": {
+    "0.05": {
+      "mean_coverage": 0.9988,
+      "target": 0.95,
+      "n_folds": 4
+    },
+    "0.1": {
+      "mean_coverage": 0.9944,
+      "target": 0.9,
+      "n_folds": 4
+    },
+    "0.2": {
+      "mean_coverage": 0.9782,
+      "target": 0.8,
+      "n_folds": 4
+    }
+  }
+}

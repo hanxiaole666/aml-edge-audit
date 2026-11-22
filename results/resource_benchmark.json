@@ -1,0 +1,66 @@
+{
+  "experiment": "resource_benchmark",
+  "hardware": {
+    "gpu": "NVIDIA GeForce RTX 2060",
+    "cpu_threads": 6,
+    "device": "cuda"
+  },
+  "graph": {
+    "nodes": 1500,
+    "edges": 6942
+  },
+  "note": "Latency measures forward propagation only, excluding data loading and feature construction. numpy peak memory is Python heap via tracemalloc; PyG peak is GPU allocation.",
+  "models": [
+    {
+      "model": "SGC",
+      "framework": "numpy",
+      "latency_p50_ms": 2.6091,
+      "latency_p95_ms": 3.3449,
+      "latency_p99_ms": 3.6032,
+      "peak_mem_MB": 0.58,
+      "n_params": 0,
+      "n_repeat": 200
+    },
+    {
+      "model": "StreamTemporal",
+      "framework": "numpy",
+      "latency_p50_ms": 2.8883,
+      "latency_p95_ms": 3.5045,
+      "latency_p99_ms": 3.8508,
+      "peak_mem_MB": 0.58,
+      "n_params": 0,
+      "n_repeat": 200
+    },
+    {
+      "model": "GCN-lite",
+      "framework": "PyG",
+      "latency_p50_ms": 4.304,
+      "latency_p95_ms": 16.2357,
+      "latency_p99_ms": 27.8169,
+      "peak_gpu_mem_MB": 17.66,
+      "n_params": 7424,
+      "n_repeat": 200
+    },
+    {
+      "model": "GAT-standard",
+      "framework": "PyG",
+      "latency_p50_ms": 6.0445,
+      "latency_p95_ms": 20.5493,
+      "latency_p99_ms": 25.3897,
+      "peak_gpu_mem_MB": 17.68,
+      "n_params": 7680,
+      "n_repeat": 200
+    },
+    {
+      "model": "TGN-like",
+      "framework": "PyG",
+      "latency_p50_ms": 3.1607,
+      "latency_p95_ms": 11.6566,
+      "latency_p99_ms": 27.3623,
+      "peak_gpu_mem_MB": 17.29,
+      "n_params": 3520,
+      "n_repeat": 200
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,39 @@
+{
+  "experiment": "temporal_sota",
+  "summary": [
+    {
+      "model": "GAT-standard",
+      "split": "random",
+      "PR_AUC_mean": 0.8913191143644749,
+      "PR_AUC_std": 0.009803780838202696,
+      "AUC_mean": 0.8663812720446011,
+      "train_sec": 1.185
+    },
+    {
+      "model": "GAT-standard",
+      "split": "temporal",
+      "PR_AUC_mean": 0.6683154621346005,
+      "PR_AUC_std": 0.03682663729123245,
+      "AUC_mean": 0.7492897297950796,
+      "train_sec": 1.12
+    },
+    {
+      "model": "TGAT-lite",
+      "split": "random",
+      "PR_AUC_mean": 0.8858358113774369,
+      "PR_AUC_std": 0.01736769693683803,
+      "AUC_mean": 0.858558994197292,
+      "train_sec": 1.13
+    },
+    {
+      "model": "TGAT-lite",
+      "split": "temporal",
+      "PR_AUC_mean": 0.5825346598374768,
+      "PR_AUC_std": 0.0191403331034384,
+      "AUC_mean": 0.6671099558725745,
+      "train_sec": 1.1150000000000002
+    }
+  ],
+  "comparison_note": "GAT-standard 与 TGAT-lite 共享相同 PyG 架构和线性读出层，仅差时间编码；与本文 StreamTemporal（纯numpy时态加权SGC）在同一真实图上对比，构成公平基线。",
+  "status": "PASS"
+}

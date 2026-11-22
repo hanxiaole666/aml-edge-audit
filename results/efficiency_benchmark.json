@@ -1,0 +1,26 @@
+{
+  "experiment": "efficiency_benchmark",
+  "hardware": "本机 CPU（Anaconda Python 3.11.5, tracemalloc 测 Python 堆内存）",
+  "note": "延迟为单样本 predict_proba；内存为 tracemalloc Python 堆（不含底层 BLAS）；非容器实测",
+  "models": {
+    "LogisticRegression": {
+      "train_seconds": 0.367,
+      "peak_train_mem_MB": 0.89,
+      "latency_p50_ms": 0.3816,
+      "latency_p95_ms": 0.4588,
+      "latency_p99_ms": 0.5901,
+      "peak_infer_mem_MB": 0.07,
+      "throughput_tx_per_sec": 4800235.0
+    },
+    "RandomForest": {
+      "train_seconds": 8.4593,
+      "peak_train_mem_MB": 6.27,
+      "latency_p50_ms": 15.3477,
+      "latency_p95_ms": 17.5878,
+      "latency_p99_ms": 19.2757,
+      "peak_infer_mem_MB": 0.42,
+      "throughput_tx_per_sec": 101475.6
+    }
+  },
+  "status": "PASS"
+}

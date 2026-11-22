@@ -1,0 +1,28 @@
+{
+  "experiment": "drift_proxies",
+  "n_subgraphs": 121810,
+  "proxies": {
+    "size": {
+      "shift_AP": 0.1963,
+      "AP_drop_from_random": 0.2062
+    },
+    "activity": {
+      "shift_AP": 0.4801,
+      "AP_drop_from_random": -0.0776
+    },
+    "feature_kl": {
+      "shift_AP": 0.5364,
+      "AP_drop_from_random": -0.1339
+    }
+  },
+  "status": "PASS",
+  "random_AP": 0.4025,
+  "commonality": {
+    "all_positive": false,
+    "n_positive": 1,
+    "n_proxies": 3,
+    "min_drop": -0.1339,
+    "max_drop": 0.2062,
+    "interpretation": "Only the size proxy reduces AP; the activity and feature-KL proxies increase it. The performance loss is therefore specific to subgraph size, not a generic property of distribution shift."
+  }
+}

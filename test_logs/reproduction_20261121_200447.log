@@ -1,0 +1,82 @@
+================================================================
+TinyAML-Bench - Full Reproduction Test Log
+Generated: 2026-11-21 20:04:48    
+Interpreter: Python 3.11.5
+Working dir: /d/Financial Micro-Modelling Project/ccfa-financial-blockchain
+================================================================
+
+[1/8] Syntax check all scripts
+  OK   scripts/01_download_data.py
+  OK   scripts/02_train_tabular.py
+  OK   scripts/03_train_gnn.py
+  OK   scripts/04_train_tiny_llm.py
+  OK   scripts/05_evaluate.py
+  OK   scripts/06_theory_verify.py
+  OK   scripts/07_build_real_graph.py
+  OK   scripts/08_build_text.py
+  OK   scripts/09_adaptive_audit.py
+  OK   scripts/10_cross_chain.py
+  OK   scripts/11_lora_ablation.py
+  OK   scripts/12_statistics_boost.py
+  OK   scripts/13_temporal_sota.py
+  OK   scripts/14_case_efficiency.py
+  OK   scripts/15_elliptic2_extract.py
+  OK   scripts/16_elliptic2_bench.py
+  OK   scripts/17_elliptic2_gnn.py
+  OK   scripts/18_defense_ablation.py
+  OK   scripts/19_nfpc_crossdomain.py
+  OK   scripts/20_elliptic2_full.py
+  OK   scripts/21_gpu_gnn.py
+  OK   scripts/22_cache_node_features.py
+  OK   scripts/23_temporal_sota.py
+  OK   scripts/24_consistency_check.py
+  OK   scripts/25_generate_figures.py
+  OK   scripts/26_reproducibility_audit.py
+  OK   scripts/common.py
+  OK   scripts/fast_download.py
+
+[2/8] Data consistency check (paper numbers vs results)
+OK   defense_off_drop                 paper=0.0318  actual=0.0318
+
+[done] D:\Financial Micro-Modelling Project\ccfa-financial-blockchain\results\consistency_report.json — 16/16 项一致
+
+[3/8] Reproducibility audit (claim -> script -> data traceability)
+OK   LR inference P50 (ms)                  paper=0.38    actual=0.3816
+
+[done] D:\Financial Micro-Modelling Project\ccfa-financial-blockchain\results\reproducibility_audit.json: 15/15 claims fully traceable
+
+[4/8] Theory verification
+  checks: {'theoremA': 'PASS', 'theoremB': 'PASS', 'theoremC': 'PASS', 'fidelity': 'PASS', 'adversarial': 'PASS', 'drift': 'PASS'}
+
+[5/8] Figure regeneration
+[fig] elliptic2_ablation.pdf: topo=0.0262 full=0.5356
+[fig] split_comparison.pdf: 7 models
+[done] figures regenerated from results/
+
+[6/8] LaTeX compilation
+  OK   PDF compiled (4 pages)
+
+[7/8] Key result files present
+  OK   results/elliptic2_full_summary.csv
+  OK   results/gnn_summary_realgraph.csv
+  OK   results/temporal_sota_v2.csv
+  OK   results/tabular_summary_realcats_random.csv
+  OK   results/text_results_phrasebank.csv
+  OK   results/cross_chain.json
+  OK   results/defense_ablation.json
+  OK   results/efficiency_benchmark.json
+  OK   results/consistency_report.json
+  OK   results/reproducibility_audit.json
+
+[8/8] Data files present
+  OK   data/real_cats_eth.csv
+  OK   data/phrasebank_real.csv
+  OK   data/elliptic2/nodes.csv
+  OK   data/elliptic2/edges.csv
+  OK   data/elliptic2/connected_components.csv
+  OK   data/elliptic2/node_features_43.npy
+  OK   data/real_cats/real_graph_nodes.csv
+
+================================================================
+END OF REPRODUCTION TEST
+================================================================

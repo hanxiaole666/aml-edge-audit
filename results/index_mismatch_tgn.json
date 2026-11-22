@@ -1,0 +1,183 @@
+{
+ "experiment": "index_mismatch_tgn",
+ "dataset": "Elliptic v1 (real steps)",
+ "hypotheses": {
+  "H1_model_class": "causal memory is inherently immune to random splitting",
+  "H2_split_index": "immunity holds only when split index matches the model's step index"
+ },
+ "split_operator": "windowed node-rank cut (Table XI); boundary window split by node rank, not step",
+ "comparison": "random training labels vs structured (node-rank) training labels, same test side",
+ "readouts": [
+  "LightGBM",
+  "TGN-lite"
+ ],
+ "reference_step_boundary_tgn_delta": -0.03,
+ "rows": [
+  {
+   "window": 1,
+   "n_train": 23979,
+   "n_val": 2664,
+   "n_test": 19921,
+   "test_prevalence": 0.082,
+   "LightGBM": {
+    "AP_structured": 0.8142,
+    "AP_random": 0.9634,
+    "optimism": 0.1492,
+    "ci95_optimism": [
+     0.1356,
+     0.1655
+    ],
+    "ci_excludes_zero": true
+   },
+   "TGN-lite": {
+    "AP_structured": 0.1857,
+    "AP_random": 0.2498,
+    "optimism": 0.0641,
+    "ci95_optimism": [
+     0.0547,
+     0.0717
+    ],
+    "ci_excludes_zero": true
+   }
+  },
+  {
+   "window": 2,
+   "n_train": 24299,
+   "n_val": 2699,
+   "n_test": 19566,
+   "test_prevalence": 0.0808,
+   "LightGBM": {
+    "AP_structured": 0.818,
+    "AP_random": 0.9651,
+    "optimism": 0.1471,
+    "ci95_optimism": [
+     0.1341,
+     0.1623
+    ],
+    "ci_excludes_zero": true
+   },
+   "TGN-lite": {
+    "AP_structured": 0.186,
+    "AP_random": 0.2472,
+    "optimism": 0.0611,
+    "ci95_optimism": [
+     0.0537,
+     0.0688
+    ],
+    "ci_excludes_zero": true
+   }
+  },
+  {
+   "window": 4,
+   "n_train": 23643,
+   "n_val": 2626,
+   "n_test": 20295,
+   "test_prevalence": 0.0883,
+   "LightGBM": {
+    "AP_structured": 0.8388,
+    "AP_random": 0.9719,
+    "optimism": 0.1331,
+    "ci95_optimism": [
+     0.1196,
+     0.1481
+    ],
+    "ci_excludes_zero": true
+   },
+   "TGN-lite": {
+    "AP_structured": 0.1948,
+    "AP_random": 0.2642,
+    "optimism": 0.0694,
+    "ci95_optimism": [
+     0.0622,
+     0.0767
+    ],
+    "ci_excludes_zero": true
+   }
+  },
+  {
+   "window": 8,
+   "n_train": 22543,
+   "n_val": 2504,
+   "n_test": 21517,
+   "test_prevalence": 0.0926,
+   "LightGBM": {
+    "AP_structured": 0.8408,
+    "AP_random": 0.9723,
+    "optimism": 0.1316,
+    "ci95_optimism": [
+     0.1187,
+     0.1442
+    ],
+    "ci_excludes_zero": true
+   },
+   "TGN-lite": {
+    "AP_structured": 0.1959,
+    "AP_random": 0.2812,
+    "optimism": 0.0853,
+    "ci95_optimism": [
+     0.0765,
+     0.0954
+    ],
+    "ci_excludes_zero": true
+   }
+  },
+  {
+   "window": 16,
+   "n_train": 19408,
+   "n_val": 2156,
+   "n_test": 25000,
+   "test_prevalence": 0.0977,
+   "LightGBM": {
+    "AP_structured": 0.8786,
+    "AP_random": 0.9701,
+    "optimism": 0.0916,
+    "ci95_optimism": [
+     0.082,
+     0.1012
+    ],
+    "ci_excludes_zero": true
+   },
+   "TGN-lite": {
+    "AP_structured": 0.2079,
+    "AP_random": 0.3029,
+    "optimism": 0.0951,
+    "ci95_optimism": [
+     0.087,
+     0.1026
+    ],
+    "ci_excludes_zero": true
+   }
+  }
+ ],
+ "summary": {
+  "LightGBM": {
+   "mean_optimism": 0.1305,
+   "positive_windows": 5,
+   "n_windows": 5,
+   "by_window": [
+    0.1492,
+    0.1471,
+    0.1331,
+    0.1316,
+    0.0916
+   ]
+  },
+  "TGN-lite": {
+   "mean_optimism": 0.075,
+   "positive_windows": 5,
+   "n_windows": 5,
+   "by_window": [
+    0.0641,
+    0.0611,
+    0.0694,
+    0.0853,
+    0.0951
+   ]
+  }
+ },
+ "verdict": {
+  "H2_supported": true,
+  "note": "If TGN-lite optimism under the node-rank cut is positive/larger than the -0.030 step-boundary reference, immunity is a property of split-index alignment, not the model class. LightGBM is the index-free control."
+ },
+ "status": "PASS"
+}

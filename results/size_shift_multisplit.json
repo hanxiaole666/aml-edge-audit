@@ -1,0 +1,148 @@
+{
+  "experiment": "size_shift_multisplit",
+  "n_seeds": 5,
+  "data": {
+    "n_subgraphs": 121810,
+    "n_nodes": 444521,
+    "n_edges_total": 367137,
+    "n_edges_within": 367137,
+    "prevalence": 0.02268286675970774,
+    "nodes_per_sub_mean": 3.64929808718496
+  },
+  "splits": [
+    {
+      "split": "60/40",
+      "n_train": 73086,
+      "n_test": 48724,
+      "prev_train": 0.0206,
+      "prev_test": 0.0257,
+      "AP_mean": 0.348,
+      "AP_sd": 0.0065,
+      "CI95": [
+        0.3158,
+        0.3732
+      ],
+      "median_size_train": 2.0,
+      "median_size_test": 5.0,
+      "size_ratio": 2.5
+    },
+    {
+      "split": "70/30",
+      "n_train": 85267,
+      "n_test": 36543,
+      "prev_train": 0.0209,
+      "prev_test": 0.0269,
+      "AP_mean": 0.3684,
+      "AP_sd": 0.0112,
+      "CI95": [
+        0.3409,
+        0.4017
+      ],
+      "median_size_train": 2.0,
+      "median_size_test": 6.0,
+      "size_ratio": 3.0
+    },
+    {
+      "split": "75/25",
+      "n_train": 91357,
+      "n_test": 30453,
+      "prev_train": 0.0213,
+      "prev_test": 0.0268,
+      "AP_mean": 0.3633,
+      "AP_sd": 0.0089,
+      "CI95": [
+        0.3229,
+        0.394
+      ],
+      "median_size_train": 2.0,
+      "median_size_test": 6.0,
+      "size_ratio": 3.0
+    },
+    {
+      "split": "80/20",
+      "n_train": 97448,
+      "n_test": 24362,
+      "prev_train": 0.0216,
+      "prev_test": 0.0269,
+      "AP_mean": 0.3375,
+      "AP_sd": 0.0079,
+      "CI95": [
+        0.2917,
+        0.3647
+      ],
+      "median_size_train": 2.0,
+      "median_size_test": 6.0,
+      "size_ratio": 3.0
+    },
+    {
+      "split": "interleaved-1-in-5",
+      "n_train": 97448,
+      "n_test": 24362,
+      "prev_train": 0.023,
+      "prev_test": 0.0215,
+      "AP_mean": 0.5239,
+      "AP_sd": 0.0019,
+      "CI95": [
+        0.4823,
+        0.5657
+      ],
+      "median_size_train": 3.0,
+      "median_size_test": 3.0,
+      "size_ratio": 1.0
+    },
+    {
+      "split": "random-matched-size",
+      "n_train": 97448,
+      "n_test": 24362,
+      "prev_train": 0.0224,
+      "prev_test": 0.0239,
+      "AP_mean": 0.5258,
+      "AP_sd": 0.0045,
+      "CI95": [
+        0.4833,
+        0.5652
+      ],
+      "median_size_train": 3.0,
+      "median_size_test": 3.0,
+      "size_ratio": 1.0
+    }
+  ],
+  "size_ratio_curve": [
+    {
+      "ratio_lo": 2.0,
+      "ratio_hi": 3.0,
+      "n": 7686,
+      "prev": 0.0267,
+      "AP": 0.4621
+    },
+    {
+      "ratio_lo": 3.0,
+      "ratio_hi": null,
+      "n": 22767,
+      "prev": 0.0268,
+      "AP": 0.3285
+    }
+  ],
+  "reference": {
+    "single_split_AP": 0.372,
+    "single_split_drop": 0.306
+  },
+  "status": "PASS",
+  "verdict": {
+    "AP_range_across_size_splits": [
+      0.3375,
+      0.3684
+    ],
+    "band_width": 0.0309,
+    "single_split_inside_band": false,
+    "single_split_gap_to_band": 0.0036,
+    "interleaved_AP": 0.5239,
+    "random_AP": 0.5258,
+    "relative_drop_vs_random": [
+      0.2994,
+      0.3581
+    ],
+    "control_gap_over_75_25": 0.1606,
+    "note": "The four size-defined splits agree within 0.03 AP; the earlier single 80/20 run (0.372) sits 0.004 above this band, inside the bootstrap CI of every row. The interleaved control isolates size composition from training volume and is not part of the band."
+  }
+}

@@ -1,0 +1,618 @@
+{
+ "experiment": "replacement_scale",
+ "dataset": "Real-CATS ETH",
+ "protocol": "E-1: replace the C2 cross-split edges with lambda-controlled edges at identical count and per-node cross-degree; E-2: degree-preserving double-edge swap of C1",
+ "rows": [
+  {
+   "frac": 0.6,
+   "n_test": 600,
+   "prevalence": 0.4017,
+   "C1": 0.5231,
+   "C2": 0.5958,
+   "C3": 0.6313,
+   "C1_degree": 6.852,
+   "C3_degree": 0.0,
+   "C3_minus_C1": {
+    "diff": 0.107,
+    "ci95": [
+     0.0811,
+     0.1331
+    ],
+    "excludes_zero": true
+   },
+   "E1_replacement": [
+    {
+     "lambda": -1.0,
+     "AP": 0.5841,
+     "delta_vs_C2": -0.0116,
+     "excess": -0.3288,
+     "K": 1080,
+     "degree": 1.8,
+     "paired_vs_C2": {
+      "diff": -0.0116,
+      "ci95": [
+       -0.0174,
+       -0.0063
+      ],
+      "excludes_zero": true
+     }
+    },
+    {
+     "lambda": -0.5,
+     "AP": 0.5853,
+     "delta_vs_C2": -0.0105,
+     "excess": -0.3288,
+     "K": 1080,
+     "degree": 1.8,
+     "paired_vs_C2": {
+      "diff": -0.0106,
+      "ci95": [
+       -0.0159,
+       -0.0061
+      ],
+      "excludes_zero": true
+     }
+    },
+    {
+     "lambda": 0.0,
+     "AP": 0.5907,
+     "delta_vs_C2": -0.0051,
+     "excess": -0.0677,
+     "K": 1080,
+     "degree": 1.8,
+     "paired_vs_C2": {
+      "diff": -0.0051,
+      "ci95": [
+       -0.0098,
+       -0.0014
+      ],
+      "excludes_zero": true
+     }
+    },
+    {
+     "lambda": 0.5,
+     "AP": 0.5969,
+     "delta_vs_C2": 0.0011,
+     "excess": -0.0306,
+     "K": 1080,
+     "degree": 1.8,
+     "paired_vs_C2": {
+      "diff": 0.001,
+      "ci95": [
+       -0.0003,
+       0.0026
+      ],
+      "excludes_zero": false
+     }
+    },
+    {
+     "lambda": 1.0,
+     "AP": 0.5958,
+     "delta_vs_C2": 0.0,
+     "excess": -0.0288,
+     "K": 1080,
+     "degree": 1.8,
+     "paired_vs_C2": {
+      "diff": 0.0001,
+      "ci95": [
+       -0.0014,
+       0.0013
+      ],
+      "excludes_zero": false
+     }
+    }
+   ],
+   "E2_C1_rewire": {
+    "AP": 0.5174,
+    "degree": 6.852,
+    "delta_vs_C1": -0.0057,
+    "paired_vs_C1": {
+     "diff": -0.0054,
+     "ci95": [
+      -0.0199,
+      0.0113
+     ],
+     "excludes_zero": false
+    }
+   }
+  },
+  {
+   "frac": 0.65,
+   "n_test": 525,
+   "prevalence": 0.3886,
+   "C1": 0.5213,
+   "C2": 0.5962,
+   "C3": 0.6354,
+   "C1_degree": 7.385,
+   "C3_degree": 0.0,
+   "C3_minus_C1": {
+    "diff": 0.1158,
+    "ci95": [
+     0.0874,
+     0.1518
+    ],
+    "excludes_zero": true
+   },
+   "E1_replacement": [
+    {
+     "lambda": -1.0,
+     "AP": 0.5834,
+     "delta_vs_C2": -0.0128,
+     "excess": -0.316,
+     "K": 1061,
+     "degree": 2.021,
+     "paired_vs_C2": {
+      "diff": -0.0128,
+      "ci95": [
+       -0.0179,
+       -0.0077
+      ],
+      "excludes_zero": true
+     }
+    },
+    {
+     "lambda": -0.5,
+     "AP": 0.5824,
+     "delta_vs_C2": -0.0138,
+     "excess": -0.3066,
+     "K": 1061,
+     "degree": 2.021,
+     "paired_vs_C2": {
+      "diff": -0.0138,
+      "ci95": [
+       -0.0197,
+       -0.0081
+      ],
+      "excludes_zero": true
+     }
+    },
+    {
+     "lambda": 0.0,
+     "AP": 0.593,
+     "delta_vs_C2": -0.0032,
+     "excess": -0.0691,
+     "K": 1061,
+     "degree": 2.021,
+     "paired_vs_C2": {
+      "diff": -0.0032,
+      "ci95": [
+       -0.0076,
+       0.0005
+      ],
+      "excludes_zero": false
+     }
+    },
+    {
+     "lambda": 0.5,
+     "AP": 0.5979,
+     "delta_vs_C2": 0.0016,
+     "excess": -0.0314,
+     "K": 1061,
+     "degree": 2.021,
+     "paired_vs_C2": {
+      "diff": 0.0017,
+      "ci95": [
+       0.0001,
+       0.0033
+      ],
+      "excludes_zero": true
+     }
+    },
+    {
+     "lambda": 1.0,
+     "AP": 0.5974,
+     "delta_vs_C2": 0.0012,
+     "excess": -0.0314,
+     "K": 1061,
+     "degree": 2.021,
+     "paired_vs_C2": {
+      "diff": 0.0012,
+      "ci95": [
+       -0.0002,
+       0.0028
+      ],
+      "excludes_zero": false
+     }
+    }
+   ],
+   "E2_C1_rewire": {
+    "AP": 0.5228,
+    "degree": 7.385,
+    "delta_vs_C1": 0.0015,
+    "paired_vs_C1": {
+     "diff": 0.0012,
+     "ci95": [
+      -0.0147,
+      0.0172
+     ],
+     "excludes_zero": false
+    }
+   }
+  },
+  {
+   "frac": 0.7,
+   "n_test": 450,
+   "prevalence": 0.3756,
+   "C1": 0.5253,
+   "C2": 0.6049,
+   "C3": 0.6366,
+   "C1_degree": 7.644,
+   "C3_degree": 0.0,
+   "C3_minus_C1": {
+    "diff": 0.1107,
+    "ci95": [
+     0.0755,
+     0.1492
+    ],
+    "excludes_zero": true
+   },
+   "E1_replacement": [
+    {
+     "lambda": -1.0,
+     "AP": 0.5888,
+     "delta_vs_C2": -0.0161,
+     "excess": -0.3316,
+     "K": 928,
+     "degree": 2.062,
+     "paired_vs_C2": {
+      "diff": -0.0165,
+      "ci95": [
+       -0.0235,
+       -0.0107
+      ],
+      "excludes_zero": true
+     }
+    },
+    {
+     "lambda": -0.5,
+     "AP": 0.5886,
+     "delta_vs_C2": -0.0163,
+     "excess": -0.3229,
+     "K": 928,
+     "degree": 2.062,
+     "paired_vs_C2": {
+      "diff": -0.0161,
+      "ci95": [
+       -0.0229,
+       -0.0102
+      ],
+      "excludes_zero": true
+     }
+    },
+    {
+     "lambda": 0.0,
+     "AP": 0.6007,
+     "delta_vs_C2": -0.0042,
+     "excess": -0.0449,
+     "K": 928,
+     "degree": 2.062,
+     "paired_vs_C2": {
+      "diff": -0.0041,
+      "ci95": [
+       -0.0103,
+       0.001
+      ],
+      "excludes_zero": false
+     }
+    },
+    {
+     "lambda": 0.5,
+     "AP": 0.608,
+     "delta_vs_C2": 0.0031,
+     "excess": 0.0047,
+     "K": 928,
+     "degree": 2.062,
+     "paired_vs_C2": {
+      "diff": 0.003,
+      "ci95": [
+       0.001,
+       0.0055
+      ],
+      "excludes_zero": true
+     }
+    },
+    {
+     "lambda": 1.0,
+     "AP": 0.6064,
+     "delta_vs_C2": 0.0015,
+     "excess": 0.0047,
+     "K": 928,
+     "degree": 2.062,
+     "paired_vs_C2": {
+      "diff": 0.0015,
+      "ci95": [
+       -0.0001,
+       0.0032
+      ],
+      "excludes_zero": false
+     }
+    }
+   ],
+   "E2_C1_rewire": {
+    "AP": 0.5292,
+    "degree": 7.644,
+    "delta_vs_C1": 0.004,
+    "paired_vs_C1": {
+     "diff": 0.0035,
+     "ci95": [
+      -0.0131,
+      0.0202
+     ],
+     "excludes_zero": false
+    }
+   }
+  },
+  {
+   "frac": 0.75,
+   "n_test": 375,
+   "prevalence": 0.3787,
+   "C1": 0.5366,
+   "C2": 0.6185,
+   "C3": 0.6593,
+   "C1_degree": 8.155,
+   "C3_degree": 0.0,
+   "C3_minus_C1": {
+    "diff": 0.1218,
+    "ci95": [
+     0.0878,
+     0.1611
+    ],
+    "excludes_zero": true
+   },
+   "E1_replacement": [
+    {
+     "lambda": -1.0,
+     "AP": 0.6,
+     "delta_vs_C2": -0.0185,
+     "excess": -0.3164,
+     "K": 915,
+     "degree": 2.44,
+     "paired_vs_C2": {
+      "diff": -0.0186,
+      "ci95": [
+       -0.026,
+       -0.012
+      ],
+      "excludes_zero": true
+     }
+    },
+    {
+     "lambda": -0.5,
+     "AP": 0.5978,
+     "delta_vs_C2": -0.0207,
+     "excess": -0.3317,
+     "K": 915,
+     "degree": 2.44,
+     "paired_vs_C2": {
+      "diff": -0.0208,
+      "ci95": [
+       -0.0292,
+       -0.0134
+      ],
+      "excludes_zero": true
+     }
+    },
+    {
+     "lambda": 0.0,
+     "AP": 0.6143,
+     "delta_vs_C2": -0.0042,
+     "excess": -0.0366,
+     "K": 915,
+     "degree": 2.44,
+     "paired_vs_C2": {
+      "diff": -0.0041,
+      "ci95": [
+       -0.0103,
+       0.0014
+      ],
+      "excludes_zero": false
+     }
+    },
+    {
+     "lambda": 0.5,
+     "AP": 0.6201,
+     "delta_vs_C2": 0.0015,
+     "excess": 0.0093,
+     "K": 915,
+     "degree": 2.44,
+     "paired_vs_C2": {
+      "diff": 0.0015,
+      "ci95": [
+       -0.0008,
+       0.0041
+      ],
+      "excludes_zero": false
+     }
+    },
+    {
+     "lambda": 1.0,
+     "AP": 0.6188,
+     "delta_vs_C2": 0.0003,
+     "excess": 0.0115,
+     "K": 915,
+     "degree": 2.44,
+     "paired_vs_C2": {
+      "diff": 0.0003,
+      "ci95": [
+       -0.0028,
+       0.0032
+      ],
+      "excludes_zero": false
+     }
+    }
+   ],
+   "E2_C1_rewire": {
+    "AP": 0.5476,
+    "degree": 8.155,
+    "delta_vs_C1": 0.011,
+    "paired_vs_C1": {
+     "diff": 0.0109,
+     "ci95": [
+      -0.0064,
+      0.0338
+     ],
+     "excludes_zero": false
+    }
+   }
+  },
+  {
+   "frac": 0.8,
+   "n_test": 300,
+   "prevalence": 0.3567,
+   "C1": 0.5266,
+   "C2": 0.6135,
+   "C3": 0.6436,
+   "C1_degree": 7.127,
+   "C3_degree": 0.0,
+   "C3_minus_C1": {
+    "diff": 0.1162,
+    "ci95": [
+     0.0742,
+     0.1636
+    ],
+    "excludes_zero": true
+   },
+   "E1_replacement": [
+    {
+     "lambda": -1.0,
+     "AP": 0.5852,
+     "delta_vs_C2": -0.0282,
+     "excess": -0.3097,
+     "K": 711,
+     "degree": 2.37,
+     "paired_vs_C2": {
+      "diff": -0.0279,
+      "ci95": [
+       -0.0451,
+       -0.0134
+      ],
+      "excludes_zero": true
+     }
+    },
+    {
+     "lambda": -0.5,
+     "AP": 0.5852,
+     "delta_vs_C2": -0.0282,
+     "excess": -0.3097,
+     "K": 711,
+     "degree": 2.37,
+     "paired_vs_C2": {
+      "diff": -0.0281,
+      "ci95": [
+       -0.0466,
+       -0.0132
+      ],
+      "excludes_zero": true
+     }
+    },
+    {
+     "lambda": 0.0,
+     "AP": 0.6047,
+     "delta_vs_C2": -0.0087,
+     "excess": -0.0087,
+     "K": 711,
+     "degree": 2.37,
+     "paired_vs_C2": {
+      "diff": -0.009,
+      "ci95": [
+       -0.0263,
+       0.0054
+      ],
+      "excludes_zero": false
+     }
+    },
+    {
+     "lambda": 0.5,
+     "AP": 0.6191,
+     "delta_vs_C2": 0.0056,
+     "excess": 0.056,
+     "K": 711,
+     "degree": 2.37,
+     "paired_vs_C2": {
+      "diff": 0.0055,
+      "ci95": [
+       0.0022,
+       0.0098
+      ],
+      "excludes_zero": true
+     }
+    },
+    {
+     "lambda": 1.0,
+     "AP": 0.6179,
+     "delta_vs_C2": 0.0044,
+     "excess": 0.056,
+     "K": 711,
+     "degree": 2.37,
+     "paired_vs_C2": {
+      "diff": 0.0043,
+      "ci95": [
+       0.0018,
+       0.0077
+      ],
+      "excludes_zero": true
+     }
+    }
+   ],
+   "E2_C1_rewire": {
+    "AP": 0.5321,
+    "degree": 7.127,
+    "delta_vs_C1": 0.0055,
+    "paired_vs_C1": {
+     "diff": 0.0056,
+     "ci95": [
+      -0.0153,
+      0.0256
+     ],
+     "excludes_zero": false
+    }
+   }
+  }
+ ],
+ "E1_by_lambda": [
+  {
+   "lambda": -1.0,
+   "mean_delta_vs_C2": -0.0174,
+   "excludes_zero": 5,
+   "n": 5
+  },
+  {
+   "lambda": -0.5,
+   "mean_delta_vs_C2": -0.0179,
+   "excludes_zero": 5,
+   "n": 5
+  },
+  {
+   "lambda": 0.0,
+   "mean_delta_vs_C2": -0.0051,
+   "excludes_zero": 1,
+   "n": 5
+  },
+  {
+   "lambda": 0.5,
+   "mean_delta_vs_C2": 0.0026,
+   "excludes_zero": 3,
+   "n": 5
+  },
+  {
+   "lambda": 1.0,
+   "mean_delta_vs_C2": 0.0015,
+   "excludes_zero": 1,
+   "n": 5
+  }
+ ],
+ "summary": {
+  "C3_minus_C1": 0.1143,
+  "E1_span_vs_C2": 0.0189,
+  "E2_M2pprime_minus_C1": 0.0033,
+  "degree_share_of_headline": 0.9715,
+  "E2_excludes_zero": 0,
+  "n_splits": 5
+ },
+ "verdict": {
+  "E1_monotone": false,
+  "E2_sig_splits": 0,
+  "note": "E2 delta is the composition part of the headline gain at C1's own degree; the remainder is the degree part."
+ },
+ "status": "PASS"
+}

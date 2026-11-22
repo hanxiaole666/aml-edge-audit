@@ -1,0 +1,36 @@
+{
+  "experiment": "base_rate_reweight",
+  "original_prevalence": 0.2738,
+  "n_test": 7148,
+  "status": "PASS",
+  "reweighted": {
+    "0.01": {
+      "target_prevalence": 0.01,
+      "weighted_PR_AUC": 0.1076,
+      "weighted_precision@100": 0.3373,
+      "effective_positive_weight_top100": 3.47
+    },
+    "0.03": {
+      "target_prevalence": 0.03,
+      "weighted_PR_AUC": 0.2437,
+      "weighted_precision@100": 0.6092,
+      "effective_positive_weight_top100": 10.41
+    },
+    "0.1": {
+      "target_prevalence": 0.1,
+      "weighted_PR_AUC": 0.4821,
+      "weighted_precision@100": 0.8485,
+      "effective_positive_weight_top100": 34.699
+    }
+  },
+  "conformal_operational": {
+    "alpha": 0.1,
+    "threshold_score": 0.05,
+    "predicted_positive_rate": 0.9028,
+    "recall_on_positive": 0.9944,
+    "precision": 0.3016,
+    "n_alerts": 6453,
+    "alert_rate_per_1000": 902.8,
+    "note": "At this threshold the prediction set is deliberately large, giving high recall and coverage but many alerts; this is the operational cost of the conservative guarantee."
+  }
+}

@@ -1,0 +1,22 @@
+================================================================
+TinyAML-Bench v2 FINAL - Reproduction Test Log
+Generated: 2026-11-21 20:35:58    
+Interpreter: Python 3.11.5
+================================================================
+[1] Syntax all scripts:
+  33 scripts OK
+[2] Consistency:
+[done] D:\Financial Micro-Modelling Project\ccfa-financial-blockchain\results\consistency_report.json — 16/16 项一致
+[3] Traceability:
+[done] D:\Financial Micro-Modelling Project\ccfa-financial-blockchain\results\reproducibility_audit.json: 20/20 claims fully traceable
+[4] Leakage audit:
+  ['PASS', 'PASS', 'PASS', 'PASS', 'PASS']
+[5] Rolling-origin:
+  {'XGBoost': {'PR_AUC_mean': 0.8833, 'PR_AUC_std': 0.131, 'n_folds': 4}, 'RandomForest': {'PR_AUC_mean': 0.8668, 'PR_AUC_std': 0.1596, 'n_folds': 4}, 'LogisticRegression': {'PR_AUC_mean': 0.8408, 'PR_AUC_std': 0.1896, 'n_folds': 4}}
+[6] CI:
+  {'point': 0.8944, 'ci95_low': 0.8845, 'ci95_high': 0.9043, 'n_boot': 1000, 'n_test': 7148}
+[7] Resource:
+  5 models
+[8] LaTeX v2:
+  OK
+================================================================

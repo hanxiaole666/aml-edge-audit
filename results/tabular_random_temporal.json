@@ -1,0 +1,32 @@
+{
+  "experiment": "tabular_random_temporal",
+  "n": 28591,
+  "n_test": 7148,
+  "prev_temporal": 0.2738,
+  "prev_random": 0.4397,
+  "features": 46,
+  "models": {
+    "Logistic": {
+      "AP_random": 0.8776,
+      "AP_temporal": 0.6521,
+      "delta": 0.2255,
+      "sd_random": 0.0,
+      "sd_temporal": 0.0
+    },
+    "RandomForest": {
+      "AP_random": 0.9366,
+      "AP_temporal": 0.7213,
+      "delta": 0.2153,
+      "sd_random": 0.0003,
+      "sd_temporal": 0.0015
+    },
+    "LightGBM": {
+      "AP_random": 0.9551,
+      "AP_temporal": 0.7996,
+      "delta": 0.1555,
+      "sd_random": 0.0004,
+      "sd_temporal": 0.0009
+    }
+  },
+  "status": "PASS"
+}

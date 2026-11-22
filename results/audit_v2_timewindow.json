@@ -1,0 +1,419 @@
+{
+  "experiment": "audit_v2_timewindow",
+  "dataset": "Elliptic v1 (49 real steps)",
+  "step_days": 14,
+  "status": "PASS",
+  "layer1_availability": {
+    "n_nodes": 203769,
+    "local_block": {
+      "dims": 93,
+      "documented_window": "transaction-local",
+      "status": "t-available"
+    },
+    "aggregated_block": {
+      "dims": 72,
+      "documented_window": "one-hop aggregate, window undefined",
+      "status": "window-dependent"
+    },
+    "mean_degree": 2.9895,
+    "frac_future_neighbour_mean": 0.0,
+    "frac_future_neighbour_p90": 0.0,
+    "nodes_with_any_future_neighbour": 0.0,
+    "count_like_agg_columns": [],
+    "n_count_like_agg": 0,
+    "max_abs_spearman_with_degree": 0.2958,
+    "median_abs_spearman_with_degree": 0.0525,
+    "edge_time_structure": {
+      "n_edges": 234355,
+      "n_cross_step_edges": 0,
+      "max_step_gap": 0,
+      "note": "maximum over |t_u - t_v|; zero means every edge connects nodes in the same two-week step, so no edge can cross a temporal split"
+    }
+  },
+  "layer2_truncation": {
+    "30": {
+      "n_train": 26381,
+      "n_test": 19659,
+      "test_prevalence": 0.0809,
+      "cells": {
+        "local_only": {
+          "AP": 0.8439,
+          "CI95": [
+            0.8288,
+            0.8591
+          ]
+        },
+        "local+agg_released": {
+          "AP": 0.864,
+          "CI95": [
+            0.8495,
+            0.8791
+          ]
+        },
+        "local+proxy_all": {
+          "AP": 0.8625,
+          "CI95": [
+            0.8478,
+            0.8766
+          ]
+        },
+        "local+proxy_past": {
+          "AP": 0.8625,
+          "CI95": [
+            0.8478,
+            0.8766
+          ]
+        },
+        "local+proxy_past-d1": {
+          "AP": 0.8439,
+          "CI95": [
+            0.8288,
+            0.8591
+          ]
+        },
+        "local+proxy_past-d2": {
+          "AP": 0.8439,
+          "CI95": [
+            0.8288,
+            0.8591
+          ]
+        },
+        "local+proxy_past-d3": {
+          "AP": 0.8439,
+          "CI95": [
+            0.8288,
+            0.8591
+          ]
+        },
+        "local+proxy_past-d5": {
+          "AP": 0.8439,
+          "CI95": [
+            0.8288,
+            0.8591
+          ]
+        }
+      }
+    },
+    "36": {
+      "n_train": 31235,
+      "n_test": 13621,
+      "test_prevalence": 0.0637,
+      "cells": {
+        "local_only": {
+          "AP": 0.7325,
+          "CI95": [
+            0.7075,
+            0.7582
+          ]
+        },
+        "local+agg_released": {
+          "AP": 0.7737,
+          "CI95": [
+            0.7493,
+            0.7983
+          ]
+        },
+        "local+proxy_all": {
+          "AP": 0.7574,
+          "CI95": [
+            0.7331,
+            0.7835
+          ]
+        },
+        "local+proxy_past": {
+          "AP": 0.7574,
+          "CI95": [
+            0.7331,
+            0.7835
+          ]
+        },
+        "local+proxy_past-d1": {
+          "AP": 0.7325,
+          "CI95": [
+            0.7075,
+            0.7582
+          ]
+        },
+        "local+proxy_past-d2": {
+          "AP": 0.7325,
+          "CI95": [
+            0.7075,
+            0.7582
+          ]
+        },
+        "local+proxy_past-d3": {
+          "AP": 0.7325,
+          "CI95": [
+            0.7075,
+            0.7582
+          ]
+        },
+        "local+proxy_past-d5": {
+          "AP": 0.7325,
+          "CI95": [
+            0.7075,
+            0.7582
+          ]
+        }
+      }
+    },
+    "42": {
+      "n_train": 37723,
+      "n_test": 6687,
+      "test_prevalence": 0.0253,
+      "cells": {
+        "local_only": {
+          "AP": 0.1133,
+          "CI95": [
+            0.0919,
+            0.1481
+          ]
+        },
+        "local+agg_released": {
+          "AP": 0.2005,
+          "CI95": [
+            0.1591,
+            0.2498
+          ]
+        },
+        "local+proxy_all": {
+          "AP": 0.0853,
+          "CI95": [
+            0.0663,
+            0.1134
+          ]
+        },
+        "local+proxy_past": {
+          "AP": 0.0853,
+          "CI95": [
+            0.0663,
+            0.1134
+          ]
+        },
+        "local+proxy_past-d1": {
+          "AP": 0.1133,
+          "CI95": [
+            0.0919,
+            0.1481
+          ]
+        },
+        "local+proxy_past-d2": {
+          "AP": 0.1133,
+          "CI95": [
+            0.0919,
+            0.1481
+          ]
+        },
+        "local+proxy_past-d3": {
+          "AP": 0.1133,
+          "CI95": [
+            0.0919,
+            0.1481
+          ]
+        },
+        "local+proxy_past-d5": {
+          "AP": 0.1133,
+          "CI95": [
+            0.0919,
+            0.1481
+          ]
+        }
+      }
+    }
+  },
+  "layer2_delta_curve": [
+    {
+      "cutoff": 30,
+      "delta_steps": 0,
+      "window": "all",
+      "AP": 0.8625,
+      "gain_over_local": 0.0186,
+      "gain_over_past": 0.0
+    },
+    {
+      "cutoff": 30,
+      "delta_steps": 0,
+      "window": "past",
+      "AP": 0.8625,
+      "gain_over_local": 0.0186,
+      "gain_over_past": 0.0
+    },
+    {
+      "cutoff": 30,
+      "delta_steps": 1,
+      "window": "past-d1",
+      "AP": 0.8439,
+      "gain_over_local": 0.0,
+      "gain_over_past": -0.0186
+    },
+    {
+      "cutoff": 30,
+      "delta_steps": 2,
+      "window": "past-d2",
+      "AP": 0.8439,
+      "gain_over_local": 0.0,
+      "gain_over_past": -0.0186
+    },
+    {
+      "cutoff": 30,
+      "delta_steps": 3,
+      "window": "past-d3",
+      "AP": 0.8439,
+      "gain_over_local": 0.0,
+      "gain_over_past": -0.0186
+    },
+    {
+      "cutoff": 30,
+      "delta_steps": 5,
+      "window": "past-d5",
+      "AP": 0.8439,
+      "gain_over_local": 0.0,
+      "gain_over_past": -0.0186
+    },
+    {
+      "cutoff": 36,
+      "delta_steps": 0,
+      "window": "all",
+      "AP": 0.7574,
+      "gain_over_local": 0.0249,
+      "gain_over_past": 0.0
+    },
+    {
+      "cutoff": 36,
+      "delta_steps": 0,
+      "window": "past",
+      "AP": 0.7574,
+      "gain_over_local": 0.0249,
+      "gain_over_past": 0.0
+    },
+    {
+      "cutoff": 36,
+      "delta_steps": 1,
+      "window": "past-d1",
+      "AP": 0.7325,
+      "gain_over_local": 0.0,
+      "gain_over_past": -0.0249
+    },
+    {
+      "cutoff": 36,
+      "delta_steps": 2,
+      "window": "past-d2",
+      "AP": 0.7325,
+      "gain_over_local": 0.0,
+      "gain_over_past": -0.0249
+    },
+    {
+      "cutoff": 36,
+      "delta_steps": 3,
+      "window": "past-d3",
+      "AP": 0.7325,
+      "gain_over_local": 0.0,
+      "gain_over_past": -0.0249
+    },
+    {
+      "cutoff": 36,
+      "delta_steps": 5,
+      "window": "past-d5",
+      "AP": 0.7325,
+      "gain_over_local": 0.0,
+      "gain_over_past": -0.0249
+    },
+    {
+      "cutoff": 42,
+      "delta_steps": 0,
+      "window": "all",
+      "AP": 0.0853,
+      "gain_over_local": -0.028,
+      "gain_over_past": 0.0
+    },
+    {
+      "cutoff": 42,
+      "delta_steps": 0,
+      "window": "past",
+      "AP": 0.0853,
+      "gain_over_local": -0.028,
+      "gain_over_past": 0.0
+    },
+    {
+      "cutoff": 42,
+      "delta_steps": 1,
+      "window": "past-d1",
+      "AP": 0.1133,
+      "gain_over_local": 0.0,
+      "gain_over_past": 0.028
+    },
+    {
+      "cutoff": 42,
+      "delta_steps": 2,
+      "window": "past-d2",
+      "AP": 0.1133,
+      "gain_over_local": 0.0,
+      "gain_over_past": 0.028
+    },
+    {
+      "cutoff": 42,
+      "delta_steps": 3,
+      "window": "past-d3",
+      "AP": 0.1133,
+      "gain_over_local": 0.0,
+      "gain_over_past": 0.028
+    },
+    {
+      "cutoff": 42,
+      "delta_steps": 5,
+      "window": "past-d5",
+      "AP": 0.1133,
+      "gain_over_local": 0.0,
+      "gain_over_past": 0.028
+    }
+  ],
+  "layer2_mean_gain_over_past": {
+    "all": 0.0,
+    "past": 0.0,
+    "past-d1": -0.0052,
+    "past-d2": -0.0052,
+    "past-d3": -0.0052,
+    "past-d5": -0.0052
+  },
+  "layer3_label_probe": {
+    "30": {
+      "local_only_AUC": 0.9439,
+      "local_only_AP": 0.8442,
+      "prevalence_baseline_AP": 0.0809,
+      "full_model_AP": 0.864,
+      "structure_gain": 0.0198
+    },
+    "36": {
+      "local_only_AUC": 0.919,
+      "local_only_AP": 0.7378,
+      "prevalence_baseline_AP": 0.0637,
+      "full_model_AP": 0.7737,
+      "structure_gain": 0.0359
+    },
+    "42": {
+      "local_only_AUC": 0.8709,
+      "local_only_AP": 0.1131,
+      "prevalence_baseline_AP": 0.0253,
+      "full_model_AP": 0.2005,
+      "structure_gain": 0.0874
+    }
+  },
+  "elliptic2_boundary": {
+    "n_features": 43,
+    "documented_window": 0,
+    "reason": "release has no subgraph timestamps; temporal truncation is undefined, not merely unavailable",
+    "max_abs_spearman_with_subgraph_size": 0.4118,
+    "n_features_size_corr_gt_0.5": 0,
+    "internal_only_AP": 0.025,
+    "full_feature_AP": 0.392,
+    "note": "aggregation-scope fallback from script 41; no temporal claim is possible here"
+  },
+  "verdict": {
+    "n_cross_step_edges": 0,
+    "AP_gain_all_over_past": 0.0,
+    "AP_gain_d1_over_past": -0.0052,
+    "AP_gain_d5_over_past": -0.0052,
+    "future_edges_exist": false,
+    "note": "Every one of the 234355 edges joins nodes in the same step, so no edge can cross a temporal split and no neighbour is ever in the future of another. The window sweep therefore collapses: retaining the same-step window equals retaining all neighbours (gain over past = 0.0000), and truncating one step removes neighbour signal entirely (gain = -0.0052), which drops AP back to the local-only model. The aggregated block is contemporaneous, not future-looking."
+  }
+}

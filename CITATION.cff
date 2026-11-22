@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software or the associated manuscript, please cite it."
+title: "Cross-Split Edge Auditing for Cryptocurrency AML Evaluation: Degree, Composition, and a Pre-Deployment Test"
+type: article
+authors:
+  - family-names: Han
+    given-names: Xiaole
+    orcid: "https://orcid.org/0009-0009-9611-2368"
+    affiliation: "Business School, Qilu Institute of Technology, Jinan, Shandong 250200, China"
+abstract: >-
+  An audit of evaluation protocols for cryptocurrency anti-money laundering.
+  The repository contains the code, results, generated tables, and LaTeX source
+  for the manuscript submitted to IEEE TDSC. The central result is that the
+  dominant channel of a protocol effect differs by graph: degree on a 1,500-node
+  co-occurrence graph, label composition on Elliptic, where no edge crosses a
+  time step. The deliverable is a pre-deployment test based on three measurable
+  structural quantities.
+keywords:
+  - anti-money laundering
+  - evaluation protocol
+  - temporal split
+  - data leakage
+  - graph neural networks
+  - reproducibility
+license: MIT
+repository-code: "https://github.com/hanxiaole666/aml-edge-audit"
+version: "v1.1-artifact"

@@ -1,0 +1,17 @@
+model,dataset,random,temporal,PR_AUC_drop,drop_pct
+gnn_GCN-lite,realcats,0.929116,0.744257,0.184859,19.896215
+gnn_SAGE-lite,realcats,0.929460,0.717021,0.212439,22.856175
+gnn_SGC,realcats,0.953921,0.840501,0.113420,11.889855
+gnn_StreamTemporal,realcats,0.961404,0.866174,0.095230,9.905268
+tabular_LightGBM,realcats,0.978454,0.886066,0.092388,9.442243
+tabular_LogisticRegression,realcats,0.965771,0.854717,0.111054,11.498963
+tabular_RandomForest,realcats,0.968430,0.857389,0.111040,11.466027
+tabular_XGBoost,realcats,0.979561,0.893202,0.086358,8.816034
+gnn_GCN-lite,realgraph,0.806943,0.405418,0.401524,49.758719
+gnn_SAGE-lite,realgraph,0.806083,0.416398,0.389684,48.342974
+gnn_SGC,realgraph,0.936817,0.784759,0.152058,16.231315
+gnn_StreamTemporal,realgraph,0.969226,0.880955,0.088271,9.107370
+gnn_GCN-lite,synthetic,0.279732,0.108744,0.170988,61.125758
+gnn_SAGE-lite,synthetic,0.325751,0.045815,0.279936,85.935423
+gnn_SGC,synthetic,0.257447,0.431159,-0.173712,-67.474859
+gnn_StreamTemporal,synthetic,0.256444,0.210358,0.046086,17.971175

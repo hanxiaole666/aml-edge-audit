@@ -1,0 +1,22 @@
+{
+  "experiment": "defense_comparison",
+  "defense_mechanisms": [
+    "时态加权（StreamTemporal）：近期行为权重更高，削弱历史良性记录的利用",
+    "不确定性拒绝：低置信样本转人工（需部署时配置阈值）",
+    "多视图交叉验证：结构/行为视图不一致时提高审查（NP 融合命题 C）"
+  ],
+  "empirical_comparison": {
+    "LogisticRegression": {
+      "adaptive_attack_AP_drop": 0.08997597801905588,
+      "fixed_noise_AP_drop": 0.10306648062050527,
+      "note": "自适应攻击退化更大属预期（攻击者优化 vs 随机噪声）"
+    },
+    "RandomForest": {
+      "adaptive_attack_AP_drop": 0.012091978734672604,
+      "fixed_noise_AP_drop": 0.04975155169564727,
+      "note": "自适应攻击退化更大属预期（攻击者优化 vs 随机噪声）"
+    }
+  },
+  "honest_note": "本对照只比较'攻击类型'（自适应 vs 固定），未做'启用/禁用防御'的 A/B 对照实验——R2 MC4 的完整防御消融仍未满足，如实标注。",
+  "status": "PASS"
+}

@@ -1,0 +1,530 @@
+{
+  "experiment": "operating_points",
+  "protocol": "threshold selected by 3-fold out-of-fold F1 on the training period; test set never used for threshold selection",
+  "quotas": [
+    10,
+    50,
+    100
+  ],
+  "abs_ks": [
+    100,
+    500,
+    1000
+  ],
+  "datasets": {
+    "Elliptic v1": {
+      "splits": "4 non-degenerate temporal cutoffs (embargo = 1 step)",
+      "cutoffs": [
+        30,
+        33,
+        36,
+        39
+      ],
+      "features": 93,
+      "models": {
+        "Logistic": {
+          "AP": {
+            "mean": 0.1916,
+            "std": 0.018
+          },
+          "ROC_AUC": {
+            "mean": 0.8141,
+            "std": 0.0242
+          },
+          "F1_at_0.5": {
+            "mean": 0.2281,
+            "std": 0.0216
+          },
+          "F1_at_tau_star": {
+            "mean": 0.3957,
+            "std": 0.0213
+          },
+          "P_at_tau_star": {
+            "mean": 0.2775,
+            "std": 0.0184
+          },
+          "R_at_tau_star": {
+            "mean": 0.6935,
+            "std": 0.0548
+          },
+          "ECE_10bins": {
+            "mean": 0.3296,
+            "std": 0.0219
+          },
+          "Brier": {
+            "mean": 0.2382,
+            "std": 0.0293
+          },
+          "prevalence": {
+            "mean": 0.0667
+          },
+          "P@10per1000": {
+            "mean": 0.1216,
+            "std": 0.045,
+            "cost_per_TP": 9.726
+          },
+          "P@50per1000": {
+            "mean": 0.1225,
+            "std": 0.0468,
+            "cost_per_TP": 9.884
+          },
+          "P@100per1000": {
+            "mean": 0.2079,
+            "std": 0.0868,
+            "cost_per_TP": 5.661
+          }
+        },
+        "RandomForest": {
+          "AP": {
+            "mean": 0.7653,
+            "std": 0.0755
+          },
+          "ROC_AUC": {
+            "mean": 0.9062,
+            "std": 0.0183
+          },
+          "F1_at_0.5": {
+            "mean": 0.7721,
+            "std": 0.0724
+          },
+          "F1_at_tau_star": {
+            "mean": 0.7254,
+            "std": 0.0443
+          },
+          "P_at_tau_star": {
+            "mean": 0.754,
+            "std": 0.0472
+          },
+          "R_at_tau_star": {
+            "mean": 0.7073,
+            "std": 0.0968
+          },
+          "ECE_10bins": {
+            "mean": 0.0231,
+            "std": 0.004
+          },
+          "Brier": {
+            "mean": 0.0249,
+            "std": 0.0017
+          },
+          "prevalence": {
+            "mean": 0.0667
+          },
+          "P@10per1000": {
+            "mean": 1.0,
+            "std": 0.0,
+            "cost_per_TP": 1.0
+          },
+          "P@50per1000": {
+            "mean": 0.867,
+            "std": 0.1295,
+            "cost_per_TP": 1.175
+          },
+          "P@100per1000": {
+            "mean": 0.496,
+            "std": 0.1243,
+            "cost_per_TP": 2.107
+          }
+        },
+        "LightGBM": {
+          "AP": {
+            "mean": 0.7693,
+            "std": 0.0641
+          },
+          "ROC_AUC": {
+            "mean": 0.9312,
+            "std": 0.0101
+          },
+          "F1_at_0.5": {
+            "mean": 0.7242,
+            "std": 0.0535
+          },
+          "F1_at_tau_star": {
+            "mean": 0.7261,
+            "std": 0.055
+          },
+          "P_at_tau_star": {
+            "mean": 0.7994,
+            "std": 0.0549
+          },
+          "R_at_tau_star": {
+            "mean": 0.6756,
+            "std": 0.1096
+          },
+          "ECE_10bins": {
+            "mean": 0.0273,
+            "std": 0.0054
+          },
+          "Brier": {
+            "mean": 0.029,
+            "std": 0.001
+          },
+          "prevalence": {
+            "mean": 0.0667
+          },
+          "P@10per1000": {
+            "mean": 1.0,
+            "std": 0.0,
+            "cost_per_TP": 1.0
+          },
+          "P@50per1000": {
+            "mean": 0.8486,
+            "std": 0.131,
+            "cost_per_TP": 1.201
+          },
+          "P@100per1000": {
+            "mean": 0.5019,
+            "std": 0.1105,
+            "cost_per_TP": 2.059
+          }
+        }
+      }
+    },
+    "Real-CATS ETH": {
+      "splits": "first_time 75/25 temporal with embargo at the boundary",
+      "features": 46,
+      "n_train": 21443,
+      "n_test": 7148,
+      "test_prevalence": 0.2738,
+      "degenerate": false,
+      "degenerate_note": null,
+      "models": {
+        "Logistic": {
+          "AP": {
+            "mean": 0.6521,
+            "std": 0.0
+          },
+          "ROC_AUC": {
+            "mean": 0.8224,
+            "std": 0.0
+          },
+          "F1_at_0.5": {
+            "mean": 0.6017,
+            "std": 0.0
+          },
+          "F1_at_tau_star": {
+            "mean": 0.6114,
+            "std": 0.002
+          },
+          "P_at_tau_star": {
+            "mean": 0.5226,
+            "std": 0.0137
+          },
+          "R_at_tau_star": {
+            "mean": 0.7381,
+            "std": 0.0308
+          },
+          "ECE_10bins": {
+            "mean": 0.0924,
+            "std": 0.0
+          },
+          "Brier": {
+            "mean": 0.1555,
+            "std": 0.0
+          },
+          "prevalence": {
+            "mean": 0.2738
+          },
+          "P@10per1000": {
+            "mean": 0.9718,
+            "std": 0.0,
+            "cost_per_TP": 1.029
+          },
+          "P@50per1000": {
+            "mean": 0.8319,
+            "std": 0.0,
+            "cost_per_TP": 1.202
+          },
+          "P@100per1000": {
+            "mean": 0.7678,
+            "std": 0.0,
+            "cost_per_TP": 1.302
+          },
+          "n_seeds": 5
+        },
+        "RandomForest": {
+          "AP": {
+            "mean": 0.7213,
+            "std": 0.0015
+          },
+          "ROC_AUC": {
+            "mean": 0.8558,
+            "std": 0.0008
+          },
+          "F1_at_0.5": {
+            "mean": 0.6494,
+            "std": 0.0032
+          },
+          "F1_at_tau_star": {
+            "mean": 0.6628,
+            "std": 0.0049
+          },
+          "P_at_tau_star": {
+            "mean": 0.6532,
+            "std": 0.014
+          },
+          "R_at_tau_star": {
+            "mean": 0.6736,
+            "std": 0.0234
+          },
+          "ECE_10bins": {
+            "mean": 0.0456,
+            "std": 0.0006
+          },
+          "Brier": {
+            "mean": 0.1309,
+            "std": 0.0003
+          },
+          "prevalence": {
+            "mean": 0.2738
+          },
+          "P@10per1000": {
+            "mean": 0.9549,
+            "std": 0.0154,
+            "cost_per_TP": 1.047
+          },
+          "P@50per1000": {
+            "mean": 0.8919,
+            "std": 0.0042,
+            "cost_per_TP": 1.121
+          },
+          "P@100per1000": {
+            "mean": 0.8526,
+            "std": 0.0049,
+            "cost_per_TP": 1.173
+          },
+          "n_seeds": 5
+        },
+        "LightGBM": {
+          "AP": {
+            "mean": 0.7996,
+            "std": 0.0009
+          },
+          "ROC_AUC": {
+            "mean": 0.899,
+            "std": 0.0013
+          },
+          "F1_at_0.5": {
+            "mean": 0.7052,
+            "std": 0.0018
+          },
+          "F1_at_tau_star": {
+            "mean": 0.7177,
+            "std": 0.0051
+          },
+          "P_at_tau_star": {
+            "mean": 0.7326,
+            "std": 0.0214
+          },
+          "R_at_tau_star": {
+            "mean": 0.7045,
+            "std": 0.0266
+          },
+          "ECE_10bins": {
+            "mean": 0.0254,
+            "std": 0.0024
+          },
+          "Brier": {
+            "mean": 0.1083,
+            "std": 0.0003
+          },
+          "prevalence": {
+            "mean": 0.2738
+          },
+          "P@10per1000": {
+            "mean": 0.9915,
+            "std": 0.0077,
+            "cost_per_TP": 1.008
+          },
+          "P@50per1000": {
+            "mean": 0.9658,
+            "std": 0.0094,
+            "cost_per_TP": 1.036
+          },
+          "P@100per1000": {
+            "mean": 0.9203,
+            "std": 0.0043,
+            "cost_per_TP": 1.087
+          },
+          "n_seeds": 5
+        }
+      }
+    },
+    "Real-CATS BTC": {
+      "splits": "first_time 75/25 temporal with embargo at the boundary",
+      "features": 26,
+      "n_train": 135570,
+      "n_test": 45190,
+      "test_prevalence": 0.0275,
+      "degenerate": true,
+      "degenerate_note": "Late-period prevalence is below the 5% floor. A temporal split on this chain leaves almost no positives in test, so the random-split domain-internal figures in the cross-chain study (0.88/0.93) have no temporal counterpart.",
+      "models": {
+        "Logistic": {
+          "AP": {
+            "mean": 0.0342,
+            "std": 0.0
+          },
+          "ROC_AUC": {
+            "mean": 0.4777,
+            "std": 0.0
+          },
+          "F1_at_0.5": {
+            "mean": 0.0537,
+            "std": 0.0
+          },
+          "F1_at_tau_star": {
+            "mean": 0.0537,
+            "std": 0.0
+          },
+          "P_at_tau_star": {
+            "mean": 0.0276,
+            "std": 0.0
+          },
+          "R_at_tau_star": {
+            "mean": 0.996,
+            "std": 0.0
+          },
+          "ECE_10bins": {
+            "mean": 0.6048,
+            "std": 0.0
+          },
+          "Brier": {
+            "mean": 0.3945,
+            "std": 0.0
+          },
+          "prevalence": {
+            "mean": 0.0275
+          },
+          "P@10per1000": {
+            "mean": 0.0796,
+            "std": 0.0,
+            "cost_per_TP": 12.556
+          },
+          "P@50per1000": {
+            "mean": 0.0358,
+            "std": 0.0,
+            "cost_per_TP": 27.901
+          },
+          "P@100per1000": {
+            "mean": 0.0303,
+            "std": 0.0,
+            "cost_per_TP": 32.985
+          },
+          "n_seeds": 5
+        },
+        "RandomForest": {
+          "AP": {
+            "mean": 0.0939,
+            "std": 0.0021
+          },
+          "ROC_AUC": {
+            "mean": 0.7725,
+            "std": 0.002
+          },
+          "F1_at_0.5": {
+            "mean": 0.0911,
+            "std": 0.0007
+          },
+          "F1_at_tau_star": {
+            "mean": 0.088,
+            "std": 0.001
+          },
+          "P_at_tau_star": {
+            "mean": 0.0463,
+            "std": 0.0006
+          },
+          "R_at_tau_star": {
+            "mean": 0.9007,
+            "std": 0.003
+          },
+          "ECE_10bins": {
+            "mean": 0.4655,
+            "std": 0.0007
+          },
+          "Brier": {
+            "mean": 0.313,
+            "std": 0.0009
+          },
+          "prevalence": {
+            "mean": 0.0275
+          },
+          "P@10per1000": {
+            "mean": 0.1783,
+            "std": 0.006,
+            "cost_per_TP": 5.613
+          },
+          "P@50per1000": {
+            "mean": 0.1164,
+            "std": 0.0037,
+            "cost_per_TP": 8.6
+          },
+          "P@100per1000": {
+            "mean": 0.0959,
+            "std": 0.0032,
+            "cost_per_TP": 10.431
+          },
+          "n_seeds": 5
+        },
+        "LightGBM": {
+          "AP": {
+            "mean": 0.2048,
+            "std": 0.0042
+          },
+          "ROC_AUC": {
+            "mean": 0.8159,
+            "std": 0.0021
+          },
+          "F1_at_0.5": {
+            "mean": 0.134,
+            "std": 0.0032
+          },
+          "F1_at_tau_star": {
+            "mean": 0.1069,
+            "std": 0.0004
+          },
+          "P_at_tau_star": {
+            "mean": 0.0571,
+            "std": 0.0002
+          },
+          "R_at_tau_star": {
+            "mean": 0.8407,
+            "std": 0.004
+          },
+          "ECE_10bins": {
+            "mean": 0.2754,
+            "std": 0.0051
+          },
+          "Brier": {
+            "mean": 0.1593,
+            "std": 0.0043
+          },
+          "prevalence": {
+            "mean": 0.0275
+          },
+          "P@10per1000": {
+            "mean": 0.4168,
+            "std": 0.0081,
+            "cost_per_TP": 2.4
+          },
+          "P@50per1000": {
+            "mean": 0.1921,
+            "std": 0.0006,
+            "cost_per_TP": 5.205
+          },
+          "P@100per1000": {
+            "mean": 0.1347,
+            "std": 0.0019,
+            "cost_per_TP": 7.424
+          },
+          "n_seeds": 5
+        }
+      }
+    }
+  },
+  "status": "PASS",
+  "f1_gain_from_threshold_selection": {
+    "mean": 0.0142,
+    "max": 0.1676,
+    "note": "F1 at a model-selected threshold minus F1 at the naive 0.5 cut. A large positive gap means 0.5 was miscalibrated, not that the model improved."
+  }
+}

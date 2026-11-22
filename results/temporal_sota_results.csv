@@ -1,0 +1,9 @@
+PR-AUC,AUC,split,use_time,seed,train_seconds,status,model
+0.898251,0.867277,random,False,0,1.260000,done,GAT-standard
+0.884387,0.865485,random,False,1,1.110000,done,GAT-standard
+0.898117,0.876778,random,True,0,1.120000,done,TGAT-lite
+0.873555,0.840340,random,True,1,1.140000,done,TGAT-lite
+0.642275,0.732908,temporal,False,0,1.120000,done,GAT-standard
+0.694356,0.765671,temporal,False,1,1.120000,done,GAT-standard
+0.569000,0.632896,temporal,True,0,1.110000,done,TGAT-lite
+0.596069,0.701324,temporal,True,1,1.120000,done,TGAT-lite

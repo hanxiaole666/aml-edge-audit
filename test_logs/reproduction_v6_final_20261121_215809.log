@@ -1,0 +1,24 @@
+================================================================
+TinyAML-Bench v6 - FINAL Reproduction Test Log
+Generated: 2026-11-21 21:58:09    
+Interpreter: Python 3.11.5
+================================================================
+[1] Syntax:
+  47 scripts OK
+[2] Consistency:
+[done] D:\Financial Micro-Modelling Project\ccfa-financial-blockchain\results\consistency_report.json — 16/16 项一致
+[3] Traceability:
+[done] D:\Financial Micro-Modelling Project\ccfa-financial-blockchain\results\reproducibility_audit.json: 34/34 claims fully traceable
+[4] Mechanism M1/M2:
+  M1: PASS: feature pipeline independent of edge filtering (no bug)
+  M2 diff: 0.0769
+[5] Edge protocol 5 splits:
+  {'C1': {'AP_mean': 0.709, 'AP_std': 0.009}, 'C2': {'AP_mean': 0.8064, 'AP_std': 0.0112}, 'C3': {'AP_mean': 0.837, 'AP_std': 0.0132}, 'M2': {'AP_mean': 0.7252, 'AP_std': 0.0083}}
+  paired: {'C2_vs_C3': {'diff': -0.0293, 'ci95': [-0.0575, -0.0035], 'significant': True}, 'C2_vs_M2': {'diff': 0.0908, 'ci95': [0.0601, 0.1256], 'significant': True}}
+[6] Drift proxies:
+  {'size': 0.2014, 'activity': -0.0715, 'feature_kl': -0.1491}
+[7] Base-rate:
+  (0.2966, 6513)
+[8] LaTeX v6:
+  OK
+================================================================

@@ -1,0 +1,22 @@
+================================================================
+TinyAML-Bench v5 - FINAL Reproduction Test Log
+Generated: 2026-11-21 21:41:58    
+Interpreter: Python 3.11.5
+================================================================
+[1] Syntax:
+  44 scripts OK
+[2] Consistency:
+[done] D:\Financial Micro-Modelling Project\ccfa-financial-blockchain\results\consistency_report.json — 16/16 项一致
+[3] Traceability:
+[done] D:\Financial Micro-Modelling Project\ccfa-financial-blockchain\results\reproducibility_audit.json: 31/31 claims fully traceable
+[4] Edge protocol:
+  {'C1_keep_all': 0.7366, 'C2_past_only': 0.817, 'C3_remove_all': 0.8659, 'C4_transductive': 0.7366} | verdict: cross_split_edges_are_harmful_not_leaking_future
+[5] Elliptic2-Safe:
+  Full 0.3915 Safe 0.0251 bound 0.3664
+[6] Base-rate:
+  {'0.01': 0.7531, '0.03': 0.8412, '0.1': 0.9115}
+[7] Conformal ops:
+  {'alpha': 0.1, 'threshold_score': 0.015, 'predicted_positive_rate': 0.9008, 'recall_on_positive': 0.9959, 'precision': 0.4861, 'n_alerts': 6439, 'alert_rate_per_1000': 900.8, 'note': 'At this threshold the prediction set is deliberately large, giving high recall and coverage but many alerts; this is the operational cost of the conservative guarantee.'}
+[8] LaTeX v5:
+  OK
+================================================================

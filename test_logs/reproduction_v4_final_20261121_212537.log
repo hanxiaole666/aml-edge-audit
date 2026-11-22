@@ -1,0 +1,24 @@
+================================================================
+TinyAML-Bench v4 - FINAL Reproduction Test Log (Dependability framing)
+Generated: 2026-11-21 21:25:37    
+Interpreter: Python 3.11.5
+================================================================
+[1] Syntax:
+  41 scripts OK
+[2] Consistency:
+[done] D:\Financial Micro-Modelling Project\ccfa-financial-blockchain\results\consistency_report.json — 16/16 项一致
+[3] Traceability:
+[done] D:\Financial Micro-Modelling Project\ccfa-financial-blockchain\results\reproducibility_audit.json: 27/27 claims fully traceable
+[4] Leakage v2:
+  ['WARN', 'PASS', 'PASS', 'PASS']
+[5] Extrapolation:
+  horizons 8 embargo 5
+[6] Conformal:
+  {'0.05': {'mean_coverage': 0.9971, 'target': 0.95, 'n_folds': 4}, '0.1': {'mean_coverage': 0.9929, 'target': 0.9, 'n_folds': 4}, '0.2': {'mean_coverage': 0.9802, 'target': 0.8, 'n_folds': 4}}
+[7] Operational:
+  F1 0.9125 ECE 0.0242 eps curve 7
+[8] End-to-end:
+  ['LogisticRegression', 'RandomForest'] feasible ['LogisticRegression']
+[9] LaTeX v4:
+  OK
+================================================================

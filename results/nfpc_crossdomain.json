@@ -1,0 +1,19 @@
+{
+  "experiment": "nfpc_crossdomain",
+  "n_accounts": 96091,
+  "n_mule": 2683,
+  "mule_rate": 0.027921449459366643,
+  "n_features": 9,
+  "status": "PASS",
+  "in_domain": {
+    "LogisticRegression": {
+      "PR-AUC": 0.0343,
+      "AUC": 0.5155
+    },
+    "RandomForest": {
+      "PR-AUC": 0.0791,
+      "AUC": 0.5473
+    }
+  },
+  "cross_domain_note": "链上地址特征(ETH余额/token交互)与银行账户特征(KYC/网点/余额)语义与量纲完全不同，无法直接特征对齐。跨域迁移需领域自适应方法（如对齐公共语义子空间），本版未实现，诚实标注为未来工作。NFPC 提供的是传统金融域的真实 AML 验证平台。"
+}

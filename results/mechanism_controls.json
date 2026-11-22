@@ -1,0 +1,51 @@
+{
+  "experiment": "mechanism_controls",
+  "n_train": 1125,
+  "n_test": 375,
+  "test_prevalence": 0.3787,
+  "status": "PASS",
+  "conditions": {
+    "C1_keep_all": {
+      "n_edges": 6942,
+      "PR-AUC": 0.5366,
+      "mean_test_degree": 8.15
+    },
+    "C2_past_only": {
+      "n_edges": 5349,
+      "PR-AUC": 0.6185,
+      "mean_test_degree": 2.44
+    },
+    "C3_remove_all": {
+      "n_edges": 4434,
+      "PR-AUC": 0.6593,
+      "mean_test_degree": 0.0
+    },
+    "C4_transductive": {
+      "n_edges": 6942,
+      "PR-AUC": 0.5366,
+      "mean_test_degree": 8.15
+    },
+    "M2_random_matched": {
+      "n_edges": 5349,
+      "PR-AUC": 0.4655,
+      "mean_test_degree": 7.18
+    }
+  },
+  "M1_feature_only": {
+    "PR_AUC_by_condition": {
+      "C1_keep_all": 0.7234,
+      "C2_past_only": 0.7234,
+      "C3_remove_all": 0.7234,
+      "C4_transductive": 0.7234,
+      "M2_random_matched": 0.7234
+    },
+    "all_identical": true,
+    "verdict": "PASS: feature pipeline independent of edge filtering (no bug)"
+  },
+  "M2_verdict": {
+    "C2_AP": 0.6185,
+    "random_matched_AP": 0.4655,
+    "difference": 0.153,
+    "interpretation": "If random-matched ~= C2, the effect is density (fewer edges), not which edges. If C2 clearly higher, the removed edges carry specific harmful structure."
+  }
+}

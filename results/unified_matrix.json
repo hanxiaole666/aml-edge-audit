@@ -1,0 +1,131 @@
+{
+  "experiment": "unified_matrix",
+  "rows": [
+    {
+      "dataset": "Elliptic v1",
+      "model": "lightgbm",
+      "AP": 0.9111,
+      "n_test_mean": 3716,
+      "prevalence_mean": 0.1415,
+      "protocol": "6-fold rolling origin, 5 non-degenerate",
+      "AP_random": 0.9675
+    },
+    {
+      "dataset": "Elliptic v1",
+      "model": "gcn",
+      "AP": 0.5833,
+      "n_test_mean": 3716,
+      "prevalence_mean": 0.1415,
+      "protocol": "6-fold rolling origin, 5 non-degenerate",
+      "AP_random": 0.6026
+    },
+    {
+      "dataset": "Elliptic v1",
+      "model": "sage",
+      "AP": 0.8473,
+      "n_test_mean": 3716,
+      "prevalence_mean": 0.1415,
+      "protocol": "6-fold rolling origin, 5 non-degenerate",
+      "AP_random": 0.9047
+    },
+    {
+      "dataset": "Elliptic v1",
+      "model": "tgn_lite",
+      "AP": 0.3939,
+      "n_test_mean": 3716,
+      "prevalence_mean": 0.1415,
+      "protocol": "6-fold rolling origin, 5 non-degenerate",
+      "AP_random": 0.3655
+    },
+    {
+      "dataset": "Elliptic2",
+      "model": "LightGBM-pooled",
+      "AP": 0.5352,
+      "n_test_mean": 12181,
+      "prevalence_mean": 0.0227,
+      "protocol": "random 80:10:10",
+      "AP_random": null
+    },
+    {
+      "dataset": "Elliptic2",
+      "model": "DeepSets",
+      "AP": 0.4407,
+      "n_test_mean": 12181,
+      "prevalence_mean": 0.0227,
+      "protocol": "random 80:10:10",
+      "AP_random": null
+    },
+    {
+      "dataset": "Elliptic2",
+      "model": "GIN-3",
+      "AP": 0.3765,
+      "n_test_mean": 12181,
+      "prevalence_mean": 0.0227,
+      "protocol": "random 80:10:10",
+      "AP_random": null
+    },
+    {
+      "dataset": "Elliptic2",
+      "model": "GCN-2",
+      "AP": 0.4269,
+      "n_test_mean": 12181,
+      "prevalence_mean": 0.0227,
+      "protocol": "random 80:10:10",
+      "AP_random": null
+    },
+    {
+      "dataset": "Elliptic2",
+      "model": "SAGE-2",
+      "AP": 0.4134,
+      "n_test_mean": 12181,
+      "prevalence_mean": 0.0227,
+      "protocol": "random 80:10:10",
+      "AP_random": null
+    },
+    {
+      "dataset": "Real-CATS ETH",
+      "model": "LightGBM",
+      "AP": 0.7996,
+      "n_test_mean": 7148,
+      "prevalence_mean": 0.2738,
+      "protocol": "time 75/25, provenance removed",
+      "AP_random": 0.9551
+    },
+    {
+      "dataset": "Real-CATS ETH",
+      "model": "RandomForest",
+      "AP": 0.7213,
+      "n_test_mean": 7148,
+      "prevalence_mean": 0.2738,
+      "protocol": "time 75/25, provenance removed",
+      "AP_random": 0.9366
+    },
+    {
+      "dataset": "Real-CATS ETH",
+      "model": "Logistic",
+      "AP": 0.6521,
+      "n_test_mean": 7148,
+      "prevalence_mean": 0.2738,
+      "protocol": "time 75/25, provenance removed",
+      "AP_random": 0.8776
+    },
+    {
+      "dataset": "Real-CATS BTC",
+      "model": "LightGBM",
+      "AP": 0.2048,
+      "n_test_mean": 45190,
+      "prevalence_mean": 0.0275,
+      "protocol": "time 75/25 on first_time; degenerate (prev 0.028)",
+      "AP_random": 0.9343121101455177
+    }
+  ],
+  "provenance_removed": true,
+  "caveat": "Protocols differ across datasets; the table is a map of what exists, not a leaderboard. Cross-dataset comparisons inherit the split difference and are labelled accordingly.",
+  "status": "PASS",
+  "real_cats_edge_conditions": {
+    "C1": 0.5266,
+    "C2": 0.6058,
+    "C3": 0.6412,
+    "M2": 0.5419
+  }
+}
